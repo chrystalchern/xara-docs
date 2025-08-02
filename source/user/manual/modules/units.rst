@@ -138,8 +138,7 @@ Stress
    GPa          , gigapascal   , 
    psi          ,              ,  Pound-square-inch
    ksi          ,              , 
-   pci          ,              , 
-   pcf          ,              ,  Pounds per cubic foot
+
 
 
 Mass 
@@ -153,6 +152,18 @@ Mass
    kg           , kilogram     ,  Kilogram
    tonne        ,              ,  "Metric tonne, 10 :sup:`3` kg"
    oz           , ounce        ,  International avoirdupois ounce
+
+
+Density
+-------
+
+.. csv-table::
+
+   ``pcf``          ,              ,  Pounds per cubic foot
+
+.. note::
+
+   The ``p`` in ``pcf`` represents the pound mass (``lbm``), not the pound force (``lbf``) as it does ``psi`` unit.
 
 
 ..
