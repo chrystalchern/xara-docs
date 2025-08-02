@@ -17,7 +17,7 @@ Although this has no effect on the solution, it can have a significant effect on
 
          :param string type: The numberer type.
          :param args: A sequence of arguments for that type.
-   
+
    .. tab:: Tcl
 
       .. function:: numberer type? args? ...

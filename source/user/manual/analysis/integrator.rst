@@ -55,14 +55,14 @@ The type of integrator used in the analysis is dependent on whether it is a :ref
    :caption: Transient Integrators
    :maxdepth: 1
 
-   integrator/CentralDifference
    integrator/Newmark
-   integrator/HHT
    integrator/GeneralizedAlpha
    integrator/TRBDF2
+
+..
+   integrator/CentralDifference
+   integrator/HHT
    integrator/ExplicitDifference
-
-
 
 References
 ----------

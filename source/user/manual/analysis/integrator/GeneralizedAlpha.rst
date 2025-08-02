@@ -1,7 +1,7 @@
 .. _GeneralizedAlphaMethod:
 
-Generalized Alpha Method
-^^^^^^^^^^^^^^^^^^^^^^^^
+Generalized Alpha
+^^^^^^^^^^^^^^^^^
 
 .. function:: integrator GeneralizedAlpha $alphaM $alphaF <$gamma $beta> 
 

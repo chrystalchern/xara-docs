@@ -1,21 +1,19 @@
 .. _responseSpectrumAnalysis:
 
 responseSpectrumAnalysis
-************************
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-|  This command is used to perform a response spectrum analysis.
-|  The response spectrum analysis performs N linear analysis steps, where N is the number of eigenvalues requested in a previous call to :ref:`eigen`.
-|  For each analysis step, it computes the modal displacements. When the i-th analysis step is complete, all previously defined recorders will be called, so they will record all the results requested by the user, pertaining to the current modal displacements.
-|  The modal combination of these modal displacements (and derived results such as beam forces) is up to the user, and can be easily done via TCL or Python scripting.
-
-|  The command can be called in two different ways, depending on how you store the Tn/Sa (response spectrum function) values.
-|  They can be either stored in a timeSeries ...
-
-.. function:: responseSpectrumAnalysis $tsTag $direction <-scale $scale> <-mode $mode>
-
-|  ... or in two lists
+This command is used to perform a response spectrum analysis.
+The response spectrum analysis performs N linear analysis steps, where N is the number of eigenvalues requested in a previous call to :ref:`eigen`.
+For each analysis step, it computes the modal displacements. When the i-th analysis step is complete, all previously defined recorders will be called, so they will record all the results requested by the user, pertaining to the current modal displacements.
+The modal combination of these modal displacements (and derived results such as beam forces) is up to the user, and can be easily done via TCL or Python scripting.
 
 .. function:: responseSpectrumAnalysis $direction -Tn $Tn -Sa $Sa <-scale $scale> <-mode $mode>
+
+.. note::
+
+   This is the only form of the command that is supported by |xara|. 
+   The variant using a time series is not supported.   
 
 .. csv-table:: 
    :header: "Argument", "Type", "Description"
@@ -33,15 +31,21 @@ responseSpectrumAnalysis
    $mode, |integer|, "The 1-based index of the unique mode to process."
 
 .. note::
+
    *  This command can be used only if a previous call to :ref:`eigen` and :ref:`modalProperties` has been performed.
    *  It computes only the modal displacements, any modal combination is up to the user.
-   *  The scale factor (-scale $scale) for the output modal displacements is not used now, and it's there for future implementations. When your model is linear elastic there is no need to use this option. It will be useful in future when we will allow using this command on a nonlinear model as a **linear perturbation** about a certain nonlinear state. In that case, the scale factor can be set to a very small number, so that the computed modal displacements will be very small (linear perturbation) and will not alter the nonlinear state of your model. Then the inverse of the scale factor can be used to post-multiply any result for post-processing.
+   *  The ``scale`` factor for the output modal displacements is not used now, and it's there for future implementations. 
+      When your model is linear elastic there is no need to use this option. 
+      It will be useful in future when we will allow using this command on a nonlinear model as a *linear perturbation* about a certain nonlinear state. 
+      In that case, the scale factor can be set to a very small number, so that the computed modal displacements will be very small (linear perturbation) and will not alter the nonlinear state of your model. Then the inverse of the scale factor can be used to post-multiply any result for post-processing.
 
 Theory
-^^^^^^
-|  Once the eigenvalue problem (:ref:`eigen`) has been solved, and once the modal properties (:ref:`modalProperties`) have been computed, the modal displacements :math:`U` for mode :math:`i` at node :math:`n` and DOF :math:`j` is given by
+------
+
+Once the eigenvalue problem (:ref:`eigen`) has been solved, and once the modal properties (:ref:`modalProperties`) have been computed, the modal displacements :math:`U` for mode :math:`i` at node :math:`n` and DOF :math:`j` is given by
 
 .. math::
+
    U_{ij}^n = \frac{\Phi_{ij}^n \cdot MPF_{ij} \cdot RSf\left(T_i\right)}{\lambda_i}
 
 |  where:
@@ -51,6 +55,10 @@ Theory
    *  :math:`MPF_{ij}` is the modal participation factor
    *  :math:`RSf\left(T_i\right)` is the response spectrum function value at period :math:`T_i`
    *  and :math:`T_i` is the period :math:`\frac{2\pi}{\sqrt{\lambda_i}}`
+
+
+Examples
+--------
 
 .. admonition:: Example 1: Simple call
    

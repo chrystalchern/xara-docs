@@ -8,5 +8,6 @@ For a great guide to Tcl programming, see `this <https://antirez.com/articoli/tc
    :maxdepth: 1
 
    install
+   conventions
    signatures
    references

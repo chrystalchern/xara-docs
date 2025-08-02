@@ -35,7 +35,6 @@ Newton schemes, are based on the *linearization* of the residual :math:`\boldsym
 
 .. math::
 
-
    \mathcal{L} \boldsymbol{r}(\boldsymbol{u}, \lambda)(\boldsymbol{u}_{n},\lambda_n) = \lambda_n^{(i)} \boldsymbol{p}_f 
     - \boldsymbol{p}_{\sigma}\left(\boldsymbol{u}_{n}^{(i)} \right) - \left[
    \begin{array}{cc}

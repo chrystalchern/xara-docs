@@ -5,27 +5,27 @@ model basic -ndm 3 -ndf 6
 
 # the response spectrum function
 set Tn {0.0 0.06 0.1 0.12 0.18 0.24 0.3 0.36 0.4 0.42 \
-		0.48 0.54 0.6 0.66 0.72 0.78 0.84 0.9 0.96 1.02 \
-		1.08 1.14 1.2 1.26 1.32 1.38 1.44 1.5 1.56 1.62 \
-		1.68 1.74 1.8 1.86 1.92 1.98 2.04 2.1 2.16 2.22 \
-		2.28 2.34 2.4 2.46 2.52 2.58 2.64 2.7 2.76 2.82 \
-		2.88 2.94 3.0 3.06 3.12 3.18 3.24 3.3 3.36 3.42 \
-		3.48 3.54 3.6 3.66 3.72 3.78 3.84 3.9 3.96 4.02 \
-		4.08 4.14 4.2 4.26 4.32 4.38 4.44 4.5 4.56 4.62 \
-		4.68 4.74 4.8 4.86 4.92 4.98 5.04 5.1 5.16 5.22 \
-		5.28 5.34 5.4 5.46 5.52 5.58 5.64 5.7 5.76 5.82 \
-		5.88 5.94 6.0}
+        0.48 0.54 0.6 0.66 0.72 0.78 0.84 0.9 0.96 1.02 \
+        1.08 1.14 1.2 1.26 1.32 1.38 1.44 1.5 1.56 1.62 \
+        1.68 1.74 1.8 1.86 1.92 1.98 2.04 2.1 2.16 2.22 \
+        2.28 2.34 2.4 2.46 2.52 2.58 2.64 2.7 2.76 2.82 \
+        2.88 2.94 3.0 3.06 3.12 3.18 3.24 3.3 3.36 3.42 \
+        3.48 3.54 3.6 3.66 3.72 3.78 3.84 3.9 3.96 4.02 \
+        4.08 4.14 4.2 4.26 4.32 4.38 4.44 4.5 4.56 4.62 \
+        4.68 4.74 4.8 4.86 4.92 4.98 5.04 5.1 5.16 5.22 \
+        5.28 5.34 5.4 5.46 5.52 5.58 5.64 5.7 5.76 5.82 \
+        5.88 5.94 6.0}
 set Sa {1.9612 3.72628 4.903 4.903 4.903 4.903 4.903 4.903 4.903 4.6696172 \
-		4.0861602 3.6321424 3.2683398 2.971218 2.7241068 2.5142584 2.3348086 2.1788932 2.0425898 1.9229566 \
-		1.8160712 1.7199724 1.6346602 1.5562122 1.485609 1.4208894 1.3620534 1.3071398 1.2571292 1.211041 \
-		1.166914 1.1267094 1.0894466 1.054145 1.0217852 0.990406 0.960988 0.9335312 0.9080356 0.8835206 \
-		0.8599862 0.838413 0.8168398 0.7972278 0.7785964 0.759965 0.7432948 0.7266246 0.710935 0.6952454 \
-		0.6805364 0.666808 0.6540602 0.6285646 0.6040496 0.5814958 0.5609032 0.5403106 0.5206986 0.5030478 \
-		0.485397 0.4697074 0.4540178 0.4393088 0.4255804 0.411852 0.3991042 0.3863564 0.3755698 0.3638026 \
-		0.353016 0.34321 0.333404 0.3245786 0.3157532 0.3069278 0.2981024 0.2902576 0.2833934 0.2755486 \
-		0.2686844 0.2618202 0.254956 0.2490724 0.2431888 0.2373052 0.2314216 0.2265186 0.220635 0.215732 \
-		0.210829 0.205926 0.2020036 0.1971006 0.1931782 0.1892558 0.1853334 0.181411 0.1774886 0.1735662 \
-		0.1706244 0.166702 0.1637602}
+        4.0861602 3.6321424 3.2683398 2.971218 2.7241068 2.5142584 2.3348086 2.1788932 2.0425898 1.9229566 \
+        1.8160712 1.7199724 1.6346602 1.5562122 1.485609 1.4208894 1.3620534 1.3071398 1.2571292 1.211041 \
+        1.166914 1.1267094 1.0894466 1.054145 1.0217852 0.990406 0.960988 0.9335312 0.9080356 0.8835206 \
+        0.8599862 0.838413 0.8168398 0.7972278 0.7785964 0.759965 0.7432948 0.7266246 0.710935 0.6952454 \
+        0.6805364 0.666808 0.6540602 0.6285646 0.6040496 0.5814958 0.5609032 0.5403106 0.5206986 0.5030478 \
+        0.485397 0.4697074 0.4540178 0.4393088 0.4255804 0.411852 0.3991042 0.3863564 0.3755698 0.3638026 \
+        0.353016 0.34321 0.333404 0.3245786 0.3157532 0.3069278 0.2981024 0.2902576 0.2833934 0.2755486 \
+        0.2686844 0.2618202 0.254956 0.2490724 0.2431888 0.2373052 0.2314216 0.2265186 0.220635 0.215732 \
+        0.210829 0.205926 0.2020036 0.1971006 0.1931782 0.1892558 0.1853334 0.181411 0.1774886 0.1735662 \
+        0.1706244 0.166702 0.1637602}
 timeSeries Path 1 -time $Tn -values $Sa
 
 # a uniaxial material for transverse shear
@@ -144,21 +144,21 @@ set dmp [lrepeat [llength $eigs] 0.05]
 set scalf [lrepeat [llength $eigs] 1.0]
 # CQC function
 proc CQC {mu lambdas dmp scalf} {
-	set u 0.0
-	set ne [llength $lambdas]
-	for {set i 0} {$i < $ne} {incr i} {
-		for {set j 0} {$j < $ne} {incr j} {
-			set di [lindex $dmp $i]
-			set dj [lindex $dmp $j]
-			set bij [expr [lindex $lambdas $i]/[lindex $lambdas $j]]
-			set rho [expr \
-				((8.0*sqrt($di*$dj)*($di+$bij*$dj)*($bij**(3.0/2.0))) / \
-				(pow(1.0-$bij**2.0,2.0) + 4.0*$di*$dj*$bij*(1.0+pow($bij,2.0)) + \
-				4.0*(pow($di,2.0) + pow($dj,2.0))*pow($bij,2.0)))]
-			set u [expr $u + [lindex $scalf $i]*[lindex $mu $i] * [lindex $scalf $j]*[lindex $mu $j] * $rho]
-		}
-	}
-	return [expr sqrt($u)]
+    set u 0.0
+    set ne [llength $lambdas]
+    for {set i 0} {$i < $ne} {incr i} {
+        for {set j 0} {$j < $ne} {incr j} {
+            set di [lindex $dmp $i]
+            set dj [lindex $dmp $j]
+            set bij [expr [lindex $lambdas $i]/[lindex $lambdas $j]]
+            set rho [expr \
+                ((8.0*sqrt($di*$dj)*($di+$bij*$dj)*($bij**(3.0/2.0))) / \
+                (pow(1.0-$bij**2.0,2.0) + 4.0*$di*$dj*$bij*(1.0+pow($bij,2.0)) + \
+                4.0*(pow($di,2.0) + pow($dj,2.0))*pow($bij,2.0)))]
+            set u [expr $u + [lindex $scalf $i]*[lindex $mu $i] * [lindex $scalf $j]*[lindex $mu $j] * $rho]
+        }
+    }
+    return [expr sqrt($u)]
 }
 
 # ========================================================================
@@ -175,10 +175,10 @@ set My {}
 set f [open $filename "r"]
 set lines [split [read $f] "\n"]
 foreach line $lines {
-	if {[llength $line] > 0} {
-		set tokens [split $line " "]
-		lappend My [lindex $tokens 2]
-	}
+    if {[llength $line] > 0} {
+        set tokens [split $line " "]
+        lappend My [lindex $tokens 2]
+    }
 }
 close $f
 
@@ -190,7 +190,7 @@ puts "Do CQC combination in post processing."
 puts "Use Tn and Sa lists.\n"
 puts [format "%10s %15s" "Mode" "My"]
 for {set i 0} {$i < [llength $eigs]} {incr i} {
-	puts [format "%10g %15f" [expr $i+1] [lindex $My $i]]
+    puts [format "%10g %15f" [expr $i+1] [lindex $My $i]]
 }
 puts [format "%10s %15f" "CQC" $MyCQC]
 
@@ -208,10 +208,10 @@ set My {}
 set f [open $filename "r"]
 set lines [split [read $f] "\n"]
 foreach line $lines {
-	if {[llength $line] > 0} {
-		set tokens [split $line " "]
-		lappend My [lindex $tokens 2]
-	}
+    if {[llength $line] > 0} {
+        set tokens [split $line " "]
+        lappend My [lindex $tokens 2]
+    }
 }
 close $f
 
@@ -223,7 +223,7 @@ puts "Do CQC combination in post processing."
 puts "Use a Path timeSeries to store Tn-Sa pairs.\n"
 puts [format "%10s %15s" "Mode" "My"]
 for {set i 0} {$i < [llength $eigs]} {incr i} {
-	puts [format "%10g %15f" [expr $i+1] [lindex $My $i]]
+    puts [format "%10g %15f" [expr $i+1] [lindex $My $i]]
 }
 puts [format "%10s %15f" "CQC" $MyCQC]
 
@@ -236,9 +236,9 @@ puts [format "%10s %15f" "CQC" $MyCQC]
 remove recorder 0
 set My {}
 for {set i 0} {$i < [llength $eigs]} {incr i} {
-	responseSpectrumAnalysis $direction -Tn $Tn -Sa $Sa -mode [expr $i+1]
-	set force [eleResponse 1 section 1 force]
-	lappend My [lindex $force 2]
+    responseSpectrumAnalysis $direction -Tn $Tn -Sa $Sa -mode [expr $i+1]
+    set force [eleResponse 1 section 1 force]
+    lappend My [lindex $force 2]
 }
 
 # post process the results doing the CQC modal combination for the My response (3rd column in section forces)
@@ -247,7 +247,7 @@ puts "\n\nTEST 02:\nRun a Response Spectrum Analysis mode-by-mode."
 puts "Grab results during the loop and do CQC combination with them.\n"
 puts [format "%10s %15s" "Mode" "My"]
 for {set i 0} {$i < [llength $eigs]} {incr i} {
-	puts [format "%10g %15f" [expr $i+1] [lindex $My $i]]
+    puts [format "%10g %15f" [expr $i+1] [lindex $My $i]]
 }
 puts [format "%10s %15f" "CQC" $MyCQC]
 

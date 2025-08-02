@@ -3,8 +3,6 @@
 analysis
 ^^^^^^^^
 
-This is the command issued to configure an analysis.
-
 .. tabs::
 
    .. tab:: Python

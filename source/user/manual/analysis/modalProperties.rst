@@ -1,7 +1,7 @@
 .. _modalProperties:
 
 modalProperties
-***************
+^^^^^^^^^^^^^^^
 
 This command is used to compute the modal properties of a model after an :ref:`eigen`.
 This command computes the following modal properties:
@@ -13,7 +13,7 @@ This command computes the following modal properties:
 *  :math:`MPF` : The modal participation factors.
 *  :math:`MPM` : The modal participation masses.
 *  :math:`MPMc` : The cumulative modal participation masses.
-*  :math:`MPM\left(\%\right)` : The modal participation masse ratios.
+*  :math:`MPM\left(\%\right)` :  The modal participation masse ratios.
 *  :math:`MPMc\left(\%\right)` : The cumulative modal participation masse ratios.
 
 .. function:: modalProperties <-print> <-return> <-file $reportFileName> <-unorm>
@@ -181,7 +181,7 @@ This command computes the following modal properties:
    *  Only the values in :math:`gm` and :math:`MPF` depend on the normalization of the eigenvectors. This normalization depends on the solver used in the :ref:`eigen`. The default -genBandArpack uses a mass-normalization, so that the :math:`gm` is the identity. On the contrary, the -fullGenLapack uses a displacement-normalization, so that the largest component of the eigenvector is 1. If you use the -genBandArpack, but want a displacement-normalization of the eigenvectors, use the **-unorm** option.
 
 Theory
-^^^^^^
+======
 The eigenvalues :math:`\lambda` and the eigenvectors :math:`\Phi` can be obtained after solving the *generalized eigenvalue problem* for two symmetric matrices :math:`K` (stiffness) and :math:`M` (mass) given by:
 
 .. math::

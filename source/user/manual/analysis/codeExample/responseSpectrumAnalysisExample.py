@@ -1,4 +1,4 @@
-from opensees import *
+from opensees.openseespy import *
 from math import sqrt
 
 wipe()

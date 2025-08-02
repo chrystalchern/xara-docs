@@ -82,6 +82,7 @@ rst_prolog = """
 
 """
 
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
@@ -116,7 +117,7 @@ exclude_patterns = [
     "user/index.rst",
     "user/manual/model/geomTransf/frame/index.rst",
     "user/manual/analysis/integrator/gimmeMCK.rst",
-    "user/manual/analysis/modalProperties.rst",
+#   "user/manual/analysis/modalProperties.rst",
     "user/manual/analysis/responseSpectrumAnalysis.rst",
     "user/manual/model/damping/elementalDamping.rst",
     "user/manual/model/eleLoad.rst",

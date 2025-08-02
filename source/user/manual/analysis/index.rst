@@ -36,14 +36,13 @@ These include:
    algorithm
    analyze
    constraints
-   numberer
    system
    test
    eigen
+   modalProperties
+   responseSpectrumAnalysis
+
 
 ..
-   analysis/modalProperties
-   analysis/responseSpectrumAnalysis
-
-
+   numberer
 
