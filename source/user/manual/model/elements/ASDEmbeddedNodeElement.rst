@@ -164,14 +164,13 @@ Examples
       U2 = [0.1 + 0.9*rand(), 0.1 + 0.9*rand()]
       U3 = [0.1 + 0.9*rand(), 0.1 + 0.9*rand()]
       print('Applying random X displacement:\nU1: {}\nU2: {}\nU3: {}\n\n'.format(U1,U2,U3))
-      timeSeries('Constant', 1)
-      pattern('Plain', 1, 1)
+      model.pattern('Plain', 1, "Constant")
       for i in range(1, 3):
-         sp(1, i, U1[i - 1])
-         sp(2, i, U2[i - 1])
-         sp(3, i, U3[i - 1])
+         model.sp(1, i, U1[i - 1], pattern=1)
+         model.sp(2, i, U2[i - 1], pattern=1)
+         model.sp(3, i, U3[i - 1], pattern=1)
       
-      
+
       # run analysis
       model.constraints('Transformation')
       model.numberer('Plain')
@@ -186,7 +185,7 @@ Examples
       UCref = [
          (U1[0] + U2[0] + U3[0])/3.0,
          (U1[1] + U2[1] + U3[1])/3.0
-         ]
+      ]
       print('Expected displacement at constrained node is (U1+U2+U3)/3:\n{}\n\n'.format(UCref))
       
       # read results
