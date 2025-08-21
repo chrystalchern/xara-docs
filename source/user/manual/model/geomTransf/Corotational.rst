@@ -4,6 +4,15 @@ Corotational
 ^^^^^^^^^^^^
 
 
+.. deprecated:: 0.0.8
+
+   This formulation is made obsolete by the new :ref:`Corotational02 <CorotTR02>` formulation. 
+   ``Corotational02`` corrects several bugs in the original ``Corotational`` formulation. 
+   The original ``Corotational`` transformation will continue 
+   to be supported to ensure prior investigations remain reproducible, but all new analyses should use the new :ref:`Corotational02 <CorotTR02>` formulation.
+
+
+
 The corotational coordinate transformation performs a geometric transformation from a *basic* system [1]_ to the global coordinate system. [2]_
 
 .. tabs::
