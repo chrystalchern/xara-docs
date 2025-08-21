@@ -8,25 +8,25 @@ eigen
 
    .. tab:: Python 
 
-      .. py:method:: Model.eigen(n, solver="-genBandArpack")
-         
+      .. py:method:: Model.eigen(n, solver="GenBandArpack")
+
          Perform an eigenvalue analysis and return a list of eigenvalues.
 
          :param n: number of eigenvalues required.
          :type n: |integer|
-         :param solver: optional string detailing type of solver: -genBandArpack, -symmBandLapack, -fullGenLapack (default: -genBandArpack).
+         :param solver: optional string detailing type of solver: ``GenBandArpack``, ``SymmBandLapack``, ``FullGenLapack`` (default: ``GenBandArpack``).
          :type solver: |string|
-         :returns: A |list| containing the eigenvalues
+         :returns: A |list| containing ``n`` eigenvalues
    
    .. tab:: Tcl
 
-      .. function:: eigen <$solver> $numEigenvalues
+      .. function:: eigen <$solver> $n
 
       .. csv-table::
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
          
-         ``numEigenvalues``, |integer|, number of eigenvalues required.
+         ``n``, |integer|, number of eigenvalues required.
          ``solver``, |string|, "optional string detailing type of solver: -genBandArpack, -symmBandLapack, -fullGenLapack (default: -genBandArpack)."
 
 .. note::
@@ -41,12 +41,13 @@ Theory
 The *generalized eigenvalue problem* for two symmetric matrices :math:`\boldsymbol{K}` and :math:`M` of size :math:`n \times n` is given by:
 
 .. math::
-   \left (\boldsymbol{K} - \lambda M \right ) \Phi = 0
+
+   \left( \boldsymbol{K} - \lambda \boldsymbol{M} \right) \Phi = 0
 
 where:
 
 *  :math:`\boldsymbol{K}` is the stiffness matrix
-*  :math:`M` is the mass matrix
+*  :math:`\boldsymbol{M}` is the mass matrix
 *  :math:`\lambda` is the eigenvalue
 *  and :math:`\Phi` is the associated eigenvector
 
