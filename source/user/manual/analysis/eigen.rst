@@ -51,6 +51,29 @@ where:
 *  :math:`\lambda` is the eigenvalue
 *  and :math:`\Phi` is the associated eigenvector
 
+
+Of course. Here is the breakdown formatted in reStructuredText, suitable for documentation.
+
+To convert the eigenvalues obtained from the generalized eigenvalue problem into natural frequencies, use the following relationships:
+
+**Eigenvalue** (`:math:\lambda`)
+This is the direct numerical output from the `model.eigen` call. Each eigenvalue corresponds to a specific vibration mode and represents the square of the natural angular frequency for that mode.
+
+**Angular Frequency** (`:math:\omega`)
+The angular frequency, measured in **radians per second**, is the square root of the eigenvalue.
+
+.. math::
+
+   \omega = \sqrt{\lambda}
+
+**Natural Frequency** (`:math:f`)
+The natural frequency, measured in **Hertz (Hz)**, represents the number of oscillations per second. It is calculated by dividing the angular frequency by :math:`2\pi`.
+
+.. math::
+
+   f = \frac{\omega}{2\pi} = \frac{\sqrt{\lambda}}{2\pi}
+
+
 Examples
 --------
    
