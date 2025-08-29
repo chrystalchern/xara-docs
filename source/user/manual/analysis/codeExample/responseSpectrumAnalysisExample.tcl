@@ -52,52 +52,36 @@ node 13 2 1.5 6
 node 14 2 1.5 3
 
 # beam elements
-# Geometric transformation command
 geomTransf Linear 1 1.0 0.0 -0.0
 element forceBeamColumn 1 1 2 1 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 2 0.0 0.0 1.0
 element forceBeamColumn 2 2 3 2 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 3 1.0 0.0 -0.0
 element forceBeamColumn 3 4 3 3 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 4 1.0 0.0 -0.0
 element forceBeamColumn 4 2 5 4 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 5 0.0 0.0 1.0
 element forceBeamColumn 5 5 6 5 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 6 0.0 0.0 1.0
 element forceBeamColumn 6 7 6 6 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 7 0.0 0.0 1.0
 element forceBeamColumn 7 8 7 7 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 8 0.0 0.0 1.0
 element forceBeamColumn 8 9 2 8 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 9 0.0 0.0 1.0
 element forceBeamColumn 9 8 5 9 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 10 1.0 0.0 -0.0
 element forceBeamColumn 10 10 9 10 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 11 1.0 0.0 -0.0
 element forceBeamColumn 11 3 6 11 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 12 1.0 0.0 -0.0
 element forceBeamColumn 12 11 7 12 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 13 0.0 0.0 1.0
 element forceBeamColumn 13 11 3 13 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 14 0.0 0.0 1.0
 element forceBeamColumn 14 9 11 14 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 15 1.0 0.0 -0.0
 element forceBeamColumn 15 12 11 15 Lobatto 3 5
-# Geometric transformation command
 geomTransf Linear 16 1.0 0.0 -0.0
 element forceBeamColumn 16 9 8 16 Lobatto 3 5
 
@@ -200,7 +184,7 @@ puts [format "%10s %15f" "CQC" $MyCQC]
 # then do modal combination in post-processing.
 # Use a Path timeSeries to store the Tn-Sa pairs
 # ========================================================================
-responseSpectrumAnalysis $tsTag $direction
+responseSpectrumAnalysis $direction -Tn $Tn -Sa $Sa 
 
 # read the My values [3rd column] for each step 
 # (1 for each mode, they are section forces associated to each modal displacement)
