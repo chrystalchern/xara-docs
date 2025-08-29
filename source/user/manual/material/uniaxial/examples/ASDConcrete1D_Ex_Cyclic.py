@@ -49,15 +49,16 @@ def run_sample(
 	ops.model('basic', '-ndm', 1, '-ndf', 1)
 	
 	# the material (units = N, mm)
-	E = 30000.0
-	v = 0.2
+	E  = 30000.0
+	v  = 0.2
 	fc = 30.0
 	ft = fc/10.0
 	ec = 2.0*fc/E
-	Gt = 0.073*fc**0.18 # warning: this equation assumed fc in MPa!
+	Gt = 0.073*fc**0.18 # NOTE: this equation assumes Fc in MPa!
 	Gc = 2.0*Gt*(fc/ft)**2
 	# create tensile and uniaxial laws from the make_concrete function.
 	Te, Ts, Td, Ce, Cs, Cd, lch_ref = make_concrete(E, ft, fc, ec, Gt, Gc)
+
 	# damage variables are computed for normal strength concrete.
 	# however you can change them to see their effect on the cyclic response
 	# damage variables range from 0 (pure plasticity) to 1 (pure damage)
@@ -233,28 +234,29 @@ def run_sample(
 	images[0].save('{}.gif'.format(title), save_all=True, append_images=images[1:], loop=0, duration=100)
 	images[-1].save('{}-still.png'.format(title))
 
-run_sample(title = 'Mixed-Plastic-Damage(rate-independent)',
-		eta = 0.0,
-		pd_pos_override = _pd_settings.PLASTIC_DAMAGE,
-		pd_neg_override = _pd_settings.PLASTIC_DAMAGE
-	)
-run_sample(title = 'Mixed-Plastic-Damage(rate-dependent)',
-		eta = 0.001,
-		pd_pos_override = _pd_settings.PLASTIC_DAMAGE,
-		pd_neg_override = _pd_settings.PLASTIC_DAMAGE
-	)
-run_sample(title = 'Pure-Damage',
-		eta = 0.0,
-		pd_pos_override = _pd_settings.PURE_DAMAGE,
-		pd_neg_override = _pd_settings.PURE_DAMAGE
-	)
-run_sample(title = 'Pure-Plasticity',
-		eta = 0.0,
-		pd_pos_override = _pd_settings.PURE_PLASTICITY,
-		pd_neg_override = _pd_settings.PURE_PLASTICITY
-	)
-run_sample(title = 'Mixed-Plastic-Damage(compression)-Pure-Damage(tension)',
-		eta = 0.0,
-		pd_pos_override = _pd_settings.PURE_DAMAGE,
-		pd_neg_override = _pd_settings.PLASTIC_DAMAGE
-	)
+if __name__ == "__main__":
+	run_sample(title = 'Mixed-Plastic-Damage(rate-independent)',
+			eta = 0.0,
+			pd_pos_override = _pd_settings.PLASTIC_DAMAGE,
+			pd_neg_override = _pd_settings.PLASTIC_DAMAGE
+		)
+	run_sample(title = 'Mixed-Plastic-Damage(rate-dependent)',
+			eta = 0.001,
+			pd_pos_override = _pd_settings.PLASTIC_DAMAGE,
+			pd_neg_override = _pd_settings.PLASTIC_DAMAGE
+		)
+	run_sample(title = 'Pure-Damage',
+			eta = 0.0,
+			pd_pos_override = _pd_settings.PURE_DAMAGE,
+			pd_neg_override = _pd_settings.PURE_DAMAGE
+		)
+	run_sample(title = 'Pure-Plasticity',
+			eta = 0.0,
+			pd_pos_override = _pd_settings.PURE_PLASTICITY,
+			pd_neg_override = _pd_settings.PURE_PLASTICITY
+		)
+	run_sample(title = 'Mixed-Plastic-Damage(compression)-Pure-Damage(tension)',
+			eta = 0.0,
+			pd_pos_override = _pd_settings.PURE_DAMAGE,
+			pd_neg_override = _pd_settings.PLASTIC_DAMAGE
+		)
