@@ -70,6 +70,7 @@ def _make_tension(E, ft, Gt):
 		Td[i] = 1.0-si/qi # compute damage
 	return (Te, Ts, Td)
 
+
 def _make_compression(E, fc, ec, Gc):
 	'''
 	a quadratic hardening followed by linear softening for compressive response
@@ -82,8 +83,8 @@ def _make_compression(E, fc, ec, Gc):
 	Gc1 = fc*(ec-ec_pl)/2.0
 	Gc2 = max(Gc1*1.0e-2, Gc-Gc1)
 	ecr = ec + 2.0*Gc2/(fc+fcr)
-	Ce = [0.0, ec0] # total strain points
-	Cs = [0.0, fc0] # nominal stress points
+	Ce  = [0.0, ec0] # total strain points
+	Cs  = [0.0, fc0] # nominal stress points
 	Cpl = [0.0, 0.0] # desired values of equivalent plastic strains
 	nc = 10
 	dec = (ec-ec0)/(nc-1)
@@ -92,6 +93,7 @@ def _make_compression(E, fc, ec, Gc):
 		Ce.append(iec)
 		Cs.append(_bezier3(iec,  ec0, ec1, ec,  fc0, fc, fc))
 		Cpl.append(Cpl[-1]+(iec-Cpl[-1])*0.7)
+	
 	# end of linear softening - begin residual plateau
 	Ce.append(ecr)
 	Cs.append(fcr)
