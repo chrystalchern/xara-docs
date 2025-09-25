@@ -25,8 +25,7 @@ The *Modeling* methods are used to programatically build a finite element model.
    model/element
    model/geomTransf
    model/beamIntegration
-   model/mpConstraints
-   model/pattern
+   model/constraints/index
    model/damping
    model/mass
    parameter/index
