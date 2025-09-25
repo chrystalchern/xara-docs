@@ -54,6 +54,7 @@ However, a more common representation of the model is in terms of the compressio
 where :math:`\operatorname{dev}\boldsymbol{E}` is the deviatoric part of the strain tensor :math:`\boldsymbol{E}`.
 
 
+
 Plane Sections
 ~~~~~~~~~~~~~~
 
