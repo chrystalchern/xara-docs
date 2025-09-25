@@ -7,8 +7,6 @@
 ##
 #########################################################
 
-wipe
-
 model BasicBuilder -ndm 2 -ndf 2
 
 # beam dimensions
@@ -98,5 +96,3 @@ algorithm Newton
 analysis Static
 
 analyze 105
-
-wipe

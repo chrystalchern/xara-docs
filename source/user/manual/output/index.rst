@@ -28,7 +28,6 @@ can be used to get quantities at specific :ref:`nodes <node>`.
    printA
    printB
    getTime
-   eleResponse
    recorder
 
 
@@ -46,4 +45,17 @@ can be used to get quantities at specific :ref:`nodes <node>`.
    getNodeTags
 
 
+.. toctree::
+   :caption: Element methods
+   :maxdepth: 1
 
+   getEleTags
+   eleNodes 
+   eleResponse
+
+
+.. toctree::
+   :caption: Miscellaneous
+   :maxdepth: 1
+
+   getEleLoadTags

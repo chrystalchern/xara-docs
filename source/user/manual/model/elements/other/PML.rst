@@ -5,13 +5,6 @@ PML Element
 
 This command is used to construct four-node and and eight-node PML elements. Perfectly Matched Layer (PML) elements are a numerical technique used in simulations to manage boundary conditions and minimize reflections at the edges of a computational domain. PMLs are often implemented as layers or regions at the edges of a computational domain, where the properties of the material in the PML are carefully designed to gradually absorb and attenuate outgoing waves. This absorption process is designed to be as efficient as possible, reducing the reflection of waves back into the domain. The choice of PML parameters, such as the profile of the absorbing material and its thickness, depends on the specific simulation and the desired level of accuracy.
 
-Implementation details for these elements can be found in:
-
-W. Zhang, E. Esmaeilzadeh Seylabi, E. Taciroglu,(2019), An ABAQUS toolbox for soil-structure interaction analysis, Computers and Geotechnics, Volume 114, 2019, https://doi.org/10.1016/j.compgeo.2019.103143.
-
-.. A. Trono, (2023) Interaccion dinamica suelo-estructura considerando ondas sismicas inclinadas y superficiales, PhD Dissertation, 2023, Universidad Nacional de Cordoba, Cordoba, Argentina..
-
-
 .. admonition:: Command
 
     1. PML2D
@@ -95,6 +88,17 @@ Example
  .. code-block:: python
 
     model.element('PML', 1, 1, 2, 3, 4, 5, 6, 7, 8, 1, 0.5, 0.25, 0.0833333333333333, 1e6, 0.3, 1.0, 1, 1.0, 2, 1e-8, 10.0, 10.0, 5.0, 0.0, 0.0)
+
+
+References
+----------
+
+Implementation details for these elements can be found in:
+
+W. Zhang, E. Esmaeilzadeh Seylabi, E. Taciroglu,(2019), An ABAQUS toolbox for soil-structure interaction analysis, Computers and Geotechnics, Volume 114, 2019, https://doi.org/10.1016/j.compgeo.2019.103143.
+
+.. A. Trono, (2023) Interaccion dinamica suelo-estructura considerando ondas sismicas inclinadas y superficiales, PhD Dissertation, 2023, Universidad Nacional de Cordoba, Cordoba, Argentina..
+
 
 Code Developed by: W. Zhang, E. Taciroglu, A. Pakzad, P. Arduino (UCLA, UW)
 

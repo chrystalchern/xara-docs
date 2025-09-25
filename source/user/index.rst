@@ -10,8 +10,10 @@ Manual
 
    manual/modeling
    manual/meshing/index
+   mannual/loading/index
    manual/analysis/index
    manual/output/index
+   manual/strategy/index
    manual/misc/index
 
 

@@ -16,31 +16,12 @@ Other
       zeroLengthND
       zeroLengthContactASDimplex
 
-..
-   zeroLengthInterface2D
-   zeroLengthImpact3D 
-   zeroLengthContact
-   zeroLengthContactNTS2D
+#. Links
 
-.. #. Bearing Elements
+   .. toctree::
+      :maxdepth: 1
 
-
-..
-       ElastomericBearingBouc-Wen
-       FlatSliderBearingElement
-       SingleFrictionPendulumBearing
-       TripleFrictionPendulumBearing
-       TripleFrictionPendulum
-       MultipleShearSpring
-       KikuchiBearing
-       YamamotoBiaxialHDR
-       LeadRubberX
-       HDR
-       RJ-Watson EQS Bearing
-       FPBearingPTV
-       ElastomericBearingPlasticity
-
-
+      TwoNodeLink
 
 #. Misc.
 
@@ -50,9 +31,6 @@ Other
       ASDEmbeddedNodeElement
       ASDAbsorbingBoundary
       RockingBC
-      FSIFluidBoundaryElement2D
-      FSIFluidElement2D
-      FSIInterfaceElement2D
       PML
 
 

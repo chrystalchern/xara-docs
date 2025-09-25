@@ -1,7 +1,7 @@
 .. _nDMaterial:
 
-General
-*******
+Multiaxial
+^^^^^^^^^^
 
 
 .. tabs::

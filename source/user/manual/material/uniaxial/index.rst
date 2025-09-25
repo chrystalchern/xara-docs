@@ -1,7 +1,7 @@
 .. _uniaxialMaterial:
 
 Uniaxial
-********
+^^^^^^^^
 
 Uniaxial materials define a mathematical relationship between two scalar quantities. 
 These quantities are typically stress and strain, but can also be force and deformation, or any other two scalar quantities.

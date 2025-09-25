@@ -45,6 +45,7 @@ The following subsections contain information about ``type`` and the number of n
    elements/solid/index
    elements/joint/index
    elements/other/index
+   elements/fluid/index
    elements/bearing/index
 
 

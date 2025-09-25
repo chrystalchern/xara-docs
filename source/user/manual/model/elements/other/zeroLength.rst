@@ -3,7 +3,9 @@
 ZeroLength
 ^^^^^^^^^^
 
-This command is used to construct a zeroLength element object, which is defined by two nodes at the same location. A zeroLength element is similar to a set of springs placed between two nodes, each spring providing the force displacement relationship for a specified degree-of-freedom. The nodes are connected by multiple UniaxialMaterial objects, which provide the force-deformation relationship for the element in that degree-of-freedom direction. 
+A ZeroLength element is defined by two nodes at the same location. 
+A ZeroLength element is similar to a set of springs placed between two nodes, each spring providing the force displacement relationship for a specified degree-of-freedom. 
+The nodes are connected by multiple UniaxialMaterials, which provide the force-deformation relationship for the element in that degree-of-freedom direction.
 
 .. function:: element zeroLength $eleTag $iNode $jNode -mat $matTag -dir $dir <-doRayleigh $rFlag> <-orient $x $yp>
 
@@ -34,7 +36,8 @@ This command is used to construct a zeroLength element object, which is defined 
 
 .. warning::
 
-   If the distance between end noes is not **0.0** a warning message will appear when the script is run. This is just a warning in case you have made a mistake as most users when they use zeroLength elements are wanting to use them in the more normal way. ZeroLength elements can be used between nodes with non-zero length.
+   If the distance between end noes is not **0.0** a warning will be issued. ZeroLength elements can be used between nodes with non-zero length.
+
 
 Examples
 --------
@@ -56,7 +59,7 @@ Element **2** has as its end nodes **4** and **5**, has only one material **1** 
 
    .. code-block:: python
 
-      model.element("zeroLength",1,2,4,"-mat",5,6,"-dir",1,2)
+      model.element("zeroLength",1,2,4,"-mat",(5,6),"-dir",1,2)
       model.element("zeroLength",2,4,5,"-mat",1,"-dir",1,"-orient",1,1,0,-1,1,0)
       model.element("zeroLength",3,5,6,"-mat",1,"-dir",1,"-doRayleigh",1)
 

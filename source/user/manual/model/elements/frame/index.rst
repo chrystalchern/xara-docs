@@ -34,7 +34,7 @@ Available frame elements include
    ExactFrame
 
 
-To use frame elements in OpenSees models, you'll need to:
+To use frame elements, you'll need to:
 
 #. Define nodes with appropriate coordinates
 #. Create a coordinate transformation with the element orientation

@@ -19,15 +19,3 @@ algorithm
 where ``name`` is a string indentifying one of the following algorithms:
 
 
-.. toctree::
-   :maxdepth: 1
-
-   algorithm/LinearAlgorithm
-   algorithm/Newton
-   algorithm/NewtonLineSearch
-   algorithm/ModifiedNewton
-   algorithm/AcceleratedNewton
-   algorithm/Broyden
-   algorithm/ExpressNewton
-
-

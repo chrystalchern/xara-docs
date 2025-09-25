@@ -8,7 +8,7 @@ addToParameter
    this command relates these additional objects to the specific parameter.
 
    ==============================   ===========================================================================
-   ``tag`` |int|                    integer tag identifying the parameter.
+   ``tag`` |integer|                integer tag identifying the parameter.
    ``*args``                        arguments that depend on the object in the FE model encapsulating the desired parameters.
    ==============================   ===========================================================================
 

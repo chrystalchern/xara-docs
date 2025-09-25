@@ -34,7 +34,8 @@ The zeroLengthContactASDimplex element is a 2-node zeroLength contact element wi
    -intType, |string|, "optional flag, if provided, the user can specify the integration scheme. If not provided the default implicit scheme is used."
    $type, |integer|, "the integration scheme: 0 = implicit (default), 1 = IMPL-EX"
 
-.. admonition:: Example 
+Example
+-------
 
    **Tcl Code**
 

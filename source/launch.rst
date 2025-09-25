@@ -36,6 +36,7 @@ then constructs and analyzes a finite element simulation by invoking its *method
 Documentation of these methods is organized as follows:
 
 * :ref:`Modeling <modeling>` methods are used to add components to the finite element model.
+* :ref:`Loading <pattern>` methods are used to define loads and load patterns.
 * :ref:`Analysis <lblAnalysisCommands>` methods are used to move the state of the model from one converged state to another via a number of trial steps.
 * :ref:`Output <output>` methods allow one to obtain output from a finite element analysis, e.g. to record the node displacement history.
 
@@ -47,9 +48,10 @@ Documentation of these methods is organized as follows:
 
    user/manual/modeling
    user/manual/meshing/index
+   user/manual/loading/index
    user/manual/analysis/index
    user/manual/output/index
-   user/manual/misc/index
+   user/manual/strategy/index
    user/manual/modules/index
    Examples <https://gallery.stairlab.io/examples/>
 
@@ -63,6 +65,5 @@ Documentation of these methods is organized as follows:
    user/guides/index
    about/features/index
    about/license
-   about/references
    cite
 
