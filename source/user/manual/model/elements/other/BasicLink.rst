@@ -1,25 +1,64 @@
 .. _element-two-node-link:
 
-Link
-^^^^^^
+BasicLink
+^^^^^^^^^
 
-``Link`` connects two nodes with a set of uncoupled
+``BasicLink`` connects two nodes with a set of uncoupled
 uniaxial springs/dashpots acting along user-selected basic directions.
 It supports 1D, 2D, and 3D kinematics and can include geometric
 (P–Δ) effects, optional Rayleigh damping, and a lumped translational mass.
 
+.. py:method:: Model.element("BasicLink", tag, nodes, *, mat, dir=None, dof=None, orient=None, pDelta=None, shearDist=None, doRayleigh=False, mass=0.0)
+   :no-index:
+
+   Create a two–node link element that couples specified DOFs between two nodes using one or more uniaxial material models. 
+
+   :param tag: unique :ref:`element` tag
+   :type tag: |integer|
+   :param nodes: pair of integer node tags ``(iNode, jNode)`` (see :ref:`node`)
+   :type nodes: tuple
+   :param mat: uniaxial material tags assigned to the requested link directions
+   :type mat: tuple or list of |integer|
+   :param dir: 1-based DOF indices corresponding to ``mat`` (length must equal ``len(mat)``); synonym: ``dof``
+   :type dir: tuple or list of |integer|
+   :param orient: element orientation. Accepts either
+                  ``(x1, x2, x3, y1, y2, y3)`` or a single 3-vector depending on model dimension:
+                  
+                  - In 1D/2D, a single 3-vector is treated as the *x* axis.
+                  - In 3D, a single 3-vector is treated as the *y* (``yp``) axis while *x* defaults from node coordinates.
+
+                  If omitted, :math:`\mathbf{e}_x = \Delta \mathbf{x}/L`  and :math:`\mathbf{e}_y = (0,1,0)`.
+   :type orient: tuple or list of |float|
+   :param pDelta: P-Δ moment distribution ratios. In 3D supply four values; in 2D supply two values.
+   :type pDelta: tuple or list of |float|
+   :param shearDist: shear distance from node *i*. In 3D supply two values; in 2D supply one value
+                     (the second defaults internally to ``0.5`` if not provided).
+   :type shearDist: tuple or list of |float|
+   :param doRayleigh: include Rayleigh damping contributions
+   :type doRayleigh: |bool|
+   :param mass: lumped element mass
+   :type mass: |float|
+
+
+.. note::
+
+   - ``dof`` is **1-based**
+   - The lengths of ``mat`` and ``dof`` must match.
+   - Orientation parsing follows the element’s Tcl command exactly: two vectors ``(x, y)`` if six numbers are given; otherwise a single vector is interpreted per model dimension as described above.
+
+
+Formulation
+===========
+
 The element operates in three coordinate systems:
 
-- **Global (g)** – the analysis coordinates at the nodes.
-- **Local (l)** – the element’s orthonormal triad :math:`\{\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\}`.
-- **Basic (b)** – the collection of scalar deformation modes that are each driven
+- **Global** – the analysis coordinates at the nodes.
+- **Local** – the element’s orthonormal triad :math:`\{\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\}`.
+- **Basic** – the collection of scalar deformation modes that are each driven
   by a single uniaxial material.
 
 Only diagonal coupling is used in the basic system: each basic mode is
 assigned exactly one uniaxial material.
-
-Formulation
-===========
 
 Let :math:`\mathbf{u}_g` be the global nodal DOF vector ordered as the DOF of
 node *i* followed by the DOF of node *j*. 

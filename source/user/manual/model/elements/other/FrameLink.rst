@@ -11,6 +11,35 @@ through a single ``SectionForceDeformation`` object. The element works in 1D, 2D
 supports optional Rayleigh damping, translational lumped mass, and geometric
 (:math:`P\!-\!\Delta`) effects.
 
+.. py:method:: Model.element("FrameLink", tag, nodes, section, *, orient=None, pDelta=None, shearDist=None, doRayleigh=False, mass=0.0)
+   :no-index:
+
+   Create a two–node link element whose behavior is defined by a section formulation.
+
+   :param tag: unique :ref:`element` tag
+   :type tag: |integer|
+   :param nodes: pair of integer node tags ``(iNode, jNode)`` (see :ref:`node`)
+   :type nodes: tuple
+   :param section: section tag (see :ref:`section`)
+   :type section: |integer|
+   :param orient: element orientation. Accepts either
+                  ``(x1, x2, x3, y1, y2, y3)`` or a single 3-vector depending on model dimension:
+                  
+                  - In 1D/2D, a single 3-vector is treated as :math:`\mathbf{e}_x`.
+                  - In 3D, a single 3-vector is treated as :math:`\mathbf{e}_y` while :math:`\mathbf{e}_x` defaults from node coordinates.
+
+                  If omitted, :math:`\mathbf{e}_x = \Delta \mathbf{x}/L` and :math:`\mathbf{e}_y = (0,1,0)`.
+   :type orient: tuple or list of |float|
+   :param pDelta: P-Δ moment distribution ratios. In 3D supply four values; in 2D supply two values.
+   :type pDelta: tuple or list of |float|
+   :param shearDist: shear distance from node *i*. In 3D supply two values; in 2D supply one value
+                     (the second defaults internally to ``0.5`` if not provided).
+   :type shearDist: tuple or list of |float|
+   :param doRayleigh: include Rayleigh damping contributions
+   :type doRayleigh: |bool|
+   :param mass: lumped element mass
+   :type mass: |float|
+
 
 Formulation
 ===========
