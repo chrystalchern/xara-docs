@@ -1,6 +1,6 @@
-.. _Solvers:
+.. _Numerics:
 
-Strategy
+Numerics
 ^^^^^^^^
 
 .. toctree::
