@@ -21,7 +21,8 @@ Other
    .. toctree::
       :maxdepth: 1
 
-      TwoNodeLink
+      BasicLink
+      FrameLink
 
 #. Misc.
 
