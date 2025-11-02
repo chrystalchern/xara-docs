@@ -6,10 +6,9 @@ FrameLink
 Synopsis
 ========
 
-``TwoNodeLinkSection`` connects two nodes and enforces a **section-level** constitutive law
-through a single ``SectionForceDeformation`` object. The element works in 1D, 2D, and 3D,
-supports optional Rayleigh damping, translational lumped mass, and geometric
-(:math:`P\!-\!\Delta`) effects.
+A ``FrameLink`` connects two nodes using a **section-level** constitutive law
+through a single ``SectionForceDeformation``. The element works in 1D, 2D, and 3D, and 
+supports optional geometric (:math:`P\!-\!\Delta`) effects.
 
 .. py:method:: Model.element("FrameLink", tag, nodes, section, *, orient=None, pDelta=None, shearDist=None, doRayleigh=False, mass=0.0)
    :no-index:
