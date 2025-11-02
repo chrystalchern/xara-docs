@@ -84,16 +84,17 @@ Plastic response is distinguished by the yield function :math:`f`
 
 .. math::
 
-   f (\boldsymbol{T},q) \triangleq \| \operatorname{dev} \boldsymbol{T} \| - \sqrt{\tfrac{2}{3}} \, q^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}})
+   f (\boldsymbol{T},h) \triangleq \| \operatorname{dev} \boldsymbol{T} \| - \sqrt{\tfrac{2}{3}} \, h^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}})
 
-where :math:`\bar{\epsilon}_{\mathrm{p}}` is the scalar *equivalent plastic tensile strain*, and :math:`q^{\mathrm{iso}}` is a scalar function that defines the *saturation isotropic hardening* given by:
+where :math:`\bar{\epsilon}_{\mathrm{p}}` is the scalar *equivalent plastic tensile strain*, and :math:`h^{\mathrm{iso}}` is a scalar function that defines the *saturation isotropic hardening* given by:
 
 .. math::
    
-   q^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}}) = H_{\mathrm{iso}} \bar{\epsilon}_{\mathrm{p}} + F_{s}  + (F_y - F_{s}) \exp \left(-H_{\mathrm{s}} \bar{\epsilon}_{\mathrm{p}} \right)
+   h^{\mathrm{iso}}(\bar{\epsilon}_{\mathrm{p}}) = H_{\mathrm{iso}} \bar{\epsilon}_{\mathrm{p}} + F_{s}  + (F_y - F_{s}) \exp \left(-H_{\mathrm{s}} \bar{\epsilon}_{\mathrm{p}} \right)
 
 .. note:: 
    This is identical to the hardening function for :ref:`DruckerPrager`, when :math:`F_y \equiv F_0`.
+
 This hardening rule is equivalent to the model implemented by FEAP. 
 The flow rules are
 
