@@ -222,6 +222,7 @@ if "book" in html_theme:
         "article_header_start": ["toggle-primary-sidebar.html", "breadcrumbs"]
     })
 
+g = "https://gallery.stairlab.io"
 html_context = {
     "root_doc": root_doc,
     "description": description,
@@ -230,7 +231,16 @@ html_context = {
 #   "doc_path": "<path-from-root-to-your-docs>",
 
     # HOME
-    "examples": [],
+    "examples": [
+            {"title": "Basics",      "link": f"{g}/examples/plane-0002/",     "image": "../_static/images/gallery/Example6.png", "description": "Learn the basics of drawing models."},
+            {"title": "Frames",      "link": f"{g}/examples/portal-moments/",     "image": "../_static/images/gallery/moments.png", "description": "Render structural models with extruded sections."},
+#           {"title": "Sections",    "link": f"{g}/examples/framesections/",     "image": "../_static/images/gallery/Torsion.png", "description": "Detailed analysis of structural cross sections."},
+            {"title": "Detailing",   "link": f"{g}/examples/example7/",     "image": "../_static/images/gallery/ShellFrame.png", "description": "."},
+            {"title": "Finite Rotations",  "link": f"{g}/examples/framecircle/",  "image": "../_static/images/gallery/ShellCircle-576x324.webp", "description": "Render finite deformations in constrained members like Cosserat rods and shells."},
+            {"title": "Versatility",     "link": f"{g}/examples/cablestayed/",  "image": "../_static/images/gallery/CableStayed02-576x324.webp", "description": "Import models from commercial platforms like ABAQUS."},
+#           {"title": "Motions",     "link": f"{g}/examples/framehelix/",  "image": "../_static/images/gallery/sign-light-2800x2558.webp", "description": "Coming soon."},
+#           {"title": "Interoperability", "link": f"{g}/examples/cablestayed/",  "image": "../_static/images/gallery/CableStayed02-576x324.webp", "description": "Coming soon."},
+    ],
     "features": [
         {"title": "Fast", "body": "Core components have been refactored to leverage modern C++ features, which has furnished substantial performance improvements over the alternative serial OpenSees interpreters."},
         {"title": "Free", "body": "All source code contributed to xara is licensed under a <em>pure</em> BSD."},

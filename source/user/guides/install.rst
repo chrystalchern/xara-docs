@@ -19,4 +19,4 @@ Installing with ``pip`` is supported on the following platforms:
 - Windows 
 
 On older Macs with Intel processors, it is best to install from source. 
-Please refer to the :ref:`compile <user/guides/compile>` guide for detailed instructions.
+Please refer to the :ref:`compile <user-guides-compile>` guide for detailed instructions.

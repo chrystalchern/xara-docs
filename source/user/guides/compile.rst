@@ -1,5 +1,19 @@
+.. _user-guides-compile:
+
 Compile
 =======
+
+.. note::
+   
+   The procedure outlined in this guide will create a temporary compile configuration,
+   and clean up all intermediate files upon completion. This is useful for installing *xara* intro
+   a Python environment or making changes to the Python source code.
+   
+   If you wish to set up a persistent development environment to write C++ code, 
+   please refer to :ref:`develop <user-guides-develop>`.
+
+
+
 
 To compile Xara from source, follow these steps:
 

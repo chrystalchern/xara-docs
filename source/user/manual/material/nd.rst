@@ -48,6 +48,8 @@ The following materials are available:
    ndMaterials/ElasticIsotropic
    ndMaterials/ElasticOrthotropic
    plastic/J2Plasticity
+   plastic/GeneralizedJ2
+   plastic/UVC
    plastic/DruckerPrager
    ndMaterials/ManzariDafalias
 
