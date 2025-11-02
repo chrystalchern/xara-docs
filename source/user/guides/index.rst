@@ -9,6 +9,7 @@ For a great guide to Tcl programming, see `this <https://antirez.com/articoli/tc
 
    install
    compile
+   develop
    conventions
    signatures
    references
