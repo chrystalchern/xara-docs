@@ -53,7 +53,7 @@ The following steps only need to be performed once to set up the development env
 
          .. code-block:: bash
 
-            conda install -c conda-forge cmake ninja ifx_win-64 mkl-devel conda-forge/label/mkl_rc::blas
+            conda install -c conda-forge cmake ninja ifx_win-64 mkl-devel conda-forge/label/mkl_rc::blas tk
 
 
 4. Create a *persistent* build tree for C/C++ development:
@@ -82,9 +82,10 @@ The following steps only need to be performed once to set up the development env
    c. When ``libOpenSeesRT.so`` is built in a persistent tree, the ``xara``
       package needs to be told where to find it. This is done by setting
       an environment variable with the name ``OPENSEESRT_LIB`` to point to
-      the location of ``libOpenSeesRT.so`` in the build tree.
-      You may want to add a line like the following to your shell
-      startup script (e.g., ``.bashrc``):
+      the location of ``libOpenSeesRT.so`` (on Windows the equivalent file is ``libOpenSeesRT.dll``) in the build tree.
+      To do this, run the following command from your shell, replacing
+      ``/path/to/libOpenSeesRT.so`` with the actual path to the file and 
+      ``my_environment`` with the name of your Anaconda environment:
 
       .. code-block:: bash
 

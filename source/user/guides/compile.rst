@@ -37,7 +37,7 @@ To compile Xara from source, follow these steps:
 
          .. code-block:: bash
 
-            conda install -c conda-forge cmake ninja ifx_win-64 mkl-devel conda-forge/label/mkl_rc::blas
+            conda install -c conda-forge cmake ninja ifx_win-64 mkl-devel conda-forge/label/mkl_rc::blas tk
          
          .. note::
             
