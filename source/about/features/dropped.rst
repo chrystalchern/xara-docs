@@ -1,3 +1,5 @@
+.. _about-features-dropped:
+
 Dropped Capabilities
 ^^^^^^^^^^^^^^^^^^^^
 
