@@ -17,7 +17,7 @@ Compile
 
 To compile Xara from source, follow these steps:
 
-1. Download the source repository to your computer by running:
+1. Download the `source code <https://github.com/peer-open-source/xara>`__ to your computer by running:
 
    .. code-block:: bash
       
