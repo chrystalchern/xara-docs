@@ -24,6 +24,7 @@ Allow: /_images/w8x28.png
 Allow: /_images/wrench.png
 
 Allow: /about/features/
+Allow: /user/guides/install.html
 Allow: /user/manual/model/model_class.html
 Allow: /user/manual/model/nodes/node.html
 Allow: /user/manual/model/element.html
