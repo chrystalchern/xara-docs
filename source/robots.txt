@@ -43,7 +43,7 @@ Allow: /user/manual/material/uniaxial/Plastic/index.html
 Allow: /user/manual/material/uniaxial/Steel02/index.html
 
 Allow: /user/manual/model/geomTransf/Corotational.html
-Allow: /user/manual/model/geomTransf/Corotational02.html
+Allow: /user/manual/model/geomTransf/frame/Corotational02.html
 Allow: /user/manual/model/pattern/Plain/sp.html
 Allow: /user/manual/parameter/index.html
 Allow: /user/manual/section.html
@@ -59,11 +59,11 @@ Allow: /user/manual/output/nodeEigenvector.html
 Allow: /user/manual/output/nodeRotation.html
 Allow: /user/manual/meshing/index.html
 Allow: /user/manual/analysis/index.html
-Allow: /user/manual/analysis/system.html
-Allow: /user/manual/analysis/system/BandGeneral.html
-Allow: /user/manual/analysis/system/Umfpack.html
-Allow: /user/manual/analysis/system/SparseSYM.html
-Allow: /user/manual/analysis/analysis.html
+Allow: /user/manual/numerics/system/index.html
+Allow: /user/manual/numerics/system/BandGeneral.html
+Allow: /user/manual/numerics/system/Umfpack.html
+Allow: /user/manual/numerics/system/SparseSYM.html
+#Allow: /user/manual/analysis/analysis.html
 Allow: /user/manual/analysis/integrator.html
 Allow: /user/manual/analysis/integrator/ArcLength.html
 Allow: /user/manual/analysis/integrator/MinimumUnbalancedDisplacementNorm.html
