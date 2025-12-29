@@ -31,7 +31,7 @@ To compile Xara from source, follow these steps:
 
          .. code-block:: bash
             
-            conda install -c conda-forge fortran-compiler cxx-compiler c-compiler openblas openmpi
+            conda install -c conda-forge fortran-compiler cxx-compiler c-compiler openblas openmpi cmake ninja
 
       .. tab:: Windows
 
