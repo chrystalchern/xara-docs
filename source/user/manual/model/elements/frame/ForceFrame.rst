@@ -32,7 +32,27 @@ Two-node force formulation for 3D frames. [1]_ [2]_.
 
 This formulation supports higher order strain measures and shear deformations.
 
-The valid :ref:`eleResponse` queries to this element are ``"force"``.
+The valid :ref:`eleResponse` queries to this element are:
+
+-  ``"force"``.
+
+- ``"section"``: Make a query to a specific section along the element:
+
+  .. code-block:: python
+
+     model.eleResponse(element, "section", section, *section-args)
+
+Examples 
+--------
+
+Using the :ref:`ShearFiber` section, querries can 
+be made to the material at a specific fiber location within the section as follows:
+
+.. code-block:: python
+
+   model.eleResponse(element, "section", section, "fiber", fiber, "stress")
+
+where ``section`` is the section number along the element (1 to number of sections defined by the integration rule).
 
 References
 ----------
