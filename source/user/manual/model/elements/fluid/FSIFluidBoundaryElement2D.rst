@@ -3,8 +3,16 @@
 FSIFluidBoundaryElement2D
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: figures/FSI_FE/FSIFluidBoundaryElement2D_geometry.png
+	:align: center
+	:figclass: align-center
+	:width: 50%
+
+	**Figure 1. Nodes, Gauss points and parent coordinate system**
+
 Description
 ###########
+
 The FSIFluidBoundaryElement2D element is a 2-node linear acoustic boundary element object with the following features:
 
 #. It is based on the Eulerian pressure formulation ( [1]_  [2]_ , [3]_ ) for (Class I) fluid-structure interaction problems.
@@ -30,12 +38,6 @@ Input Parameters
    Optional:
    $thickness, float, the thickness in 2D problems (default 1.0).
 
-.. figure:: figures/FSI_FE/FSIFluidBoundaryElement2D_geometry.png
-	:align: center
-	:figclass: align-center
-	:width: 50%
-
-	**Figure 1. Nodes, Gauss points and parent coordinate system**
 
 Theory
 ######
