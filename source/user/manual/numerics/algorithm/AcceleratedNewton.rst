@@ -1,16 +1,16 @@
 .. _KrylovNewton:
 
-Accelerated Newton
-^^^^^^^^^^^^^^^^^^
+Quasi Newton
+^^^^^^^^^^^^
 
-Accelerated Newton algorithms are designed to mitigate the slow convergence of the Modified Newton method and to accommodate complications such as tangent inconsistency, all while imposing minimal additional computational overhead.
+Quasi-Newton algorithms are designed to mitigate the slow convergence of the Modified Newton method and to accommodate complications such as tangent inconsistency, all while imposing minimal additional computational overhead.
 
 
 .. tabs::
 
    .. tab:: Python
       
-      .. py:method:: Model.algorithm("AcceleratedNewton", iterate='current', increment='current', maxDim=3, accelerator='raphson')
+      .. py:method:: Model.algorithm("QuasiNewton", iterate='current', increment='current', maxDim=3, accelerator='raphson')
          :no-index:
          
          :param iterate: tangent to iterate on, options are ``current``, ``initial``, ``None``. default is ``current``. 
