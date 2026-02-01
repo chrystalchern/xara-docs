@@ -26,7 +26,7 @@ algorithm
    Newton
    NewtonLineSearch
    ModifiedNewton
-   AcceleratedNewton
+   QuasiNewton
    Broyden
    ExpressNewton
 
