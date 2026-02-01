@@ -3,7 +3,7 @@
 constrain
 ^^^^^^^^^
 
-The ``constrain`` command imposes a multi-point constraint between two nodes. 
+The ``constrain`` command imposes a multi-point constraint between two nodes.
 When no rotation is specified, it behaves like :ref:`equalDOF`, constraining the degrees-of-freedom at the constrained node to equal those at the retained node.
 When a rotation vector is provided, the constraint enforces a rotated relationship between the nodes through a rotation matrix.
 
@@ -12,19 +12,19 @@ When a rotation vector is provided, the constraint enforces a rotated relationsh
    .. tab:: Python
 
       .. py:method:: Model.constrain(rNode, cNode, rotate=None)
-         
+
          Impose a multi-point constraint between a retained node and a constrained node.
-   
+
          :param int|tuple rNode: integer tag identifying the retained node, or tuple (rNode, cNode) for both nodes
          :param int cNode: integer tag identifying the constrained node (required if rNode is not a tuple)
          :param list rotate: optional rotation vector [v1, v2, v3] representing axis-angle in radians (see :ref:`Rotation Vector <constrain-rotation-vector>` below). Only available for 3D problems (ndm=3, ndf=6).
          :return: None
 
-   .. tab:: Tcl 
+   .. tab:: Tcl
 
       .. function:: constrain $rNodeTag $cNodeTag <-rotate {v1 v2 v3}>
 
-      .. csv-table:: 
+      .. csv-table::
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
@@ -60,7 +60,7 @@ The rotation vector uses the **axis-angle representation**: the normalized direc
 
 In 3D models, the components :math:`[v_1, v_2, v_3]` correspond to rotations about the global X, Y, and Z axes respectively:
 - :math:`[\theta, 0, 0]` rotates about the X-axis
-- :math:`[0, \theta, 0]` rotates about the Y-axis  
+- :math:`[0, \theta, 0]` rotates about the Y-axis
 - :math:`[0, 0, \theta]` rotates about the Z-axis
 
 The coordinate system and degrees-of-freedom conventions are documented in :ref:`Conventions <conventions>`.
@@ -214,11 +214,11 @@ This example demonstrates using ``constrain`` to model a frame with a skewed sup
 
    # Results
    model.reactions()
-   
+
    # Reaction at fixed support (node 1)
    Fz_jt1 = model.nodeReaction(1, 3) / kip
    print(f"Reaction at node 1 (Z-direction): {Fz_jt1:.3f} kip")
-   
+
    # Reaction at skewed support (node 5) - transform to rotated coordinate system
    R4 = model.nodeReaction(5)[:3]  # Get translational reactions (X, Y, Z)
    r4 = R.T @ R4 / kip  # Transform to rotated coordinate system

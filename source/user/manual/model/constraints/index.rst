@@ -10,6 +10,7 @@ In structural analysis MP_Constraints are used to enforce rigid-diaphragm constr
 .. toctree::
    :maxdepth: 1
 
+   constrain
    equalDOF
    constrain
    diaphragm
