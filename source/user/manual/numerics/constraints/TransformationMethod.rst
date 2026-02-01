@@ -1,7 +1,7 @@
 Transformation
 ^^^^^^^^^^^^^^
 
-A ``Transformation`` constraint handler enforces the constraints in a model by using the transformation method, also known as *static condensation*. 
+A ``Transformation`` constraint handler enforces the constraints in a model by using the transformation method. 
 
 .. tabs::
 
@@ -21,12 +21,13 @@ The matrix equation is not manipulated to enforce them, rather the trial displac
 .. note::
 
    Great care must be taken when multiple constraints are being enforced as the transformation method does not follow constraints:
+
    * If a node is fixed, constrain it with the :ref:`fix` command and not :ref:`equalDOF` or any other type of constraint.
    * If multiple nodes are constrained, make sure that the retained node is not constrained in any other constraint.
 
 
-Example
--------
+Examples
+--------
 
 The following example shows how to construct a transformation constraint handler
 
