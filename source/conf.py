@@ -223,6 +223,7 @@ if "book" in html_theme:
     })
 
 g = "https://gallery.stairlab.io"
+html_favicon = './_static/images/favicon.ico'
 html_context = {
     "root_doc": root_doc,
     "description": description,
