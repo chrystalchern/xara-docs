@@ -57,22 +57,37 @@ The valid :ref:`eleResponse` queries are
 Formulation
 -----------
 
+The section relates axial force, shear forces, torsion, and bending moments to the corresponding deformations using linear elastic stiffness.
+For 3D, the section stiffness includes axial (:math:`EA`), shear (:math:`GA`), torsional (:math:`GJ`), and flexural (:math:`EI_y`, :math:`EI_z`) contributions.
+The local axes and sign conventions follow the :ref:`Frame <Frame>` cross-section documentation.
+
 
 Examples
 --------
 
-The following is an excerpt from a Python script that creates a 3D model with an elastic frame section:
+The following creates a 3D elastic frame section:
 
-.. code-block:: Python
+.. tabs::
 
-   model.section("ElasticFrame", 1,
-                 E=29e3*ksi,
-                 G=11.2e3*ksi,
-                 A=A,
-                 Iy=Iy,
-                 Iz=Iz,
-                 J=J
-   )
+   .. tab:: Python
+
+      .. code-block:: Python
+
+         model.section("ElasticFrame", 1,
+                       E=29e3*ksi,  # Traditional steel
+                       G=11.2e3*ksi,
+                       A=A,
+                       Iy=Iy,
+                       Iz=Iz,
+                       J=J
+         )
+
+   .. tab:: Tcl
+
+      .. code-block:: tcl
+
+         # E, G in ksi; A, Iy, Iz, J from variables
+         section ElasticFrame 1 -E 29000 -G 11200 -A $A -Iy $Iy -Iz $Iz -J $J
 
 
 The following syntax is supported in 2D models for backwards compatibility:
@@ -85,7 +100,9 @@ The following syntax is supported in 2D models for backwards compatibility:
          
          model.section("ElasticFrame", 1, E, A, I)
 
+   .. tab:: Tcl
 
-References
-----------
+      .. code-block:: tcl
+
+         section ElasticFrame 1 $E $A $I
 

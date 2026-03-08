@@ -1,7 +1,11 @@
+.. _units:
+
 Units
 ^^^^^
 
-The *xara.units* submodule contains predefined constants that can help with keeping track of units.
+xara does not assume or enforce any unit system.
+All model inputs (coordinates, mass, forces, stiffness, etc.) are numeric values; the user must choose a consistent unit system and apply it throughout the model.
+The *xara.units* submodule contains predefined constants that can help with keeping track of units, ensuring consistency.
 
 Systems
 =======

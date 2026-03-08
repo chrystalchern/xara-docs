@@ -105,5 +105,4 @@ The following examples demonstrate the command to create a Linear solution algor
 
          model.algorithm('Newton')
 
-
 Code Developed by: |fmk|

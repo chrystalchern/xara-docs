@@ -4,6 +4,8 @@ fix
 ^^^
 
 This command is used to construct a number of single-point homogeneous boundary constraints.
+Each constrained degree of freedom is assigned a fixed boolean integer value (0 or 1).
+Single-point constraints are enforced during the solution and reduce the number of free (unknown) degrees of freedom.
 
 .. tabs::
 
@@ -39,7 +41,15 @@ This command is used to construct a number of single-point homogeneous boundary 
          | 1 constrained (or fixed)"
 
 
-Example 
+Theory
+------
+
+Single-point constraints (SP_Constraints) set the value of selected degrees of freedom at a node.
+For ``fix``, the value is homogeneous (zero): the specified DOFs are constrained to zero displacement (and zero rotation for rotational DOFs).
+The constraint flags are a tuple of length :py:attr:`Model.ndf`: ``1`` means the DOF is fixed, ``0`` means it is free.
+The resulting constrained equations are eliminated or transformed depending on the :ref:`constraint handler <ConstraintHandler>` used in the analysis.
+
+Example
 -------
 
 The following examples demonstrate the commands in a script to add homogeneous boundary conditions

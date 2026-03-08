@@ -38,10 +38,11 @@ The following pattern types are available:
 .. toctree::
    :maxdepth: 2
 
-   pattern/plainPattern
-   pattern/uniformExcitationPattern
-   pattern/multiSupportPattern
-   pattern/DRM
-   pattern/H5DRM
-   timeSeries
+   plainPattern
+   uniformExcitationPattern
+   multiSupportPattern
+   DRM
+   H5DRM
+
+For time series types (Constant, Linear, Path, etc.), see :ref:`timeSeries <timeSeries>` in the Modeling section.
 
