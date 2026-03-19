@@ -21,13 +21,17 @@ nodeDisp
       .. function:: nodeDisp $tag <$dof>
 
 
-      .. csv-table:: 
+      .. csv-table::
          :header: "Argument", "Type", "Description"
          :widths: 10, 10, 40
 
-         tag, |integer|, tag identifying node whose displacements are sought
-         dof, |integer|, optional: specific dof at the node (1 through ndf)
+         $tag, |integer|, tag identifying node whose displacements are sought
+         $dof, |integer|, optional: specific dof at the node (1 through ndf)
 
+
+After an analysis step, the displacement at each :ref:`node <node>` is updated in the domain.
+``nodeDisp`` returns the current displacement (and rotation, when applicable) for the specified node and optional DOF.
+Returned values are in the length and angle units of the user's chosen system (see :ref:`units`).
 
 The components are ordered as follows for various combinations of dimension (:py:attr:`Model.ndm`) and degrees of freedom (:py:attr:`Model.ndf`):
 
@@ -58,6 +62,5 @@ The following example is used to set the variable ``disp1`` to the nodal displac
    .. code-block:: python
 
       u1 = model.nodeDisp(tag,1)
-
 
 Code developed by: |fmk|
