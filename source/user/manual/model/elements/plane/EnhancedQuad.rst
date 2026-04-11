@@ -75,6 +75,15 @@ For linear-elastic response, the formulation is equivalent to a Hellinger-Reissn
     \end{array}\right]
 
 
+Examples
+--------
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/plane-0002/main
+
+
 References 
 ----------
 
