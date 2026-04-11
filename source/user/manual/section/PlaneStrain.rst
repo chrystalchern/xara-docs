@@ -28,6 +28,13 @@ The plane strain condition is characterized by the constraints:
 Example
 =======
 
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/plane-0002/main
+
+
 .. tabs::
 
    .. tab:: Python
