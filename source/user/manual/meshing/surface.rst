@@ -31,8 +31,13 @@ Examples
 --------
 
 
-The following snippet is part of `this <https://gallery.stairlab.io/examples/planeblock/>`__ 
-example on the STAIRLab gallery. It creates a :math:`8 \times 4` mesh of linear (``order = 1``)
+.. ref-gallery::
+    :tooltip:
+
+    gallery/plane-0002/main
+
+
+The following snippet creates a :math:`8 \times 4` mesh of linear (``order = 1``)
 quadrilateral elements.
 
 .. code-block:: python
