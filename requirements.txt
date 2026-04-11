@@ -1,7 +1,7 @@
 Sphinx>=8.0
 opensees
 xara
-sphinx-book-theme
+sphinx-book-theme==1.1.4
 sphinx-tabs
 sphinx-sitemap<2.7.0
 sphinx-copybutton
