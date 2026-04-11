@@ -89,16 +89,27 @@ rst_prolog = """
 extensions = [
 #   'toctree_filter',
 #   'sphinx_rtd_theme',
+    # "myst_parser",
+    "myst_nb",
+    "xara_sphinx_gallery",
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
     "sphinx.ext.autosummary",
     'sphinxcontrib.bibtex',
     'sphinx_sitemap',
-    "myst_parser"
 ]
+
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "myst-nb",
+    ".myst": "myst-nb",
+}
+
 autosummary_generate = False
 autodoc_docstring_signature = True
+
+nb_execution_mode = "off"
 myst_enable_extensions = [
     "dollarmath",
     "attrs_inline"
@@ -271,3 +282,24 @@ mathjax3_config = {
       "inlineMath": [['$', '$'], ['\\(', '\\)']]
   }
 }
+
+
+
+from pathlib import Path
+from xara_sphinx_gallery import GalleryConfig, generate_gallery
+
+generate_gallery(
+    GalleryConfig(
+    examples_dirs="../examples",
+    gallery_dirs="gallery",
+    root_dir=Path(__file__).parent,
+    notebook_thumbnail_strategy="code",
+    thumbnail_strategy="last",
+    exclude_assets=[
+        # "meta.yml",
+        "*.tcl",
+        "GALLERY_HEADER.rst"
+    ]
+    # base_gallery=True,
+    )
+)
