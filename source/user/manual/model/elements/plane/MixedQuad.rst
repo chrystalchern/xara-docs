@@ -43,7 +43,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
    This element is ``PlainStrain`` only.
 
 
-.. figure:: Q9.svg
+.. figure:: Q4.svg
    :align: center
    :figclass: align-center
 
@@ -57,6 +57,7 @@ The valid :ref:`eleResponse` queries to this element are
 * ``"stresses"`` and 
 * ``"material $matNum matArg1 matArg2 ..."`` Where $matNum refers to the material object at the integration point corresponding to the node numbers in the isoparametric domain.
 
+
 Theory 
 ------
 
@@ -65,6 +66,16 @@ With four nodes, the element is equivalent to the *Q1/P0* formulation (Simo, Tay
 This formulation is suitable for nearly-incompressible response, but is not suitable for bending dominated problems.
 
 See also FEAP `elmt11`
+
+
+Examples
+--------
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/plane-0002/main
+
 
 Code Developed by: **Edward Love, Sandia National Laboratories**
 
