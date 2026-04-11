@@ -86,6 +86,17 @@ When used in a :ref:`PlaneStress` section, the constitutive relation becomes:
    2 \varepsilon_{12}
    \end{array}\right]
 
+
+Examples
+--------
+
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/plane-0002/main
+
+
 References
 ----------
 
