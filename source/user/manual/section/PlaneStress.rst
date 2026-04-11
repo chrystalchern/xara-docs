@@ -19,3 +19,15 @@ PlaneStress
 
 
 A PlaneStress section imposes a plane stress condition on the response of it's material.
+
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/plane-0002/main
+
