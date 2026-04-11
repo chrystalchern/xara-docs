@@ -65,6 +65,13 @@ The local axes and sign conventions follow the :ref:`Frame <Frame>` cross-sectio
 Examples
 --------
 
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/node-0005/main
+
+
 The following creates a 3D elastic frame section:
 
 .. tabs::
