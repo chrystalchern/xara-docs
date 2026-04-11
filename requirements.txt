@@ -1,6 +1,4 @@
 Sphinx>=8.0
-#sphinx_rtd_theme>=3.0.0
-#pydata-sphinx-theme
 opensees
 xara
 sphinx-book-theme
@@ -10,4 +8,5 @@ sphinx-copybutton
 sphinxcontrib-bibtex
 sphinxcontrib-googleanalytics
 myst-parser
-
+myst-nb
+xara-sphinx-gallery
