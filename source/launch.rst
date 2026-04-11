@@ -54,6 +54,7 @@ Documentation of these methods is organized as follows:
    user/manual/numerics/index
    user/manual/modules/index
    Examples <https://gallery.stairlab.io/examples/>
+   gallery/index
 
 
 
