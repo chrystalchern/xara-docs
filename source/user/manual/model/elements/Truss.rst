@@ -1,9 +1,12 @@
+.. _Truss:
+
 Truss
 ^^^^^
 
 .. tabs::
 
    .. tab:: Python
+
       .. py:method:: Model.element("Truss", tag, nodes, section, density=0)
          :no-index:
 
