@@ -7,8 +7,6 @@ The Newton-Raphson method is the most widely used and most robust method for sol
 
 
 .. tabs::
-   .. tab:: xara 
-      .. autoclass:: xara.algorithm.Newton
 
    .. tab:: Python
 
