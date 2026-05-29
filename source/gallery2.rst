@@ -13,7 +13,7 @@ General
 
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
    examples/general/model-0001
 
@@ -73,6 +73,13 @@ Plane Elasticity
    :glob:
 
    examples/plane/index
+
+
+.. ref-gallery::
+    :tooltip:
+
+    examples/plane/plane-0002
+    examples/plane/plane-2001
 
 
 Nonlinear Geometry

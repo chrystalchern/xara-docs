@@ -51,7 +51,7 @@ Galleries = [
         "description": "Plane examples.",
         "examples": [
             "plane-0002/main.ipynb",
-            # "frame-1010/main.ipynb",
+            "plane-2001/main.ipynb",
         ],
     },
     {
