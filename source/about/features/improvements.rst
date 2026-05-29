@@ -46,7 +46,7 @@ Unlike other Python packages which merely wrap the broken OpenSeesPy package, *x
 - Minimized use of ``exit()`` syscalls.
 
 
-Quality of Life
+Diagnostics
 ---------------
 
 *xara* features several small "quality of life" improvements. These include
