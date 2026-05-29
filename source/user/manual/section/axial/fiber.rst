@@ -9,6 +9,7 @@ Fiber (*AxialFiber*)
    .. tab:: Python
     
       .. py:method:: Model.fiber((y, z), A, tag, section)
+         :noindex:
 
          :param y: :math:`y`-coordinate of the fiber
          :type y: float
