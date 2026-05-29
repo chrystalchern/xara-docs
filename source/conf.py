@@ -276,7 +276,7 @@ else:
 
 from gallery import Galleries, OutputDocs, OutputRoot, build
 
-build(OutputRoot)  # regenerate the source tree
+# build(OutputRoot)  # regenerate the source tree
 
 
 Here = Path(__file__).parent
@@ -299,9 +299,6 @@ generate_gallery(
         thumbnail_strategy="first",
         target_prefix="",
         remove_thumbnail_after_build=False,
-        # exclude_assets=[
-        #     "*",
-        # ],
         base_gallery=True,
     )
 )
