@@ -196,17 +196,17 @@ def process_example(
         shutil.copy2(src_example_dir / "img" / old_name, 
                      gallery_img_dir / new_name)
 
-    # --- changed: read/write through nbformat instead of raw json ---
+    # changed: read/write through nbformat instead of raw json
     nb = nbformat.read(src_nb, as_version=4)
     # add download button
     download_md = (
         f"```{{button-link}} {example_key}.ipynb\n"
         f":color: primary\n"
         f":outline:\n"
-        f"{{octicon}}`download` Download notebook\n"
+        f"{{octicon}}`download` Download\n"
         f"```"
     )
-    nb.cells.insert(0, nbformat.v4.new_markdown_cell(download_md))
+    nb.cells.insert(1, nbformat.v4.new_markdown_cell(download_md))
     # process images
     for cell in nb.cells:
         if cell.cell_type in ("markdown", "code"):
