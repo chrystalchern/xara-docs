@@ -1,6 +1,8 @@
 Surface
 ^^^^^^^
 
+.. currentmodule:: xara
+
 .. py:method:: Model.surface(split, element, args, points=None, name=None, **kwds)
 
         Create a surface mesh of elements in the current model.
@@ -61,3 +63,4 @@ For a more complex example, visit the `wrench <https://gallery.stairlab.io/examp
 .. figure:: figures/wrench.png
    :width: 50%
    :align: center
+
