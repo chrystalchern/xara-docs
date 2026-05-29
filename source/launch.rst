@@ -6,6 +6,10 @@ Overview
 The design of the interface was guided by the demands of the |BRACE2| project, for which a suitably *reliable* and *performant* solution was not available.
 
 
+.. py:module:: xara
+   :synopsis: A Python interface to the OpenSees finite element framework.
+
+
 .. toctree::
    :hidden:
 
@@ -54,8 +58,9 @@ Documentation of these methods is organized as follows:
    user/manual/numerics/index
    user/manual/modules/index
    Examples <https://gallery.stairlab.io/examples/>
+   gallery2
+.. 
    gallery/index
-
 
 
 .. toctree::
