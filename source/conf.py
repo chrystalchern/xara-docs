@@ -2,7 +2,17 @@
 import os
 import sys
 from pathlib import Path
+XARA_GALLERY = False
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+suppress_warnings = [
+    'toc.not_included',
+    'ref.footnote',
+    'ref.citation',
+    'toc.not_readable',
+    'misc.highlighting_failure'
+]
 #
 # -- Project information -----------------------------------------------------
 #
@@ -17,70 +27,7 @@ html_short_title = "xara"
 root_doc = "launch" #"user/index"
 html_additional_pages = {'index': 'home.html'}
 html_extra_path = ["robots.txt"]
-
-rst_prolog = """
-.. |floatList| replace:: *list float*
-.. |integerList| replace:: *list integer*
-.. |integerTuple| replace:: *tuple integer*
-.. |intList| replace:: *list integer*
-.. |listFloat| replace:: *list float*
-.. |listInteger| replace:: *list integer*
-.. |listInt| replace:: *list integer*
-.. |floatTuple| replace:: *tuple of float*
-.. |list| replace:: *list*
-.. |kwds| replace:: `kwds <kwds>`__
-.. |bool| replace:: *bool*
-.. |string| replace:: *string*
-.. |str|  replace:: *str*
-.. |float| replace:: *float*
-.. |integer| replace:: *integer*
-.. |OPS| replace:: xara
-.. |BRACE2| replace:: `BRACE2`_
-.. _BRACE2: https://structures.live
-.. only:: html
-
-    .. |xara| raw:: html
-
-       <span style="font-family: 'Inconsolata', sans-serif;">𝜒ara</span>
-
-.. |OpenSeesRT| replace:: `OpenSeesRT`_
-.. _OpenSeesRT: https://stairlab.berkeley.edu/software/opensees/
-.. |OpenSees| replace:: OpenSees
-.. |OPS link| replace:: `OpenSees app`_
-.. _OpenSees app: https://stairlab.berkeley.edu/software/OpenSeesRT/
-.. |githubLink| replace:: `OpenSees Github link`_
-.. _OpenSees Github link: https://github.com/peer-open-source/xara
-.. |messageBoard| replace:: `OpenSees Message Board`_
-.. _OpenSees Message Board: https://github.com/claudioperez/OpenSeesRT/discussions
-.. |glf| replace:: `Gregory L. Fenves`_
-.. _Gregory L. Fenves: http://www.caee.utexas.edu/faculty/directory/fenves
-.. only:: html
-
-   .. |mhs| raw:: html
-
-      <a href="https://web.engr.oregonstate.edu/~mhscott/" rel="nofollow">Michael H. Scott</a>
-..
-    .. only:: not html
-
-       .. |mhs| replace:: `Michael H. Scott`_
-       .. _Michael H. Scott: https://cce.oregonstate.edu/scott
-
-.. |fmk| replace:: *fmk*
-.. |fcf| replace:: `fcf`_
-.. _fcf: https://fedeas.net
-.. |rms| replace:: *Remo Magalhaes de Souza*
-.. |cmp| replace:: `Claudio M. Perez`_
-.. _Claudio M. Perez: https://stairlab.berkeley.edu/people/claudioperez
-.. |pedro| replace:: `Pedro Arduino`_
-.. _Pedro Arduino: https://www.ce.washington.edu/facultyfinder/pedro-arduino
-.. |peter| replace:: `Peter Mackenzie-Helnwein`_
-.. _Peter Mackenzie-Helnwein: https://www.ce.washington.edu/facultyfinder/peter-mackenzie-helnwein
-.. |chris| replace:: `Chris McGann`_
-.. _Chris McGann: https://www.canterbury.ac.nz/engineering/contact-us/people/chris-mcgann.html
-.. |andreas| replace:: *Andreas Schellenberg*
-.. |csasj| replace:: *csasj*
-
-"""
+from _setup.prolog import rst_prolog
 
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -88,17 +35,26 @@ rst_prolog = """
 # ones.
 extensions = [
 #   'toctree_filter',
-#   'sphinx_rtd_theme',
     # "myst_parser",
     "myst_nb",
-    "xara_sphinx_gallery",
+    "xara_sphinx_gallery" if XARA_GALLERY else "myst_sphinx_gallery",
     'sphinxcontrib.googleanalytics',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
-    "sphinx.ext.autosummary",
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinxcontrib.bibtex',
     'sphinx_sitemap',
+    # "sphinx_codeautolink",
 ]
+
+codeautolink_warn_on_failed_resolve = True
+codeautolink_warn_on_missing_inventory = True
+codeautolink_warn_on_no_backreference = True
+codeautolink_warn_on_default_parse_fail = True
+codeautolink_inventory_map = {
+    # "opensees.openseespy": "xara"
+}
 
 source_suffix = {
     ".rst": "restructuredtext",
@@ -112,7 +68,8 @@ autodoc_docstring_signature = True
 nb_execution_mode = "off"
 myst_enable_extensions = [
     "dollarmath",
-    "attrs_inline"
+    "attrs_inline",
+    "html_image",
 ]
 googleanalytics_id = "G-35GQBT0DZP"
 
@@ -146,6 +103,7 @@ exclude_patterns = [
     "user/manual/model/elements/other/E_SFI.rst",
     "user/manual/model/elements/other/E_SFI_MVLEM_3D.rst",
     "user/manual/model/elements/grainfluid/7045-BbarBrickUP.rst",
+    "user/manual/model/elements/grainfluid/7045-BbarBrickUP.md",
     "user/manual/model/elements/grainfluid/7046-BbarQuadUP.rst",
     "user/manual/model/elements/grainfluid/7066-BrickUP.rst",
     "user/manual/model/elements/grainfluid/7264-FourNodeQuadUP.rst",
@@ -286,20 +244,64 @@ mathjax3_config = {
 
 
 from pathlib import Path
-from xara_sphinx_gallery import GalleryConfig, generate_gallery
+if XARA_GALLERY:
+    from xara_sphinx_gallery import GalleryConfig, generate_gallery
+    # generate_gallery(
+    #     GalleryConfig(
+    #     examples_dirs="../examples",
+    #     gallery_dirs="gallery",
+    #     target_prefix="",
+    #     root_dir=Path(__file__).parent,
+    #     notebook_thumbnail_strategy="markdown",
+    #     thumbnail_strategy="first",
+    #     exclude_assets=[
+    #         # "meta.yml",
+    #         "*.tcl",
+    #         "GALLERY_HEADER.rst"
+    #     ]
+    #     # base_gallery=True,
+    #     )
+    # )
+else:
+    from myst_sphinx_gallery import GalleryConfig, generate_gallery
+
+    from myst_sphinx_gallery.gallery import ExampleConverter
+
+    def _thumb_file_rel(self, thumb_file):
+        root = Path(self.config.root_dir).resolve()
+        return "/" + Path(thumb_file).resolve().relative_to(root).as_posix()
+
+    ExampleConverter.thumb_file_rel = _thumb_file_rel
+
+
+from gallery import Galleries, OutputDocs, OutputRoot, build
+
+build(OutputRoot)  # regenerate the source tree
+
+
+Here = Path(__file__).parent
+_example_dirs = [
+    str((OutputRoot/g["directory"]).resolve().relative_to(Here,walk_up=True)) for g in Galleries
+]
+_gallery_dirs = [
+    f"{(OutputDocs/g['directory']).resolve().relative_to(Here)}" for g in Galleries
+]
+# _gallery_dirs = [
+#     f'_g_{g["directory"]}' for g in Galleries
+# ] 
 
 generate_gallery(
     GalleryConfig(
-    examples_dirs="../examples",
-    gallery_dirs="gallery",
-    root_dir=Path(__file__).parent,
-    notebook_thumbnail_strategy="code",
-    thumbnail_strategy="last",
-    exclude_assets=[
-        # "meta.yml",
-        "*.tcl",
-        "GALLERY_HEADER.rst"
-    ]
-    # base_gallery=True,
+        examples_dirs=_example_dirs,
+        gallery_dirs=_gallery_dirs,
+        root_dir=Path(__file__).resolve().parent,
+        notebook_thumbnail_strategy="markdown",#"code",#
+        thumbnail_strategy="first",
+        target_prefix="",
+        remove_thumbnail_after_build=False,
+        # exclude_assets=[
+        #     "*",
+        # ],
+        base_gallery=True,
     )
 )
