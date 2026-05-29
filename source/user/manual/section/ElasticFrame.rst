@@ -69,7 +69,7 @@ Examples
 .. ref-gallery::
     :tooltip:
 
-    gallery/node-0005/main
+    examples/general/model-0001
 
 
 The following creates a 3D elastic frame section:
