@@ -91,7 +91,7 @@ Examples
 .. ref-gallery::
     :tooltip:
 
-    gallery/node-0005/main
+    examples/general/model-0001
 
 
 Basic Constraint (No Rotation)
