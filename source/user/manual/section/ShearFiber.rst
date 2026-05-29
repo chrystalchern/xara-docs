@@ -71,6 +71,12 @@ Valid :ref:`setParameter` targets are
 Examples 
 --------
 
+.. ref-gallery::
+    :tooltip:
+
+    examples/sections/fiber-0002
+
+
 The following example demonstrates how to create a ``ShearFiber`` section representing a circle.
 
 .. tabs::
