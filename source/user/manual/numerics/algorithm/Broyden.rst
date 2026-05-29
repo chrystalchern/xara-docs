@@ -1,7 +1,7 @@
 .. _Broyden:
 
 Broyden/BFGS
-^^^^^^^
+^^^^^^^^^^^^
 
 The Broyden algorithm for general unsymmetric systems which performs successive rank-one updates of the tangent at the first iteration of the current time step.
 
