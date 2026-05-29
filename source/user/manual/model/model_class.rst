@@ -10,7 +10,8 @@ exposed as methods.
 
 .. The command is also used to define the spatial dimension of the subsequent nodes to be added and the number of degrees-of-freedom at each node. 
 
-.. py:class:: Model(ndm, ndf=None, group=None, space=None, echo_file=None)
+
+.. py:class:: xara.Model(ndm, ndf=None, group=None, space=None, echo_file=None)
 
    Create an isolated model for given number of dimensions and number of DOFs.
 
