@@ -9,4 +9,6 @@ sphinxcontrib-bibtex
 sphinxcontrib-googleanalytics
 myst-parser
 myst-nb
-xara-sphinx-gallery
+myst-sphinx-gallery
+nbformat
+
