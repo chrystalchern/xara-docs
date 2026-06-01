@@ -23,11 +23,12 @@ Analysis
    :maxdepth: 1
    :hidden:
 
-   solve/index
-   trace/index
-   integrate/index
+   static/index
+   transient/index
    eigen/index
    eigen/modes
+
+..
    spectrum/index
 
 
