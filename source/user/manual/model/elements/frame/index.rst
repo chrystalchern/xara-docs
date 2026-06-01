@@ -42,12 +42,6 @@ To use frame elements, you'll need to:
 #. Create the frame element, connecting it to nodes, sections, and transformation
 #. Apply loads and boundary conditions
 
-Loads include
-
-.. toctree::
-   :maxdepth: 1
-
-   FrameLoad
 
 
 Theory
