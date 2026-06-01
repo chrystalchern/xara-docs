@@ -15,6 +15,16 @@ Static Analysis
    MinimumUnbalancedDisplacementNorm
 
 
+Examples
+--------
+
+
+.. ref-gallery::
+    :tooltip:
+
+    examples/general/model-0001
+
+
 Theory 
 ------
 
