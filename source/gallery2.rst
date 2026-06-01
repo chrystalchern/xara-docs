@@ -43,10 +43,18 @@ Sections
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    examples/sections/index
 
+
+.. ref-gallery::
+    :tooltip:
+
+    examples/sections/fiber-0002
+    examples/sections/fiber-0003
+    examples/sections/fiber-0004
+   
 
 Frames
 ---------
