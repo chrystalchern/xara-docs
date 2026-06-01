@@ -1,7 +1,9 @@
 .. _AxialFiberSection:
 
-AxialFiber
-^^^^^^^^^^
+
+UniaxialFiber
+^^^^^^^^^^^^^
+
 
 .. toctree::
    :maxdepth: 1
@@ -9,3 +11,12 @@ AxialFiber
    Fiber <fiber> 
    Patch <patch> 
    Layer <layer>
+
+
+Examples
+--------
+
+.. ref-gallery::
+    :tooltip:
+
+    examples/sections/fiber-0003
