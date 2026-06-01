@@ -1,16 +1,16 @@
 .. _ShearFiber:
 
-ShearFiber
-^^^^^^^^^^
+MultiaxialFiber
+^^^^^^^^^^^^^^^
 
-A ``ShearFiber`` section is used to model a :ref:`Frame <frame>` section with shear deformation. 
+A ``MultiaxialFiber`` section is used to model a :ref:`Frame <frame>` section with shear deformation. 
 The section is defined by a collection of fibers that discretize the cross-section. 
 
 .. tabs::
 
    .. tab:: Python (RT)
     
-      .. py:method:: Model.section("ShearFiber", tag, **kwds)
+      .. py:method:: Model.section("MultiaxialFiber", tag, **kwds)
          :no-index:
          
          :param tag: unique :ref:`section` tag
@@ -19,7 +19,7 @@ The section is defined by a collection of fibers that discretize the cross-secti
 
    .. tab:: Tcl
 
-      .. function:: section ShearFiber $tag $fibers
+      .. function:: section MultiaxialFiber $tag $fibers
          
          :param tag: unique section tag
 
@@ -77,59 +77,59 @@ Examples
     examples/sections/fiber-0002
 
 
-The following example demonstrates how to create a ``ShearFiber`` section representing a circle.
+.. The following example demonstrates how to create a ``MultiaxialFiber`` section representing a circle.
 
-.. tabs::
+.. .. tabs::
 
-   .. tab:: Python
+..    .. tab:: Python
 
-      .. code-block:: Python 
+..       .. code-block:: Python 
 
-         import xara
-         from math import pi
-         radius = 0.5
-         center = (0.0, 0.0)
-         area   = pi * radius**2
+..          import xara
+..          from math import pi
+..          radius = 0.5
+..          center = (0.0, 0.0)
+..          area   = pi * radius**2
 
-         model = xara.Model(ndm=3, ndf=6)
+..          model = xara.Model(ndm=3, ndf=6)
 
-         model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
+..          model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
 
-         model.section("ShearFiber", 1)
-         model.fiber(center, area, material=1, section=1)
+..          model.section("MultiaxialFiber", 1)
+..          model.fiber(center, area, material=1, section=1)
 
-   .. tab:: Tcl
+..    .. tab:: Tcl
 
-      .. code-block:: Tcl
+..       .. code-block:: Tcl
 
-         set radius 0.5
-         set center 0.0 0.0
-         set area   [expr {acos(-1) * $radius**2}]
+..          set radius 0.5
+..          set center 0.0 0.0
+..          set area   [expr {acos(-1) * $radius**2}]
 
-         model create -ndm 3 -ndf 6
+..          model create -ndm 3 -ndf 6
 
-         nDMaterial ElasticIsotropic 1  200e9 0.3
+..          nDMaterial ElasticIsotropic 1  200e9 0.3
 
-         section ShearFiber 1 {
-           fiber $center $area -material 1
-         }
+..          section ShearFiber 1 {
+..            fiber $center $area -material 1
+..          }
 
 
-The following example uses the ``xsection`` library to create a ``ShearFiber`` section representing an AISC *W8x28* section.
+.. The following example uses the ``xsection`` library to create a ``MultiaxialFiber`` section representing an AISC *W8x28* section.
 
-.. code-block:: Python
+.. .. code-block:: Python
 
-   import xara
-   from xara.units import english
-   from xsection.library import from_aisc
+..    import xara
+..    from xara.units import english
+..    from xsection.library import from_aisc
 
-   model = xara.Model(ndm=3, ndf=6)
+..    model = xara.Model(ndm=3, ndf=6)
 
-   model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
+..    model.material("ElasticIsotropic", 1, E=200e9, nu=0.3)
 
-   shape = from_aisc("W8x28", units=english)
+..    shape = from_aisc("W8x28", units=english)
 
-   model.section("ShearFiber", 1)
-   for fiber in shape.fibers:
-       model.fiber(**fiber, material=1, section=1)
+..    model.section("ShearFiber", 1)
+..    for fiber in shape.fibers:
+..        model.fiber(**fiber, material=1, section=1)
 
