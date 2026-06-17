@@ -9,13 +9,12 @@ Steel02
    
    .. tab:: Python 
 
-      .. py:method:: Model.uniaxialMaterial("Steel02", tag, Fy, E, b, R0, cR1, cR2, [a1, a2, a3, a4, sigInit])
+      .. py:method:: xara.UniaxialMaterial("Steel02", Fy, E, b, R0, cR1, cR2, [a1, a2, a3, a4])
          :no-index:
          :single-line-parameter-list:
 
-         Add a *Steel02* material to *model* identified by *tag*.
+         Create a *Steel02* material.
 
-         :param int tag: integer tag identifying material
          :param float Fy: yield stress, :math:`F_y` [1]_
          :param float E: initial elastic tangent, :math:`E` [1]_
          :param float b: strain-hardening ratio, :math:`b`
@@ -51,18 +50,19 @@ Steel02
 .. [1] These arguments are supported by the :ref:`parameter <parameter>` commands.
 
 
-.. py:class:: Steel02
+..
+   .. py:class:: Steel02
 
-   .. py:attribute:: Fy
-      :type: float
+      .. py:attribute:: Fy
+         :type: float
 
-      Yield stress :math:`F_y`.
+         Yield stress :math:`F_y`.
 
 
-   .. py:attribute:: E
-      :type: float
+      .. py:attribute:: E
+         :type: float
 
-      Initial stiffness :math:`E`. Analogous to :py:attr:`E <Elastic.E>` in the :ref:`Elastic <UniaxialElastic>` material. 
+         Initial stiffness :math:`E`. Analogous to :py:attr:`E <Elastic.E>` in the :ref:`Elastic <UniaxialElastic>` material. 
 
 
 Formulation
