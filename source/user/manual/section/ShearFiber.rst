@@ -8,7 +8,13 @@ The section is defined by a collection of fibers that discretize the cross-secti
 
 .. tabs::
 
-   .. tab:: Python (RT)
+   .. tab:: Class
+
+      .. py:class:: xara.Section("MultiaxialFiber", shape, *, fibers)
+         :noindex:
+
+
+   .. tab:: OpenSeesPy
     
       .. py:method:: Model.section("MultiaxialFiber", tag, **kwds)
          :no-index:
