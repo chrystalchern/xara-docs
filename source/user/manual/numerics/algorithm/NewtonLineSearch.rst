@@ -7,8 +7,7 @@ This command is used to select a NewtonLineSearch algorithm which introduces lin
 Line search increases the effectiveness of the Newton method when convergence is slow due to roughness of the residual. 
 
 .. tabs::
-   .. tab:: xara 
-      .. autoclass:: xara.algorithm.NewtonLineSearch
+
 
    .. tab:: Python 
 
