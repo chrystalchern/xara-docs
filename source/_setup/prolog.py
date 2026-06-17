@@ -60,5 +60,7 @@ rst_prolog = """
 .. _Chris McGann: https://www.canterbury.ac.nz/engineering/contact-us/people/chris-mcgann.html
 .. |andreas| replace:: *Andreas Schellenberg*
 .. |csasj| replace:: *csasj*
+.. |xara.shapes| replace:: `xara.shapes`_
+.. _xara.shapes: http://peer-open-source.github.io/xsection
 
 """
