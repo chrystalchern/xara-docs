@@ -3,19 +3,46 @@
 Multiaxial
 ^^^^^^^^^^
 
+.. py:currentmodule:: xara
 
 .. tabs::
    
    .. tab:: Python 
 
-      .. py:method:: Model.material(type, tag, *args)
+      .. py:class:: xara.MultiaxialMaterial(type, *args)
 
-         Define a material.
+         Object reprenting a multiaxial material.
 
-         :param type: material type
+         :param type: material type. Options include:
+
+            - **Elastic**
+
+              .. csv-table::
+                  :widths: 30, 70
+
+                  ":ref:`ElasticIsotropic <ElasticIsotropic>`", Elastic isotropic material
+                  ":ref:`ElasticOrthotropic <ElasticOrthotropic>`", 3D elastic orthotropic material
+            
+            - **Plastic**
+
+              .. csv-table::
+                  :widths: 30, 70
+
+                  ":ref:`J2Plasticity`", J2 plasticity material
+                  ":ref:`NonlinearJ2`", Nonlinear J2 plasticity material
+                  ":ref:`GeneralizedJ2`", Generalized J2 plasticity material
+                  ":ref:`DruckerPrager`", Drucker-Prager plasticity material
+                  ":ref:`ManzariDafalias`", Manzari-Dafalias sand plasticity material
+            
+            - **Concrete**
+
+              .. csv-table::
+                  :widths: 30, 70
+
+                  ":ref:`ASDConcrete3D`", ASD concrete material
+                  ":ref:`FariaPlasticDamage`", Plastic damage
+
          :type type: |string|
-         :param tag: unique material tag.
-         :type tag: |integer|
          :param args: additional arguments dependent on material ``type``
 
 
@@ -44,17 +71,20 @@ The following materials are available:
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    ndMaterials/ElasticIsotropic
    ndMaterials/ElasticOrthotropic
+   plastic/PlasticJ2
    plastic/J2Plasticity
+   plastic/NonlinearJ2
    plastic/GeneralizedJ2
-   plastic/UVC
    plastic/DruckerPrager
    ndMaterials/ManzariDafalias
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
 
    damage/FariaPlasticDamage
 
@@ -64,6 +94,7 @@ The following materials are available:
    wrapper/Series3D
    wrapper/Parallel3D
    wrapper/InitialStrain
+   wrapper/InitialStress
    wrapper/Orthotropic
 
 ..
@@ -118,3 +149,10 @@ The following materials are available:
     UVCplanestress (Updated Voce-Chaboche)
 
 
+Examples
+--------
+
+.. ref-gallery::
+    :tooltip:
+
+    examples/material/material-0011
