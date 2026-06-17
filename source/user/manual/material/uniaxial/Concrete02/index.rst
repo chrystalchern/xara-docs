@@ -9,26 +9,36 @@ Concrete02
 
    .. tab:: Python
 
-      .. py:method:: Model.uniaxialMaterial("Concrete02", tag, Fc, epsc0, fpcu, epsU, lambda, ft, Ets)
+      .. py:class:: xara.UniaxialMaterial("Concrete02", Fc, epsc0, fpcu, epsU, lamda, ft, Ets)
          :no-index:
+
+         :param Fc: peak compressive stress
+         :param epsc0: concrete strain at maximum strength
+         :param fpcu: concrete crushing strength
+         :param epsU: concrete strain at crushing strength
+         :param lamda: ratio between unloading slope at epscu and initial slope
+         :param ft: tensile strength
+         :param Ets: tension softening stiffness (absolute value) (slope of the linear tension softening branch)
+
 
    .. tab:: Tcl
 
       .. function:: uniaxialMaterial Concrete02 $tag $fpc $epsc0 $fpcu $epsU $lambda $ft $Ets 
 
 
-.. csv-table::
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. csv-table::
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-   $tag, |integer|, integer tag identifying material.
-   $fpc, |float|,  concrete compressive strength at 28 days (compression is negative)* .
-   $epsc0, |float|, concrete strain at maximum strength* .
-   $fpcu, |float|, concrete crushing strength*.
-   $epsU, |float|, concrete strain at crushing strength*.
-   $lambda, |float|, ratio between unloading slope at ``epscu`` and initial slope.
-   $ft, |float|, tensile strength.
-   $ets, |float|, tension softening stiffness (absolute value) (slope of the linear tension softening branch) 
+         $tag, |integer|, integer tag identifying material.
+         $fpc, |float|,  concrete compressive strength at 28 days (compression is negative)* .
+         $epsc0, |float|, concrete strain at maximum strength* .
+         $fpcu, |float|, concrete crushing strength*.
+         $epsU, |float|, concrete strain at crushing strength*.
+         $lambda, |float|, ratio between unloading slope at ``epscu`` and initial slope.
+         $ft, |float|, tensile strength.
+         $ets, |float|, tension softening stiffness (absolute value) (slope of the linear tension softening branch) 
+
 
 .. note::
    
@@ -61,6 +71,16 @@ compression envelope is simply the piecewise union of an initially parabolic res
 
 where $K$ (a scaling for strength) and $Z$ (strain softening slope) are model parameters. 
 A hysteretic loading-reloading algorithm for this curve was proposed by [Yassin1994]_
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+   
+   examples/material/material-0003
+
 
 References
 ----------
