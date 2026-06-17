@@ -4,6 +4,10 @@
 UniaxialFiber
 ^^^^^^^^^^^^^
 
+.. py:class:: xara.Section("UniaxialFiber", shape)
+   :noindex:
+
+
 
 .. toctree::
    :maxdepth: 1
