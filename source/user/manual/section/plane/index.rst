@@ -24,7 +24,6 @@ Examples
 
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
-    gallery/plane-0002/main
-
+   examples/plane/plane-0002
