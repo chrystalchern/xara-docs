@@ -78,11 +78,13 @@ where the upper-left block applies the rotation matrix :math:`\boldsymbol{R}` to
 
 .. note::
 
+   **Rotational DOF approximation:** The same rotation matrix :math:`\boldsymbol{R}` is applied to both translational and rotational DOFs. While this is a proper coordinate transformation for translational DOFs, it is an approximation for rotational DOFs (treating rotations as vectors) that is valid for small rotations but may have limitations for large finite rotations.
+
    **3D limitation:** The rotation option is only implemented for 3D problems (ndm=3, ndf=6) because Rodrigues' formula requires a 3D rotation vector, and the constraint matrix applies the rotation to all six degrees-of-freedom.
 
+..
    **2D alternative:** For 2D problems requiring rotated constraints (e.g., skewed supports), use the penalty method with :ref:`zeroLength <zeroLength>` elements, as demonstrated in the :ref:`Penalty Method for Skewed Supports in 2D <zeroLength-penalty-2d>` example.
 
-   **Rotational DOF approximation:** The same rotation matrix :math:`\boldsymbol{R}` is applied to both translational and rotational DOFs. While this is a proper coordinate transformation for translational DOFs, it is an approximation for rotational DOFs (treating rotations as vectors) that is valid for small rotations but may have limitations for large finite rotations.
 
 Examples
 --------
