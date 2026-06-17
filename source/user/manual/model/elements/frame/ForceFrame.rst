@@ -42,17 +42,15 @@ The valid :ref:`eleResponse` queries to this element are:
 
      model.eleResponse(element, "section", section, *section-args)
 
+
 Examples 
 --------
 
-Using the :ref:`ShearFiber` section, querries can 
-be made to the material at a specific fiber location within the section as follows:
+.. ref-gallery::
+    :tooltip:
 
-.. code-block:: python
+    examples/frames/frame-3056
 
-   model.eleResponse(element, "section", section, "fiber", fiber, "stress")
-
-where ``section`` is the section number along the element (1 to number of sections defined by the integration rule).
 
 References
 ----------
