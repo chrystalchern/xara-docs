@@ -15,3 +15,6 @@ td {
 	white-space: normal !important;
 }
 
+dl.py-parameter-list .param-type {
+  margin-left: 0.35em;
+}
