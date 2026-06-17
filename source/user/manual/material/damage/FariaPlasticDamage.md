@@ -1,7 +1,12 @@
+```{eval-rst}
+.. _FariaPlasticDamage:
+```
+
 
 # FariaPlasticDamage
 
 ![Failure surface in plane stress](FariaSurface.png)
+
 
 ```{eval-rst}
 .. py:method:: Model.nDMaterial("FariaPlasticDamage", tag, E, nu, Ft, Fc [, beta, Ap, An, Bn])
