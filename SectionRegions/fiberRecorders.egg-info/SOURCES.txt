@@ -1,9 +1,0 @@
-Tests_2.ipynb
-fiberRecorders.py
-fiberStrains.py
-modelDetails.json
-fiberRecorders.egg-info/PKG-INFO
-fiberRecorders.egg-info/SOURCES.txt
-fiberRecorders.egg-info/dependency_links.txt
-fiberRecorders.egg-info/requires.txt
-fiberRecorders.egg-info/top_level.txt
