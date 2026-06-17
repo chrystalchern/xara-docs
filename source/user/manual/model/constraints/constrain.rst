@@ -30,7 +30,7 @@ When a rotation vector is provided, the constraint enforces a rotated relationsh
 
          $rNodeTag, |integer|, integer tag identifying the retained node (*rNode*)
          $cNodeTag, |integer|, integer tag identifying the constrained node (*cNode*)
-         -rotate {v1 v2 v3}, |optional|, rotation vector representing axis-angle in radians (see :ref:`Rotation Vector <constrain-rotation-vector>` below). Only available for 3D problems (ndm=3, ndf=6).
+         -rotate {v1 v2 v3}, optional, "rotation vector representing axis-angle in radians (see :ref:`Rotation Vector <constrain-rotation-vector>` below). Only available for 3D problems (ndm=3, ndf=6)."
 
 
 Theory
@@ -92,6 +92,7 @@ Examples
     :tooltip:
 
     examples/general/model-0001
+
 
 
 Basic Constraint (No Rotation)
