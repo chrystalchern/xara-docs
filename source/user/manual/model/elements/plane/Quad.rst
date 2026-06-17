@@ -1,9 +1,9 @@
 .. _quad:
 
-BasicQuad
-^^^^^^^^^
+Q4-Q9
+^^^^^
 
-A *BasicQuad* element uses the standard Lagrange isoparametric formulation.
+A *Quad* element uses the standard Lagrange isoparametric formulation.
 
 .. tabs::
 
@@ -74,24 +74,19 @@ the interpolation matrix. For a four-node quadrilateral this is given by:
    \end{array}\right]
 
 
-Example
--------
 
-The following example constructs a quad element for use in a plane stress problem with tag **1** between nodes **1, 2, 3, 4** with an nDMaterial of tag **1**.
+Examples
+--------
 
-.. tabs::
 
-   .. tab:: Python
+.. ref-gallery::
+    :tooltip:
 
-      .. code-block:: Python
+    gallery/plane-0002/main
 
-         model.element("quad", 1, (1,2,3,4), (1.0, "PlaneStress", 1), (b1, b2, b3))
 
-   .. tab:: Tcl
-
-      .. code-block:: tcl
-
-         element quad 1 1 2 3 4 "PlaneStress" 1 
+References
+----------
 
 
 Code Developed by: |mhs|, |cmp|
