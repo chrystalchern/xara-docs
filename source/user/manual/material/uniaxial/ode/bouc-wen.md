@@ -8,13 +8,11 @@
    :width: 50%
    :align: center
 
-.. py:method:: Model.uniaxialMaterial("FullBoucWen", tag, E, Fy, alpha, n, **options)
+.. py:method:: xara.UniaxialMaterial("BWBF", E, Fy, alpha, n, **options)
    :no-index:
 
    Construct a uniaxial Bouc-Wen material with optional pinching and degradation.
 
-   :param tag: unique integer tag for the material
-   :type tag: int
    :param E: initial stiffness, :math:`E` [1]_
    :type  E: float
    :param Fy: yield force, :math:`F_y` [1]_
@@ -163,12 +161,6 @@ This material superceeds the following materials, which are supported for legacy
 
 <hr />
 
-<figure>
-<img src="/_static/wiki/BWBN_YSPD.jpg" alt="BWBN_YSPD" />
-<figcaption>Cyclic force displacement relationship of the YSPDs generated
-using the BWBN material model</figcaption>
-</figure>
-<hr />
 
 ## Theory
 
@@ -256,8 +248,10 @@ $\delta_\nu, \delta_\psi$, and $\lambda$ are rather insensitive parameters.
 
 ## Examples
 
-```{.include}
-docs/contrib/examples/31-BWBNExample.html
+```{eval-rst}
+.. ref-gallery::
+   
+   examples/material/material-0004
 ```
 
 ## References
