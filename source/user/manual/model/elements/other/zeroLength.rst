@@ -7,24 +7,40 @@ A ZeroLength element is defined by two nodes at the same location.
 A ZeroLength element is similar to a set of springs placed between two nodes, each spring providing the force displacement relationship for a specified degree-of-freedom. 
 The nodes are connected by multiple UniaxialMaterials, which provide the force-deformation relationship for the element in that degree-of-freedom direction.
 
-.. function:: element zeroLength $eleTag $iNode $jNode -mat $matTag -dir $dir <-doRayleigh $rFlag> <-orient $x $yp>
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+.. tabs::
 
-   $eleTag, |integer|, unique :ref:`Element` tag
-   $endNodes, |integerList|, 2 end nodes
-   $matTags, |integerList|, list of **n** material tags
-   $dirIDs, |integerList|, "| list of **n** degree-of-freedom directions
-   | 1,2,3 - translation along local x,y,z axes,
-   | 4,5,6 - rotation about local x,y,z axes"
-   $x, |floatList|,  (optional) 3 components in global coordinates defining local x-axis 
-   $yp, |floatList|, "| (optional) 3 components in global coordinates defining vector yp 
-   | which lies in the local x-y plane for the element."
-   $rFlag, |integer|, "| optional, default = 0
-   | rFlag = 0 NO RAYLEIGH DAMPING (default)
-   | rFlag = 1 include rayleigh damping"
+   .. tab:: Python
+      .. py:method:: Model.element("ZeroLength", tag, nodes, mat, dir, **orient)
+         :noindex:
+
+         Construct a zero length element object.
+
+         :param tag: integer tag identifying element
+         :param nodes: tuple of two integers representing the tags of the end nodes
+         :param mat: tuple of integers representing the tags of previously-defined UniaxialMaterial objects
+         :param dir: tuple of integers representing the degree-of-freedom directions for each material (1, 2, 3 for translation along local x, y, z axes; 4, 5, 6 for rotation about local x, y, z axes)
+   
+   .. tab:: Tcl
+
+      .. function:: element zeroLength $eleTag $iNode $jNode -mat $matTag -dir $dir <-doRayleigh $rFlag> <-orient $x $yp>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $eleTag, |integer|, unique :ref:`Element` tag
+         $endNodes, |integerList|, 2 end nodes
+         $matTags, |integerList|, list of **n** material tags
+         $dirIDs, |integerList|, "| list of **n** degree-of-freedom directions
+         | 1,2,3 - translation along local x,y,z axes,
+         | 4,5,6 - rotation about local x,y,z axes"
+         $x, |floatList|,  (optional) 3 components in global coordinates defining local x-axis 
+         $yp, |floatList|, "| (optional) 3 components in global coordinates defining vector yp 
+         | which lies in the local x-y plane for the element."
+         $rFlag, |integer|, "| optional, default = 0
+         | rFlag = 0 NO RAYLEIGH DAMPING (default)
+         | rFlag = 1 include rayleigh damping"
 
 
 .. note::
