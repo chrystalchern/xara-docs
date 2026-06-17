@@ -3,22 +3,40 @@
 InitStrain
 ^^^^^^^^^^
 
-.. function:: nDMaterial InitStrain $matTag $otherTag $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>
+.. tabs::
+   .. tab:: Python
+      .. py:method:: Model.nDMaterial("InitialStrain", tag, otherTag, eps0_11, eps0_22=0.0, eps0_33=0.0, eps0_12=0.0, eps0_23=0.0, eps0_13=0.0)
+         :no-index:
+
+         Construct an InitialStrain material wrapper.
+
+         :param tag: integer tag identifying this init-strain material wrapper
+         :param otherTag: integer tag identifying the previously defined nD material
+         :param eps0_11: initial strain value in the 11 direction
+         :param eps0_22: initial strain value in the 22 direction (optional, default = 0.0)
+         :param eps0_33: initial strain value in the 33 direction (optional, default = 0.0)
+         :param eps0_12: initial strain value in the 12 direction (optional, default = 0.0)
+         :param eps0_23: initial strain value in the 23 direction (optional, default = 0.0)
+         :param eps0_13: initial strain value in the 13 direction (optional, default = 0.0)
 
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+   .. tab:: Tcl
 
-   $matTag, |integer|, "unique tag identifying this init-strain material wrapper"
-   $otherTag, |integer|, "unique tag identifying the previously defined nD material"
-   $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>, 1 or 6 |float|, "initial strain values. If only one is given, a volumetric strain = eps0_11 is imposed."
+      .. function:: nDMaterial InitStrain $matTag $otherTag $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $matTag, |integer|, "unique tag identifying this init-strain material wrapper"
+         $otherTag, |integer|, "unique tag identifying the previously defined nD material"
+         $eps0_11 <$eps0_22 $eps0_33 $eps0_12 $eps0_23 $eps0_13>, 1 or 6 |float|, "initial strain values. If only one is given, a volumetric strain = eps0_11 is imposed."
 
 
 Notes
 -----
 
-It is a wrapper that imposes an inital-strain to another material such that :math:`\sigma = f\left (\varepsilon + \varepsilon_{0}\right )`.
+This material imposes an inital-strain to another material such that :math:`\sigma = f\left (\varepsilon + \varepsilon_{0}\right )`.
 
 
 Parameters
