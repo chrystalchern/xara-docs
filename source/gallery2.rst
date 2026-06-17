@@ -87,6 +87,7 @@ Plane Elasticity
     :tooltip:
 
     examples/plane/plane-0002
+    examples/plane/plane-0101
     examples/plane/plane-2001
 
 
