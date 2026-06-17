@@ -9,10 +9,9 @@ This command is used to construct an *ElasticIsotropic* material.
 
    .. tab:: Python
 
-      .. py:method:: Model.material("ElasticIsotropic", tag, E, v, rho=0.0)
+      .. py:method:: xara.MultiaxialMaterial("ElasticIsotropic", E, v, rho=0.0)
          :no-index:
 
-         :param |integer| tag: integer tag identifying material
          :param |float| E: Young's elastic modulus :math:`E`
          :param |float| v: Poisson's ratio :math:`\nu`
          :param |float| rho: mass density :math:`\rho`. optional default = 0.0.
@@ -94,7 +93,7 @@ Examples
 .. ref-gallery::
     :tooltip:
 
-    gallery/plane-0002/main
+    examples/plane/plane-0002
 
 
 References
