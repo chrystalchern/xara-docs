@@ -6,8 +6,19 @@ Uniaxial
 Uniaxial materials define a mathematical relationship between two scalar quantities. 
 These quantities are typically stress and strain, but can also be force and deformation, or any other two scalar quantities.
 
+.. py:currentmodule:: xara
+
 .. tabs::
  
+   .. tab:: class
+
+      .. py:class:: xara.UniaxialMaterial(type, *args)
+
+         :param type: material type
+         :type type: string
+         :param args: additional arguments dependent on material ``type``
+
+
    .. tab:: Python
 
       .. py:method:: Model.uniaxialMaterial(type, tag, *args)
@@ -77,3 +88,13 @@ The following subsections contain information about ``type``
 
       InitialStrain
       InitialStress
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+    :tooltip:
+
+    gallery/material-0002/main
