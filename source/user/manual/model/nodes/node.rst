@@ -1,11 +1,14 @@
 .. _node:
 
 Node
-****
+====
 
 This method is used to construct a ``Node`` which stores information about coordinates and mass at a single point.
 The assignment of mass is optional.
 Each node has :py:attr:`Model.ndm` coordinates (position in space) and :py:attr:`Model.ndf` degrees of freedom (displacement and, in 2D/3D frame models, rotation).
+
+
+.. py:currentmodule:: xara
 
 .. tabs::
 
@@ -53,6 +56,7 @@ The following example adds two nodes to a :class:`Model` with ``ndm=2`` and ``nd
 Node ``3`` is at coordinates (168.0, 0.0), node ``4`` at (168.0, 144.0).
 Node ``4`` is assigned lumped mass ``(10.0, 10.0, 0.0)``: 10.0 for translational DOFs 1 and 2, and 0.0 for rotational DOF 3.
 Units are those of the user's chosen system (e.g. kg in SI); see :ref:`units`.
+
 
 
 .. tabs::
