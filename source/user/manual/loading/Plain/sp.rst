@@ -16,7 +16,7 @@ This command is used to define a single-point constraint that scales under a loa
          :param integer node: tag of node to which constraint is applied
          :param integer dof: the degree-of-freedom at the node to which constraint is applied (1 through :attr:`Model.ndf`)
          :param integer value: reference constraint value
-         :param integer pattern: tag of the :ref:`Plain <plainPattern>` load pattern.
+         :param integer pattern: tag of the :ref:`StaticPattern <StaticPattern>`.
 
    .. tab:: Tcl 
 
