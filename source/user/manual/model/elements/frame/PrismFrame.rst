@@ -9,7 +9,7 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
 
    .. tab:: Python (RT)
 
-      .. py:method:: Model.element("PrismFrame", tag, nodes, section=None, transform=None, *args)
+      .. py:method:: Model.element("PrismFrame", tag, nodes, *, section, transform, shear=0, *args)
          :no-index:
          
          Create a linear elastic prismatic frame element.
@@ -18,8 +18,8 @@ The ``PrismFrame`` element represents a linear-elastic prismatic beam element.
          :type tag: |integer|
          :param nodes: tuple of *two* integer :ref:`node` tags
          :type nodes: tuple
-         :param section: tag of a previously-defined :ref:`section`
-         :type section: |integer|
+         :param section: Section object to be created at the element Gauss points. 
+         :type section: :py:class:`xara.Section`
          :param transform: identifier for previously-defined coordinate-transformation
          :type transform: |integer|
          :param shear: flag indicating whether shear deformations are included (default is ``0``)
