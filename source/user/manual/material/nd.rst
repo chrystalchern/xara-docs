@@ -153,6 +153,5 @@ Examples
 --------
 
 .. ref-gallery::
-    :tooltip:
 
-    examples/material/material-0011
+   examples/material/material-0011
