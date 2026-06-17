@@ -34,9 +34,9 @@ Examples
 
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
-    gallery/plane-0002/main
+   examples/plane/plane-0002
 
 
 The following snippet creates a :math:`8 \times 4` mesh of linear (``order = 1``)
