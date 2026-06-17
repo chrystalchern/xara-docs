@@ -51,6 +51,7 @@ Galleries = [
         "description": "Plane examples.",
         "examples": [
             "plane-0002/main.ipynb",
+            "plane-0101/main.ipynb",
             "plane-2001/main.ipynb",
         ],
     },
@@ -199,12 +200,15 @@ def process_example(
     # changed: read/write through nbformat instead of raw json
     nb = nbformat.read(src_nb, as_version=4)
     # add download button
+    # download_md = (
+    #     f"```{{button-link}} {example_key}.ipynb\n"
+    #     f":color: primary\n"
+    #     f":outline:\n"
+    #     f"{{octicon}}`download` Download\n"
+    #     f"```"
+    # )
     download_md = (
-        f"```{{button-link}} {example_key}.ipynb\n"
-        f":color: primary\n"
-        f":outline:\n"
-        f"{{octicon}}`download` Download\n"
-        f"```"
+        f"{{download}}`Download <{example_key}.ipynb>`"
     )
     nb.cells.insert(1, nbformat.v4.new_markdown_cell(download_md))
     # process images
