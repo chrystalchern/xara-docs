@@ -5,6 +5,7 @@ from pathlib import Path
 XARA_GALLERY = False
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.append(os.path.abspath("_setup"))
 
 suppress_warnings = [
     'toc.not_included',
@@ -46,6 +47,8 @@ extensions = [
     'sphinxcontrib.bibtex',
     'sphinx_sitemap',
     # "sphinx_codeautolink",
+
+    "param_dl",
 ]
 
 codeautolink_warn_on_failed_resolve = True
