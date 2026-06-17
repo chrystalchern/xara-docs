@@ -7,16 +7,10 @@ Analysis
 .. list-table::
    :widths: 10, 40
 
-   * - :ref:`solve <StaticAnalysis>`
+   * - :ref:`StaticAnalysis <StaticAnalysis>`
      - Perform a static analysis.
-   * - :ref:`trace <TraceAnalysis>`
-     - Perform a nonlinear static analysis with load factor control.
-   * - ``integrate``
+   * - :ref:`TransientAnalysis <TransientAnalysis>`
      - Perform a dynamic analysis.
-   * - ``eigen``
-     - Perform an eigenvalue analysis.
-   * - ``spectrum``
-     - Perform a response spectrum analysis.
 
 
 .. toctree::

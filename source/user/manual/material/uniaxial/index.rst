@@ -95,6 +95,6 @@ Examples
 
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
-    gallery/material-0002/main
+   examples/material/material-0002

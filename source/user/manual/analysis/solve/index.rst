@@ -2,7 +2,7 @@
    :property="og:description": Static analysis in xara.
    :description: Static analysis in xara.
 
-.. _StaticAnalysis:
+.. _xara.solve:
 
 solve
 ^^^^^

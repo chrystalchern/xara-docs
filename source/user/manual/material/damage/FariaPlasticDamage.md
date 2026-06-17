@@ -9,11 +9,9 @@
 
 
 ```{eval-rst}
-.. py:method:: Model.nDMaterial("FariaPlasticDamage", tag, E, nu, Ft, Fc [, beta, Ap, An, Bn])
+.. py:class:: xara.MultiaxialMaterial("FariaPlasticDamage", E, nu, Ft, Fc [, beta, Ap, An, Bn])
    :no-index:
 
-   :param tag: unique integer tag for the material
-   :type tag: |integer|
    :param E: Young's modulus
    :type E: |float|
    :param nu: Poisson ratio :math:`\nu`

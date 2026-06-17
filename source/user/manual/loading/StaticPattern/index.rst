@@ -13,3 +13,4 @@ StaticPattern
    NodalLoad
    NodalValue
    FrameLoad
+   SurfaceLoad

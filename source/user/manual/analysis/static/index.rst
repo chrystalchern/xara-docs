@@ -1,9 +1,12 @@
+.. _StaticAnalysis:
+
 
 Static Analysis
 ^^^^^^^^^^^^^^^
 
 .. autoclass:: xara.StaticAnalysis
    :members:
+
 
 
 .. toctree::
@@ -15,14 +18,14 @@ Static Analysis
    MinimumUnbalancedDisplacementNorm
 
 
+
 Examples
 --------
 
 
 .. ref-gallery::
-    :tooltip:
 
-    examples/general/model-0001
+   examples/general/model-0001
 
 
 Theory 
