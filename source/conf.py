@@ -14,8 +14,9 @@ suppress_warnings = [
     'toc.not_readable',
     'misc.highlighting_failure'
 ]
+
 #
-# -- Project information -----------------------------------------------------
+# Project information
 #
 project = "xara"
 copyright = 'Berkeley, CA'
@@ -43,8 +44,9 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
     'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinxcontrib.bibtex',
+    "sphinx.ext.autosummary",
+    "sphinxcontrib.bibtex",
+    "sphinx.ext.napoleon",
     'sphinx_sitemap',
     # "sphinx_codeautolink",
 
@@ -195,7 +197,7 @@ if "book" in html_theme:
     })
 
 g = "https://gallery.stairlab.io"
-html_favicon = './_static/images/favicon.ico'
+html_favicon = '_static/images/favicon.ico'
 html_context = {
     "root_doc": root_doc,
     "description": description,
