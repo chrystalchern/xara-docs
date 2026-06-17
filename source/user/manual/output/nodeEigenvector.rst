@@ -7,7 +7,7 @@ nodeEigenvector
 
    .. tab:: Python 
 
-      .. py:method:: Model.nodeEigenvector(tag [, mode, dof=None])
+      .. py:method:: Model.nodeEigenvector(tag, mode [, dof=None])
          
          Return the eigenvector at a node following a call to :py:meth:`Model.eigen`.
 
@@ -19,4 +19,13 @@ nodeEigenvector
          :type dof: |integer|
          :returns: A list containing the eigenvector at the node.
 
+
+
+Examples
+--------
+
+
+.. ref-gallery::
+
+   examples/plane/plane-0101
 
