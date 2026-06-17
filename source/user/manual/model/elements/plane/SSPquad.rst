@@ -1,6 +1,6 @@
 .. _SSPquad:
 
-SSPquad
+Q4/SSP
 ^^^^^^^
 
 This command is used to construct a SSPquad element. 
@@ -8,20 +8,45 @@ The SSPquad element is a four-node quadrilateral element using physically stabil
 The stabilization incorporates an assumed strain field in which the volumetric dilation and the shear strain associated with the the hourglass modes are zero, resulting in an element which is free from volumetric and shear locking. 
 The elimination of shear locking results in greater coarse mesh accuracy in bending dominated problems, and the elimination of volumetric locking improves accuracy in nearly-incompressible problems. 
 Analysis times are generally faster than corresponding full integration elements. 
-The formulation for this element is identical to the solid phase portion of the SSPquadUP element as described by [McGannEtAl2012]_.
+The formulation for this element is identical to the solid phase portion of the ``SSPquadUP`` element as described by [McGannEtAl2012]_.
 
-.. function:: element SSPquad $eleTag $iNode $jNode $kNode $lNode $matTag $type $thick <$b1 $b2>
 
-.. csv-table:: 
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+.. tabs::
+   .. tab:: Python
 
-   $tag, unique integer tag identifying element object
-   $iNode $jNode $kNode $lNode, 4 |integer|, the four nodes defining the element input in counterclockwise order (``ndm=2`` and ``ndf=2``)
-   $thick, |float|, thickness of the element in out-of-plane direction
-   $type, |float|, string to relay material behavior to the element (either ``"PlaneStrain"`` or ``"PlaneStress"``)
-   $matTag, |integer|,	unique integer tag associated with previously-defined nDMaterial object
-   $b1 $b2, |float|, constant body forces in global :math:`x`- and :math:`y`-directions respectively (optional: default = 0.0)
+      .. py:method:: Model.element("Q4/SSP", tag, nodes, section [, pressure, rho, b1, b2])
+         :no-index:
+
+         :param tag: integer tag identifying the element
+         :param nodes: tuple of integer tags identifying the nodes that form the element
+         :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneSection <PlaneSection>`. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
+           
+             ===================================   ==============================================================================================================
+             ``thick`` |float|                     element thickness
+             ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
+             ``material`` |integer|                tag of an :ref:`nDMaterial`
+             ===================================   ==============================================================================================================
+           
+         :param pressure: |float|, surface pressure (optional, default = 0.0)
+         :param rho: |float|, element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
+         :param b1: |float|, constant body forces defined in the domain (optional, default=0.0)
+         :param b2: |float|, constant body forces defined in the domain (optional, default=0.0)
+   
+
+   .. tab:: Tcl
+
+      .. function:: element SSPquad $eleTag $iNode $jNode $kNode $lNode $matTag $type $thick <$b1 $b2>
+
+      .. csv-table:: 
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
+
+         $tag, unique integer tag identifying element object
+         $iNode $jNode $kNode $lNode, 4 |integer|, the four nodes defining the element input in counterclockwise order (``ndm=2`` and ``ndf=2``)
+         $thick, |float|, thickness of the element in out-of-plane direction
+         $type, |float|, string to relay material behavior to the element (either ``"PlaneStrain"`` or ``"PlaneStress"``)
+         $matTag, |integer|,	unique integer tag associated with previously-defined nDMaterial object
+         $b1 $b2, |float|, constant body forces in global :math:`x`- and :math:`y`-directions respectively (optional: default = 0.0)
 
 
 .. figure:: Q4.svg
