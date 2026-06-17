@@ -1,7 +1,7 @@
 
 .. _bbarQuad:
 
-MixedQuad
+Q4/P0
 ^^^^^^^^^
 
 This command is used to construct a four-node quadrilateral element, which uses a bilinear isoparametric interpolation, derived against a three field variational principle in :math:`\boldsymbol{u}-p-\vartheta`. 
@@ -10,7 +10,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
 
    .. tab:: Python
 
-      .. py:method:: Model.element("MixedQuad", tag, nodes, section)
+      .. py:method:: Model.element("Q4/P0", tag, nodes, section)
          :no-index:
 
          :param tag: integer tag identifying the element
@@ -26,7 +26,7 @@ This command is used to construct a four-node quadrilateral element, which uses 
 
    .. tab:: Tcl
 
-      .. function:: element bbarQuad $tag {*}$nodes $thick $mat
+      .. function:: element Q4/P0 $tag {*}$nodes $thick $mat
 
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -72,9 +72,9 @@ Examples
 --------
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
-    gallery/plane-0002/main
+   examples/plane/plane-0002
 
 
 Code Developed by: **Edward Love, Sandia National Laboratories**
