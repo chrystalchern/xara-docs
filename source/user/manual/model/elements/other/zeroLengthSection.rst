@@ -8,7 +8,7 @@ This command is used to construct a zero length element object, which is defined
 
 .. tabs::
    .. tab:: Python
-      .. py:method:: Model.element("ZeroLengthSection", tag, nodes, secTag, **orient)
+      .. py:method:: Model.element("ZeroLengthSection", tag, nodes, section, **orient)
 
          Construct a zero length element object.
 
