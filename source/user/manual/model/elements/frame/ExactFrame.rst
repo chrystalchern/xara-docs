@@ -30,8 +30,8 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
          :type tag: |integer|
          :param nodes: tuple of integer node tags (see :ref:`node`)
          :type nodes: tuple 
-         :param section: section tag (see :ref:`section`)
-         :type section: |integer|
+         :param section: Section object to be created at the element Gauss points. 
+         :type section: :py:class:`xara.Section`
          :param transform: identifier for previously-defined coordinate-transformation (see :ref:`geomTransf`)
          :type transform: |integer|
 
@@ -65,7 +65,7 @@ as follows:
 The ``ExactFrame`` formulation is appropriate for a wide variety of structural members including thin-walled sections, asymmetric sections, and inelasticity.
 
 As of ``xara`` version ``0.1.15``, the ``ExactFrame`` element can be used to model cross-sectional warping through an additional seventh degree of freedom.
-This feature is implemented through template metaprogramming and consequently incurs absolutely no overhead on standard six-degree-of-freedom simulations.
+
 
 .. note::
 
@@ -95,7 +95,7 @@ The following example demonstrates the command to create an **ExactFrame** eleme
 
 
 References
-==========
+----------
 
 .. [1] Simo, J.C. (1985) ‘A finite strain beam formulation. The three-dimensional dynamic problem. Part I’, Computer Methods in Applied Mechanics and Engineering, 49(1), pp. 55–70. Available at: https://doi.org/10.1016/0045-7825(85)90050-7.
 
