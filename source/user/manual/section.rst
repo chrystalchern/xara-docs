@@ -5,6 +5,8 @@ Section
 
 This command configures a Section, which represents a constitutive model between stress and strain *resultants*.
 
+.. py:currentmodule:: xara
+
 .. tabs::
 
    .. tab:: Python (RT)
@@ -51,8 +53,7 @@ For :ref:`PlaneElements` elements, the following section types are available:
 .. toctree::
    :maxdepth: 1
 
-   section/PlaneStrain
-   section/PlaneStress
+   section/plane/index
 
 
 The following section types are valid for :ref:`shells`:
@@ -60,8 +61,8 @@ The following section types are valid for :ref:`shells`:
 .. toctree::
    :maxdepth: 1
 
-   section/ShellFiber
    section/ElasticShell
+   section/ShellFiber
 
 
 ..
