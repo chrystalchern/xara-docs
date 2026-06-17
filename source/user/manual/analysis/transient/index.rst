@@ -1,10 +1,11 @@
 .. _TransientAnalysis:
 
-integrate
-^^^^^^^^^^^^^^^
+Transient Analysis
+^^^^^^^^^^^^^^^^^^
 
-.. autofunction:: xara.integrate
+.. autoclass:: xara.TransientAnalysis
    :members:
+
 
 .. toctree::
    :maxdepth: 1
