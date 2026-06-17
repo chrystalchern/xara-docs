@@ -8,6 +8,7 @@ Pattern
    .. tab:: Python 
 
       .. py:method:: Model.pattern(type, tag, *args)
+         :noindex:
 
          Create a pattern of a given type and add it to the :class:`Model`.
 
