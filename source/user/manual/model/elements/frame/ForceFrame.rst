@@ -16,18 +16,18 @@ Two-node force formulation for 3D frames. [1]_ [2]_.
 
    .. tab:: Python (RT)
 
-      .. py:method:: Model.element("ForceFrame", tag, nodes, section=None, transform=None, integration=None, *args)
+      .. py:method:: Model.element("ForceFrame", tag, nodes, *, section, transform, **options)
          :no-index:
 
          :param tag: unique :ref:`element` tag
          :type tag: |integer|
          :param nodes: tuple of *two* :ref:`node` tags
          :type nodes: tuple
-         :param section: integer tag identifying a :ref:`section`.
-         :type section: |integer|
+         :param section: Section object to be created at the element Gauss points. 
+         :type section: :py:class:`xara.Section`
          :param transform: identifier for previously-defined :ref:`frame transformation <geomTransf>`
          :type transform: |integer|
-         :param integration: identifier for previously-defined integration rule.
+         :gparam Optional integration: identifier for previously-defined integration rule.
 
 
 This formulation supports higher order strain measures and shear deformations.
@@ -47,7 +47,6 @@ Examples
 --------
 
 .. ref-gallery::
-    :tooltip:
 
     examples/frames/frame-3056
 
