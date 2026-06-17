@@ -32,7 +32,7 @@ Example
 .. ref-gallery::
     :tooltip:
 
-    gallery/plane-0002/main
+    examples/plane/plane-0002
 
 
 .. tabs::
