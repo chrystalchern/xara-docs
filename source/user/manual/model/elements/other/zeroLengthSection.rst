@@ -1,24 +1,42 @@
+.. _zeroLengthSection:
+
 ZeroLength Section
 ^^^^^^^^^^^^^^^^^^
 
 This command is used to construct a zero length element object, which is defined by two nodes at the same location. The nodes are connected by a single section object to represent the force-deformation relationship for the element.
 
-.. function:: element zeroLengthSection $tag $iNode $jNode $secTag <-orient $x1 $x2 $x3 $yp1 $yp2 $yp3> <-doRayleigh $rFlag>
+
+.. tabs::
+   .. tab:: Python
+      .. py:method:: Model.element("ZeroLengthSection", tag, nodes, secTag, **orient)
+
+         Construct a zero length element object.
+
+         :param tag: integer tag identifying element
+         :param nodes: tuple of two integers representing the tags of the end nodes
+         :param section: integer tag of previously-defined Section object
+         :param orient: optional tuple of 6 floats defining orientation vectors (x1, x2, x3, yp1, yp2, yp3)
+         :param doRayleigh: optional boolean flag to include Rayleigh damping (default False)
+         :return: None
+
+   .. tab:: Tcl
+
+      .. function:: element zeroLengthSection $tag $iNode $jNode $secTag <-orient $x1 $x2 $x3 $yp1 $yp2 $yp3> <-doRayleigh $rFlag>
 
 
-.. csv-table::
-   :header: "Argument", "Type", "Description"
-   :widths: 10, 10, 40
+      .. csv-table::
+         :header: "Argument", "Type", "Description"
+         :widths: 10, 10, 40
 
-   $tag, |integer|, unique :ref:`Element` tag
-   $endNodes, |integerList|, 2 end nodes
-   $secTag, |integer|, tag associated with previously-defined Section object
-   $x, |floatList|,  (optional) 3 components in global coordinates defining local x-axis 
-   $yp, |floatList|, "| (optional) 3 components in global coordinates defining vector yp 
-   | which lies in the local x-y plane for the element."
-   $rFlag, |integer|, "| optional, default = 0
-   | rFlag = 0 NO RAYLEIGH DAMPING (default)
-   | rFlag = 1 include rayleigh damping"
+         $tag, |integer|, unique :ref:`Element` tag
+         $endNodes, |integerList|, 2 end nodes
+         $secTag, |integer|, tag associated with previously-defined Section object
+         $x, |floatList|,  (optional) 3 components in global coordinates defining local x-axis 
+         $yp, |floatList|, "| (optional) 3 components in global coordinates defining vector yp 
+         | which lies in the local x-y plane for the element."
+         $rFlag, |integer|, "| optional, default = 0
+         | rFlag = 0 NO RAYLEIGH DAMPING (default)
+         | rFlag = 1 include rayleigh damping"
 
 
 .. note::
@@ -35,8 +53,13 @@ This command is used to construct a zero length element object, which is defined
    If the distance between end noes is not **0.0** a warning message will appear when the script is run. This is just a warning in case you have made a mistake as most users when they use zeroLength elements are wanting to use them in the more normal way. ZeroLength elements can be used between nodes with non-zero length.
 
 
-Example
-------- 
+Examples
+--------
+
+.. ref-gallery::
+
+   examples/sections/fiber-0004
+
 
 The following examples demonstrate the commands in a script to add three zeroLength elements to domain. 
 The three to be added have element tags **1**, **2**, and **3**. 
