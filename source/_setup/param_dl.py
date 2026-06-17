@@ -1,3 +1,9 @@
+# docs/_ext/grouped_params.py
+
+import hashlib
+import re
+import shlex
+
 from docutils import nodes
 from sphinx import addnodes
 
@@ -5,6 +11,9 @@ try:
     from sphinx.domains.python._object import PyObject, PyTypedField
 except ImportError:
     from sphinx.domains.python import PyObject, PyTypedField
+
+
+_DYNAMIC_FIELD_NAMES = set()
 
 
 def _first_source_line(*objects):
@@ -35,6 +44,74 @@ def _stamp(node, source, line):
     if not getattr(node, "rawsource", None):
         node.rawsource = node.astext()
     return node
+
+
+# def _split_field_name(text):
+#     try:
+#         return text.split(None, 1)
+#     except ValueError:
+#         return text, ""
+def _split_field_name(text):
+    parts = text.split(None, 1)
+
+    if len(parts) == 0:
+        return "", ""
+
+    if len(parts) == 1:
+        return parts[0], ""
+
+    return parts[0], parts[1]
+
+
+# def _parse_gparam_arg(arg):
+#     parts = shlex.split(arg)
+
+#     if len(parts) == 1:
+#         return "Parameters", parts[0]
+
+#     if len(parts) >= 2:
+#         return " ".join(parts[:-1]), parts[-1]
+
+#     return "Parameters", ""
+
+# def _parse_gparam_arg(arg):
+#     parts = shlex.split(arg)
+
+#     if len(parts) == 1:
+#         return "Parameters", parts[0]
+
+#     if len(parts) >= 2:
+#         return " ".join(parts[:-1]), parts[-1]
+
+#     return "Parameters", ""
+def _parse_gparam_arg(arg):
+    try:
+        parts = shlex.split(arg)
+    except ValueError:
+        return "Parameters", ""
+
+    if len(parts) == 1:
+        return "Parameters", parts[0]
+
+    if len(parts) >= 2:
+        return " ".join(parts[:-1]), parts[-1]
+
+    return "Parameters", ""
+
+
+def _slug(label):
+    base = re.sub(r"[^a-zA-Z0-9]+", "_", label).strip("_").lower()
+    digest = hashlib.sha1(label.encode("utf-8")).hexdigest()[:8]
+
+    if not base:
+        base = "group"
+
+    return f"{base}_{digest}"
+
+
+def _set_field_name(field_name, text):
+    field_name.clear()
+    field_name += nodes.Text(text)
 
 
 class DLParameterField(PyTypedField):
@@ -121,7 +198,24 @@ class DLParameterField(PyTypedField):
         return field
 
 
-def patch_python_parameters():
+def _make_param_field(name, label, names, typenames):
+    return DLParameterField(
+        name,
+        label=label,
+        names=tuple(names),
+        typenames=tuple(typenames),
+        rolename="obj",
+        typerolename="class",
+        can_collapse=False,
+    )
+
+
+def _clear_field_type_cache():
+    if hasattr(PyObject, "_doc_field_type_map"):
+        PyObject._doc_field_type_map = {}
+
+
+def _replace_builtin_param_field():
     new_fields = []
 
     for field in PyObject.doc_field_types:
@@ -141,16 +235,112 @@ def patch_python_parameters():
             new_fields.append(field)
 
     PyObject.doc_field_types = new_fields
+    _clear_field_type_cache()
 
-    if hasattr(PyObject, "_doc_field_type_map"):
-        PyObject._doc_field_type_map = {}
+
+# def _ensure_dynamic_group(label):
+#     slug = _slug(label)
+#     field_name = f"gparam_{slug}"
+
+#     if field_name in _DYNAMIC_FIELD_NAMES:
+#         return slug
+
+#     PyObject.doc_field_types.append(
+#         _make_param_field(
+#             name=field_name,
+#             label=label,
+#             names=(field_name,),
+#             typenames=(f"gtype_{slug}",),
+#         )
+#     )
+
+#     _DYNAMIC_FIELD_NAMES.add(field_name)
+#     _clear_field_type_cache()
+
+#     return slug
+def _ensure_dynamic_group(label):
+    if label in {"Parameter", "Parameters"}:
+        slug = "default"
+        field_name = "gparam_default"
+        field_label = "Parameters"
+    else:
+        slug = _slug(label)
+        field_name = f"gparam_{slug}"
+        field_label = label
+
+    if field_name in _DYNAMIC_FIELD_NAMES:
+        return slug
+
+    PyObject.doc_field_types.append(
+        _make_param_field(
+            name=field_name,
+            label=field_label,
+            names=(field_name,),
+            typenames=(f"gtype_{slug}",),
+        )
+    )
+
+    _DYNAMIC_FIELD_NAMES.add(field_name)
+    _clear_field_type_cache()
+
+    return slug
+
+def _rewrite_grouped_param_fields(app, domain, objtype, contentnode):
+    if domain != "py":
+        return
+
+    for child in list(contentnode):
+        if not isinstance(child, nodes.field_list):
+            continue
+
+        param_to_slug = {}
+        field_rewrites = []
+
+        for field in list(child):
+            if len(field) != 2:
+                continue
+
+            field_name = field[0]
+            kind, arg = _split_field_name(field_name.astext())
+
+            if kind != "gparam":
+                continue
+
+            label, param = _parse_gparam_arg(arg)
+            if not param:
+                continue
+
+            slug = _ensure_dynamic_group(label)
+            param_to_slug[param] = slug
+            field_rewrites.append((field_name, f"gparam_{slug} {param}"))
+
+        for field_name, new_name in field_rewrites:
+            _set_field_name(field_name, new_name)
+
+        for field in list(child):
+            if len(field) != 2:
+                continue
+
+            field_name = field[0]
+            kind, arg = _split_field_name(field_name.astext())
+
+            if kind != "gtype":
+                continue
+
+            param = arg.strip()
+            slug = param_to_slug.get(param)
+
+            if slug is not None:
+                _set_field_name(field_name, f"gtype_{slug} {param}")
 
 
 def setup(app):
-    patch_python_parameters()
+    _replace_builtin_param_field()
+
+    app.connect("object-description-transform", _rewrite_grouped_param_fields)
 
     return {
-        "version": "0.3",
+        "version": "0.4",
         "parallel_read_safe": True,
         "parallel_write_safe": True,
     }
