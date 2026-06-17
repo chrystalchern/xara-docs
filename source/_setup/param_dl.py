@@ -147,11 +147,34 @@ class DLParameterField(PyTypedField):
                 )
             )
 
+            # fieldtype = types.pop(fieldarg, None)
+            # if fieldtype:
+            #     term += nodes.Text(" ")
+            #     type_span = nodes.inline(classes=["param-type"])
+            #     type_span += nodes.Text("(")
+
+            #     if len(fieldtype) == 1 and isinstance(fieldtype[0], nodes.Text):
+            #         type_span.extend(
+            #             self.make_xrefs(
+            #                 self.typerolename,
+            #                 domain,
+            #                 fieldtype[0].astext(),
+            #                 addnodes.literal_emphasis,
+            #                 env=env,
+            #                 inliner=inliner,
+            #                 location=location,
+            #             )
+            #         )
+            #     else:
+            #         type_span.extend(fieldtype)
+
+            #     type_span += nodes.Text(")")
+            #     term += type_span
             fieldtype = types.pop(fieldarg, None)
             if fieldtype:
-                term += nodes.Text(" ")
+                term += nodes.Text(": ")
+
                 type_span = nodes.inline(classes=["param-type"])
-                type_span += nodes.Text("(")
 
                 if len(fieldtype) == 1 and isinstance(fieldtype[0], nodes.Text):
                     type_span.extend(
@@ -168,7 +191,6 @@ class DLParameterField(PyTypedField):
                 else:
                     type_span.extend(fieldtype)
 
-                type_span += nodes.Text(")")
                 term += type_span
 
             definition = nodes.definition()
