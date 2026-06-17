@@ -1,12 +1,14 @@
+.. _EnhancedQuad:
 
-EnhancedQuad
+
+Q4/E4
 ^^^^^^^^^^^^
 
 .. tabs::
 
    .. tab:: Python 
 
-      .. py:method:: Model.element("EnhancedQuad", tag, nodes, section [, pressure, rho, b1, b2])
+      .. py:method:: Model.element("Q4/E4", tag, nodes, section [, pressure, rho, b1, b2])
          :no-index:
 
          :param |integer| tag: unique :ref:`Element` tag
@@ -81,7 +83,7 @@ Examples
 .. ref-gallery::
     :tooltip:
 
-    gallery/plane-0002/main
+    examples/plane/plane-0002
 
 
 References 
