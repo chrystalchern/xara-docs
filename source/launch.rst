@@ -57,8 +57,8 @@ Documentation of these methods is organized as follows:
    user/manual/output/index
    user/manual/numerics/index
    user/manual/modules/index
-   Examples <https://gallery.stairlab.io/examples/>
-   gallery2
+   gallery
+
 .. 
    gallery/index
 
