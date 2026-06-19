@@ -24,6 +24,9 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
 #
 User-agent: *
 Allow: /$
@@ -32,6 +35,10 @@ Allow: /launch.html
 Allow: /sitemap.xml
 Allow: /cite.html
 Allow: /robots.txt
+Allow: /_static/favicon.ico
+Allow: /_static/images/favicon.ico
+Allow: /_static/legacy/favicon.ico
+Allow: /_static/images/gallery/
 Allow: /_images/
 Allow: /_images/ExactFrame_Fig1.png
 Allow: /_images/ForceFrame.png
