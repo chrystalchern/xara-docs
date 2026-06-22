@@ -165,6 +165,12 @@ Responses
 Examples
 --------
 
+
+.. ref-gallery::
+
+   examples/material/solid-0203
+
+
 Damage Surface
 ==============
 

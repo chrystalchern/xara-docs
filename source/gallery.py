@@ -9,7 +9,7 @@ import shutil
 from pathlib import Path
 import nbformat
 
-# ---------------- Config ---------------- #
+# Config
 
 ExamplesRoot = Path("~/online/benchmarks/benchmarks/").expanduser()
 OutputRoot = Path(__file__).parent.parent/"gallery2"
@@ -64,7 +64,10 @@ Galleries = [
             "material-0003/main.ipynb",
             "material-0004/main.ipynb",
             "material-0011/main.ipynb",
+            "material-0012/main.ipynb",
             "material-0005/main.ipynb",
+            "material-0030/main.ipynb",
+            "solid-0203/main.ipynb",
         ],
     },
     {
@@ -201,16 +204,9 @@ def process_example(
     nb = nbformat.read(src_nb, as_version=4)
     # add download button
     # download_md = (
-    #     f"```{{button-link}} {example_key}.ipynb\n"
-    #     f":color: primary\n"
-    #     f":outline:\n"
-    #     f"{{octicon}}`download` Download\n"
-    #     f"```"
+    #     f"{{download}}`Download <{example_key}.ipynb>`"
     # )
-    download_md = (
-        f"{{download}}`Download <{example_key}.ipynb>`"
-    )
-    nb.cells.insert(1, nbformat.v4.new_markdown_cell(download_md))
+    # nb.cells.insert(1, nbformat.v4.new_markdown_cell(download_md))
     # process images
     for cell in nb.cells:
         if cell.cell_type in ("markdown", "code"):

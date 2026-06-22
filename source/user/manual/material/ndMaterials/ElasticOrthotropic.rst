@@ -7,10 +7,9 @@ Elastic Orthotropic
 
    .. tab:: Python
 
-      .. py:method:: Model.nDMaterial('ElasticOrthotropic', tag, Ex, Ey, Ez, vxy, vyz, vzx, Gxy, Gyz, Gzx, rho=0.0)
+      .. py:method:: xara.MultiaxialMaterial('ElasticOrthotropic', Ex, Ey, Ez, vxy, vyz, vzx, Gxy, Gyz, Gzx, rho=0.0)
          :no-index:
 
-         :param int tag: unique tag identifying material
          :param |float| Ex: elastic modulus in x direction
          :param |float| Ey: elastic modulus in y direction
          :param |float| Ez: elastic modulus in z direction
@@ -21,8 +20,10 @@ Elastic Orthotropic
          :param |float| Gyz: shear modulus in yz plane
          :param |float| Gzx: shear modulus in zx plane
          :param |float| rho: mass density. optional default = 0.0
-   
+
+
    .. tab:: OpenSees
+
       .. function:: nDMaterial ElasticOrthotropic $matTag $Ex $Ey $Ez $vxy $vyz $vzx $Gxy $Gyz $Gzx <$rho>
 
       .. csv-table:: 
@@ -36,7 +37,13 @@ Elastic Orthotropic
          $rho, |float|, mass density. optional default = 0.0
 
 
-The material formulations for the ElasticOrthotropic object are "ThreeDimensional", "PlaneStrain", "Plane Stress", "AxiSymmetric", "BeamFiber", and "PlateFiber".
+The response of an elastic orthotropic material is defined by the following constitutive relation:
+.. math::
+
+  \boldsymbol{\sigma} = \mathbf{C} \boldsymbol{\varepsilon}
+
+where :math:`\boldsymbol{\sigma}` and :math:`\boldsymbol{\varepsilon}` are the stress and strain vectors in Voigt notation, and :math:`\mathbf{C}` is the elastic stiffness matrix. 
+The inverse of the stiffness matrix is given by:
 
 .. math::
 
@@ -54,6 +61,12 @@ with
 .. math::
 
    E_1>0, E_2>0, E_3>0, G_{12}>0, G_{23}>0, G_{13}>0
+
+
+References
+----------
+
+- Zienkiewicz, Olgierd C., Robert L. Taylor, and Sanjay Govindjee. "The Finite Element Method: Its Basis and Fundamentals." Eighth edition. Butterworth-Heinemann, 2025. 
 
 
 Code Developed by: |mhs|

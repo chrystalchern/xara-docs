@@ -89,6 +89,7 @@ During the application of gravity load (and static loads if any), material behav
 
    where p1, p2, … are the confinements at which modulus reduction curves are recorded. In the output file, corresponding to each given confinement there are two columns: shear strain γ and secant modulus Gs. The number of rows equals the number of yield surfaces.
 
+
 ** SUGGESTED PARAMETER VALUES **
 
 .. csv-table:: 
@@ -102,6 +103,7 @@ During the application of gravity load (and static loads if any), material behav
    "peakShearStra (at p’r=80 kPa or 11.6 psi)", 0.1 , 0.1,0.1
    frictionAng, 	0, 	0,	0
    pressDependCoe, 0, 	0,	0
+
 
 ** Pressure Dependent Multi Yield Examples **
 

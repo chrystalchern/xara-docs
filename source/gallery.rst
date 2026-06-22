@@ -99,3 +99,4 @@ Nonlinear Geometry
    :glob:
 
    examples/geometry/index
+
