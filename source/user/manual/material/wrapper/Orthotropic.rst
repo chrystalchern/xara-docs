@@ -27,7 +27,7 @@ It is a wrapper that can convert any 3D (Linear or Nonlinear) constitutive model
           :param Asigmayy: Ratio of the isotropic to the orthotropic strength along the Y direction (Fyy_iso / Fyy_ortho)
           :param Asigmazz: Ratio of the isotropic to the orthotropic strength along the Z direction (Fzz_iso / Fzz_ortho)
 
-    
+
     .. tab:: Tcl
 
         .. function:: nDMaterial Orthotropic $matTag $theIsoMatTag $Ex $Ey $Ez $Gxy $Gyz $Gzx $vxy $vyz $vzx $Asigmaxx $Asigmayy $Asigmazz $Asigmaxyxy $Asigmayzyz $Asigmaxzxz
