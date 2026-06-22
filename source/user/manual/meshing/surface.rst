@@ -7,22 +7,20 @@ Surface
 
         Create a surface mesh of elements in the current model.
 
-        :param split: tuple of integers
-            The number of elements in the local :math:`x` and :math:`y` directions.
-        :param element: str
-            The name of the element type to use.
-        :param args: tuple or dict,
-            The arguments to pass to the element constructor.
-        :param points: list of tuples
-            The coordinates of the points in the mesh.
-        :param name: str
-            The name of the mesh.
-        :param kwds: dict
-            The keyword arguments to pass to the element constructor.
-        :param order: int
-            The order of the elements to use.
-        :param shape: str
-            The shape of the elements to use. Can be "Q" for quadrilateral or "T" for triangular.
+        :param split: The number of elements in the local :math:`x` and :math:`y` directions.
+        :type split: tuple of integers
+        :param element: The name of the element type to use.
+        :type element: str
+        :param args: The arguments to pass to the element constructor.
+        :type args: tuple or dict
+        :param points: The coordinates of the points in the mesh.
+        :type points: dict
+        :param kwds: The keyword arguments to pass to the element constructor.
+        :type kwds: dict
+        :param order: The order of the elements to use. Default is 1 for linear elements.
+        :type order: int
+        :param shape: The shape of the elements to use. Can be "Q" for quadrilateral or "T" for triangular.
+        :type shape: str
         :return: Surface
 
 
