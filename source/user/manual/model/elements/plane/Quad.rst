@@ -14,8 +14,10 @@ A *Quad* element uses the standard Lagrange isoparametric formulation.
 
          Construct a *BasicQuad* and add it to the :class:`Model`.
 
-         :param tag: integer, unique :ref:`Element` tag
-         :param nodes: tuple, a tuple of four element nodes in counter-clockwise order
+         :param tag: unique :ref:`Element` tag
+         :type tag: |integer|
+         :param nodes: a tuple of four element nodes in counter-clockwise order. 
+         :type nodes: tuple of four, eight or nine :ref:`Node` tags
          :param section: tuple or int. If int, it is the tag of a previously defined :ref:`PlaneStress` or :ref:`PlaneStrain` section. If tuple, it is a tuple of the form (``thick``, ``type``, ``material``) where 
            
              ===================================   ==============================================================================================================
@@ -24,10 +26,14 @@ A *Quad* element uses the standard Lagrange isoparametric formulation.
              ``material`` |integer|                tag of an :ref:`nDMaterial`
              ===================================   ==============================================================================================================
            
-         :param pressure: |float|, surface pressure (optional, default = 0.0)
-         :param rho: |float|, element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0)
-         :param b1: |float|, constant body forces defined in the domain (optional, default=0.0)
-         :param b2: |float|, constant body forces defined in the domain (optional, default=0.0)
+         :param pressure: surface pressure (optional, default = 0.0)
+         :type pressure: |float|
+         :param rho: element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0). See :ref:`MassSources` for more information.
+         :type rho: |float|
+         :param b1: constant body forces defined in the domain (optional, default=0.0)
+         :type b1: |float|
+         :param b2: constant body forces defined in the domain (optional, default=0.0)
+         :type b2: |float|
 
 
    .. tab:: Tcl
