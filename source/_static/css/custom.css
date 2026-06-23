@@ -18,3 +18,18 @@ td {
 dl.py-parameter-list .param-type {
   margin-left: 0.35em;
 }
+
+
+.versionmod {
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 0.05em 0.4em;
+    border-radius: 0.4em;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+.version-added      { background: #e6f4ea; color: #1e7e34; }
+.version-changed    { background: #e7f1fb; color: #1c5d99; }
+.version-deprecated { background: #fdf3e0; color: #9a6b00; }
+.version-removed    { background: #fbe9e9; color: #a32020; }
+.version-fixed      { background: #ece9fb; color: #5b3da3; }
