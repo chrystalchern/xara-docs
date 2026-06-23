@@ -31,6 +31,9 @@ Notes
 Examples
 """"""""
 
-| :download:`Parallel3DExample1.py`
+.. ref-gallery::
+
+   examples/material/material-0031
+
 
 Code Developed by: **Massimo Petracca** at ASDEA Software, Italy.
