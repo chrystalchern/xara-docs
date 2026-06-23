@@ -38,9 +38,11 @@ Elastic Orthotropic
 
 
 The response of an elastic orthotropic material is defined by the following constitutive relation:
+
 .. math::
 
   \boldsymbol{\sigma} = \mathbf{C} \boldsymbol{\varepsilon}
+
 
 where :math:`\boldsymbol{\sigma}` and :math:`\boldsymbol{\varepsilon}` are the stress and strain vectors in Voigt notation, and :math:`\mathbf{C}` is the elastic stiffness matrix. 
 The inverse of the stiffness matrix is given by:
