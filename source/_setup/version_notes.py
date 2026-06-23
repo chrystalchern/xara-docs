@@ -378,6 +378,8 @@ def _breadcrumb(app, fromdocname, entry, relations):
     for index, docname in enumerate(chain):
         title_node = env.titles.get(docname)
         label = title_node.astext() if title_node is not None else docname
+        if label in {"Overview", "Modeling"}:
+            continue
         on_page = index == len(chain) - 1
         anchor = entry["target_id"] if (on_page and not param) else None
         crumbs.append(_crumb_ref(app, fromdocname, docname, anchor, nodes.Text(label)))
