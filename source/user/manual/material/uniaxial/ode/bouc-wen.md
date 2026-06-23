@@ -31,20 +31,23 @@
    :type  strength_rate: float
    :param stiffness_rate: stiffness degradation rate, :math:`\delta_{\eta}`
    :type  stiffness_rate: float
-   :param pinch_slope: pinching slope, :math:`p`
-   :type  pinch_slope: float
-   :param pinch_start: pinching initiation, :math:`q`
-   :type  pinch_start: float
-   :param pinch_slip: measure of total slip, :math:`\zeta`
-   :type  pinch_slip: float
-   :param pinch_rate: pinching rate, :math:`\delta_{\psi}`
-   :type  pinch_rate: float
-   :param pinch_size: pinching magnitude, :math:`\psi_0`
-   :type  pinch_size: float
-   :param lamda: pinching severity, :math:`\lambda`
-   :type  lamda: float
+   :gparam Pinching pinch_slope: pinching slope, :math:`p`
+   :gtype  pinch_slope: float
+   :gparam Pinching pinch_start: pinching initiation, :math:`q`
+   :gtype  pinch_start: float
+   :gparam Pinching pinch_slip: measure of total slip, :math:`\zeta`
+   :gtype  pinch_slip: float
+   :gparam Pinching pinch_rate: pinching rate, :math:`\delta_{\psi}`
+   :gtype  pinch_rate: float
+   :gparam Pinching pinch_size: pinching magnitude, :math:`\psi_0`
+   :gtype  pinch_size: float
+   :gparam Pinching lamda: pinching severity, :math:`\lambda`
+   :gtype  lamda: float
+   :gparam General density: density. See :ref:`MassSources`. :version-added:`0.1.29`
+   :gtype density: float
 
 ```
+
 
 ## Parameters
 
@@ -257,6 +260,8 @@ $\delta_\nu, \delta_\psi$, and $\lambda$ are rather insensitive parameters.
    
    examples/material/material-0004
 ```
+
+
 
 ## References
 
