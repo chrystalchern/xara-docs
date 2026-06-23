@@ -13,12 +13,18 @@ Concrete02
          :no-index:
 
          :param Fc: peak compressive stress
-         :param epsc0: concrete strain at maximum strength
-         :param fpcu: concrete crushing strength
+         :type Fc: |float|
+         :param epsc0: strain at peak compressive stress
+         :type epsc0: |float|
+         :param fpcu: compressive crushing strength
+         :type fpcu: |float|
          :param epsU: concrete strain at crushing strength
+         :type epsU: |float|
          :param lamda: ratio between unloading slope at epscu and initial slope
-         :param ft: tensile strength
-         :param Ets: tension softening stiffness (absolute value) (slope of the linear tension softening branch)
+         :gparam Tension Ft: tensile strength
+         :gtype Ft: |float|
+         :gparam Tension Ets: tension softening stiffness (absolute value) (slope of the linear tension softening branch)
+         :gtype Ets: |float|
 
 
    .. tab:: Tcl
