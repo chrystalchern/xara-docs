@@ -21,11 +21,16 @@ Steel02
          :param float R0: parameter to control the transition from elastic to plastic branches, :math:`R_0`
          :param float cR1: parameter to control the transition from elastic to plastic branches, :math:`cR1`
          :param float cR2: parameter to control the transition from elastic to plastic branches, :math:`cR2`
-         :param float a1: isotropic hardening parameter (optional: default = 0.0).
-         :param float a2: isotropic hardening parameter (optional: default = 1.0).
-         :param float a3: isotropic hardening parameter (optional: default = 0.0).
-         :param float a4: isotropic hardening parameter (optional: default = 1.0).
-         :param float sigInit: Initial Stress Value (optional: default = 0.0)
+         :gparam Hardening a1: isotropic hardening parameter (optional: default = 0.0).
+         :gtype a1: |float|
+         :gparam Hardening a2: isotropic hardening parameter (optional: default = 1.0).
+         :gtype a2: |float|
+         :gparam Hardening a3: isotropic hardening parameter (optional: default = 0.0).
+         :gtype a3: |float|
+         :gparam Hardening a4: isotropic hardening parameter (optional: default = 1.0).
+         :gtype a4: |float|
+         :param density: mass density (optional: default = 0.0). See :ref:`MassSources` for more information.
+         :type density: |float|
 
 
    .. tab:: Tcl
