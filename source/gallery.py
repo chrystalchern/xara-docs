@@ -67,6 +67,7 @@ Galleries = [
             "material-0012/main.ipynb",
             "material-0005/main.ipynb",
             "material-0030/main.ipynb",
+            "material-0031/main.ipynb",
             "solid-0203/main.ipynb",
         ],
     },
