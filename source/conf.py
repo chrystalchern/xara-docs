@@ -47,10 +47,11 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinxcontrib.bibtex",
     "sphinx.ext.napoleon",
-    'sphinx_sitemap',
+    "sphinx_sitemap",
     # "sphinx_codeautolink",
 
     "param_dl",
+    "version_notes",
 ]
 
 codeautolink_warn_on_failed_resolve = True
