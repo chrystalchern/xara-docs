@@ -71,5 +71,6 @@ Documentation of these methods is organized as follows:
    user/guides/index
    about/features/index
    about/license
+   changelog
    cite
 
