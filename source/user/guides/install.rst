@@ -3,7 +3,7 @@
 Install
 ^^^^^^^
 
-*xara* is built on the |OpenSeesRT| distribution of OpenSees, which is developed and maintained at UC Berkeley. 
+*xara* is built on the |OpenSeesRT| distribution of |OpenSees|, which is developed and maintained at UC Berkeley. 
 
 
 To install *xara* on Linux and new Macs, run the following command from your shell:

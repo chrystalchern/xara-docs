@@ -4,7 +4,7 @@
 Compatibility
 ^^^^^^^^^^^^^
 
-*xara* is largely compatible with both *OpenSeesPy* and the classic OpenSees Tcl interpreter.
+*xara* is largely compatible with both *OpenSeesPy* and the original |OpenSees| Tcl interpreter.
 
 
 Python

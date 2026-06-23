@@ -25,7 +25,7 @@ In addition it deletes all recorders, analysis objects and all material objects 
 
 .. note::
 
-   Unlike older OpenSees distributions, |OpenSeesRT| does not maintain model state with a global varible.
+   Unlike older |OpenSees| distributions, |OpenSeesRT| does not maintain model state with a global varible.
    Consequently, the wipe command is no longer necessary when multiple models are created from a single process.
    In general it is more convenient (and preferable) to create a new :class:`Model` object rather than using the wipe method.
 

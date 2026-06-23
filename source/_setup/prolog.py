@@ -28,7 +28,7 @@ rst_prolog = """
 .. _OpenSeesRT: https://stairlab.berkeley.edu/software/opensees/
 .. |OpenSees| replace:: OpenSees
 .. |OPS link| replace:: `OpenSees app`_
-.. _OpenSees app: https://stairlab.berkeley.edu/software/OpenSeesRT/
+.. _OpenSees app: https://peer.berkeley.edu/opensees/
 .. |githubLink| replace:: `OpenSees Github link`_
 .. _OpenSees Github link: https://github.com/peer-open-source/xara
 .. |messageBoard| replace:: `OpenSees Message Board`_

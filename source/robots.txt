@@ -68,6 +68,8 @@ Allow: /user/manual/model/elements/plane/Quad.html
 Allow: /user/manual/model/elements/plane/EnhancedQuad.html
 Allow: /user/manual/model/elements/plane/MixedQuad.html
 Allow: /user/manual/meshing/surface.html
+
+Allow: /user/manual/material/index.html
 Allow: /user/manual/material/friction/
 Allow: /user/manual/material/ndMaterials/ElasticOrthotropic.html
 
@@ -79,10 +81,12 @@ Allow: /user/manual/model/geomTransf/Corotational.html
 Allow: /user/manual/model/geomTransf/frame/Corotational02.html
 Allow: /user/manual/model/pattern/Plain/sp.html
 Allow: /user/manual/parameter/index.html
+
 Allow: /user/manual/section.html
 Allow: /user/manual/section/ShearFiber.html
 Allow: /user/manual/section/ShellFiber.html
 Allow: /user/manual/section/ElasticShell.html
+
 Allow: /user/manual/output/index.html
 Allow: /user/manual/output/print.html
 Allow: /user/manual/output/printB.html
