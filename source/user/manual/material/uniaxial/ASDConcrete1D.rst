@@ -11,6 +11,7 @@ ASDConcrete1D
 To improve robustness and convergence of the simulation in case of strain-softening, this model optionally allows to use the IMPL-EX integration scheme (a mixed IMPLicit EXplicit integration scheme).
 
 .. tabs::
+
    .. tab:: Python
 
       .. py:class:: xara.UniaxialMaterial("ASDConcrete1D", E, **kwargs)

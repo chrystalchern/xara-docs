@@ -67,9 +67,8 @@ Examples
 
 
 .. ref-gallery::
-    :tooltip:
 
-    examples/general/model-0001
+   examples/general/model-0001
 
 
 The following creates a 3D elastic frame section:

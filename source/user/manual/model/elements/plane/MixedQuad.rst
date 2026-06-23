@@ -72,7 +72,6 @@ Examples
 --------
 
 .. ref-gallery::
-   :tooltip:
 
    examples/plane/plane-0002
 

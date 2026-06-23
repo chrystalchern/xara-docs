@@ -13,23 +13,24 @@
    :no-index:
 
    :param E: Young's modulus
-   :type E: |float|
+   :type E: float
    :param nu: Poisson ratio :math:`\nu`
-   :type nu: |float|
+   :type nu: float
    :param Ft: tensile strength :math:`F_t`
-   :type Ft: |float|
+   :type Ft: float
    :param Fc: compressive strength :math:`F_c`
-   :type Fc: |float|
+   :type Fc: float
    :param beta: parameter :math:`\beta` controlling plastic strain rate/post-yield hardening parameter
-   :type beta: |float|
+   :type beta: float
    :param Ap: parameter :math:`A_p` controlling tensile fracture energy
-   :type Ap: |float|
+   :type Ap: float
    :param An: parameter :math:`A_n` controlling ductility of the compressive response
-   :type An: |float|
+   :type An: float
    :param Bn: parameter :math:`B_n` controlling ductility and peak strength of the compressive response
-   :type Bn: |float|
+   :type Bn: float
 
 ```
+
 
 ## Theory
 
@@ -86,6 +87,8 @@ x = A_p\Bigl(1 - \frac{r^{+}}{r^{+}_{0}}\Bigr)
    = A_p\Bigl(1 - \frac1\alpha\Bigr).
 $$
 
+<!--
+
 Rewrite
 
 $$
@@ -95,6 +98,7 @@ $$
 
 * `std::expm1(x)` for $\exp{x} - 1$ when $|x|\ll1$.
 * `std::fma(a,b,c)` for $a\cdot b + c$ in one rounding step.
+-->
 
 
 ## Examples

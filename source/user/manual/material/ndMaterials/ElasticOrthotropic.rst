@@ -7,7 +7,7 @@ Elastic Orthotropic
 
    .. tab:: Python
 
-      .. py:method:: xara.MultiaxialMaterial('ElasticOrthotropic', Ex, Ey, Ez, vxy, vyz, vzx, Gxy, Gyz, Gzx, rho=0.0)
+      .. py:class:: xara.MultiaxialMaterial("ElasticOrthotropic", Ex, Ey, Ez, vxy, vyz, vzx, Gxy, Gyz, Gzx, rho=0.0)
          :no-index:
 
          :param |float| Ex: elastic modulus in x direction
