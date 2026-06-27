@@ -1,7 +1,7 @@
 .. _getCrdTransfTags:
 
 getCrdTransfTags
-****************
+^^^^^^^^^^^^^^^^
 
 This command returns a list of all defined coordinate transformation tags
 

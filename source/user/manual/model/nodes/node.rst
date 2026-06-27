@@ -17,7 +17,7 @@ Each node has :py:attr:`Model.ndm` coordinates (position in space) and :py:attr:
       .. py:method:: Model.node(tag, coords, [mass])
 
          :param tag: integer tag identifying node
-         :param coords: tuple of :py:attr:`Model.ndm` |float| coordinates
+         :param coords: tuple of :py:attr:`Model.ndm` |float| coordinates. Coordinates may be retrieved with :py:meth:`Model.nodeCoord` and updated with :py:meth:`Model.setNodeCoord`.
          :param mass: tuple of :py:attr:`Model.ndf` lumped mass values per DOF (see Theory for units and interpretation)
 
 

@@ -7,17 +7,17 @@ LoadControl
 
    .. tab:: Python
 
-      .. py:method:: Model.integrator("LoadControl", dlambda, numIter=1, minLambda=None, maxLambda=None)
+      .. py:method:: Model.integrator("LoadControl", step, iter=1, min_step=None, max_step=None)
          :no-index:
 
-         :param dlambda: the load factor increment :math:`\lambda`
+         :param step: the load factor increment :math:`\lambda`
          :type dlambda: |float|
-         :param numIter: the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
-         :type numIter: |integer|
-         :param minLambda: the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
-         :type minLambda: |float|
-         :param maxLambda: the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
-         :type maxLambda: |float|
+         :param iter: the number of iterations the user would like to occur in the solution algorithm. Optional: optional default = 1
+         :type iter: |integer|
+         :param min_step: the min stepsize the user will allow. optional: defualt :math:`= \lambda_{min} = \lambda`
+         :type min_step: |float|
+         :param max_step: the max stepsize the user will allow. optional: default :math:`= \lambda_{max} = \lambda`
+         :type max_step: |float|
 
    .. tab:: Tcl
 
