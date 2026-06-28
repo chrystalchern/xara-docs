@@ -30,6 +30,7 @@ Galleries = [
         "directory": "frames",
         "description": "Frame examples.",
         "examples": [
+            "frame-0059/main.ipynb",
             "frame-2005/frame-2005.ipynb",
             # "frame-1010/main.ipynb",
             "frame-3056/main.ipynb",

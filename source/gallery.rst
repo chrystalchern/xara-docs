@@ -68,9 +68,10 @@ Frames
 
 
 .. ref-gallery::
-    :tooltip:
+   :tooltip:
 
-    examples/frames/frame-2005
+   examples/frames/frame-0059
+   examples/frames/frame-2005
 
 
 Plane Elasticity
