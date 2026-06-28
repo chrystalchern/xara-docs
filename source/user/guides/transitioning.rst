@@ -33,10 +33,29 @@ Once the switch is made, some simple changes to make scripts more readable are:
 
      ops.node(1, (0.0, 0.0))
 
-  Both forms above are equivalent in |xara|, but the second form is more readable and easier to maintain.
+  Both forms above are equivalent in |xara|, but the second form is more readable and easier to maintain. 
+
+* Prefer keyword arguments over positional arguments in supported commands. For example, change
+
+  .. code-block:: python
+
+     ops.uniaxialMaterial("Steel01", 1, 29000, 0.02)
+  
+  to:
+
+  .. code-block:: python
+
+     ops.uniaxialMaterial("Steel01", tag, E=29000, b=0.02)
+  
+  .. note::
+
+     In general, a ``tag`` argument cannot be specified as a keyword argument.
 
 
-* Change ``ops`` to ``model`` for model building commands. For example, change
+
+
+
+* Change ``ops`` to a :py:class:`xara.Model` instance for model building commands. For example, change
 
   .. code-block:: python
 
