@@ -27,7 +27,7 @@ to:
 Tcl
 ---
 
-To execute a classic OpenSees Tcl file using *xara*, run the following command from a terminal:
+To execute a classic |OpenSees| Tcl file using *xara*, run the following command from a terminal:
 
 .. code-block:: bash
 
