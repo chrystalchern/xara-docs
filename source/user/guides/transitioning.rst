@@ -13,12 +13,14 @@ Once the switch is made, some simple changes to make scripts more readable are:
 
   .. code-block:: python
 
+     import openseespy.opensees as ops
      ops.model("BasicBuilder", "-ndm", 2, "-ndf", 3)
   
   to:
 
   .. code-block:: python
 
+     import opensees.openseespy as ops
      ops.model("BasicBuilder", ndm=2, ndf=3)
 
 * Group related arguments into tuples. For example, change
