@@ -169,6 +169,7 @@ Examples
 .. ref-gallery::
 
    examples/material/solid-0203
+   examples/material/material-0005
 
 
 Damage Surface

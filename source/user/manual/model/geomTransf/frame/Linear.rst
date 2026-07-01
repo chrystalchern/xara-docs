@@ -72,37 +72,10 @@ Joint offsets are specified with respect to the global coordinate system.
 Example
 -------
 
-In the following example *Linear* transformations are defined
+.. ref-gallery::
 
-1. **Tcl Code**
+   examples/frames/frame-0059
 
-   .. code-block:: tcl
-
-	# Element 1 : tag 1 : vecxZ = zaxis
-	geomTransf Linear 1 0 0 -1
-
-	# Element 2 : tag 2 : vecxZ = y axis
-	geomTransf Linear 2 0 1 0
-
-	# If there was a rigid offset at the top of element 1:
-	geomTransf Linear 1 0 0 -1 -jntOffset 0.0 0.0 0.0 0.0 -$Offset 0.0
-
-
-2. **Python Code**
-
-   .. code-block:: python
-   
-	# Element 1, vecxZ = z-axis
-	model.geomTransf("Linear", 1, (0, 0, -1))
-
-	# Element 2, vecxZ = y-axis
-	model.geomTransf("Linear", 2, (0, 1,  0))
-
-	# If there was a rigid offset at the top of element 1: (offset is a variable that the offset value has been stored in)
-	model.geomTransf("Linear", 3, (0, 0, -1), "-jntOffset",0.0, 0.0, 0.0, 0.0, offset, 0.0)
-
-
-A detailed example including joint offsets is provided [here](https://gallery.stairlab.io/examples/frameoffsets/)
 
 References
 ----------

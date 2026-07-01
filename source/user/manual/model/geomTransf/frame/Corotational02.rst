@@ -50,28 +50,9 @@ The corotational coordinate transformation allows small-strain frame elements to
 Examples
 --------
 
-This example is developed in detail on the examples `site <https://gallery.stairlab.io/examples/framevecxz/>`__.
-In order to cover a wide range of cases, the strong axis of the first column, element `1`, 
-is oriented so as to resist bending *outside* the plane of the portal, but the strong axis of the second column, element `3`, will resist bending *inside* the portal plane.
+.. ref-gallery::
 
-
-.. figure:: figures/vecxz.png
-   :align: center
-   :width: 50%
-
-   A portal frame with :math:`X_3` vertical.
-
-
-.. code-block:: Python
-
-   model.node(1, (    0, 0,      0))
-   model.node(2, (width, 0,      0))
-   model.node(3, (width, 0, height))
-   model.node(4, (    0, 0, height))
-
-   model.geomTransf("Corotational", 1, (1, 0, 0)) # Column
-   model.geomTransf("Corotational", 2, (0, 0, 1)) # Girder
-   model.geomTransf("Corotational", 3, (0,-1, 0)) # Column
+   examples/frames/frame-0059
 
 
 
