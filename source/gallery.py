@@ -22,6 +22,7 @@ Galleries = [
         "description": "General examples.",
         "examples": [
             # "node-0005/a.ipynb",
+            "solve-0003/main.ipynb",
             "model-0001/model-0001.ipynb"
         ],
     },
