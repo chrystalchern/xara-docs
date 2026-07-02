@@ -15,6 +15,7 @@ General
 .. ref-gallery::
    :tooltip:
 
+   examples/general/solve-0003
    examples/general/model-0001
 
 
