@@ -1,7 +1,7 @@
 .. _J2Plasticity:
 
-J2 Plasticity
-^^^^^^^^^^^^^
+J2Plasticity
+^^^^^^^^^^^^
 
 .. figure:: figures/j2-mises.png
    :align: center
@@ -10,12 +10,14 @@ J2 Plasticity
 
    Tension test of a coupon using the :math:`J_2` plasticity model from the `STAIRLab gallery <https://gallery.stairlab.io/examples/tension-coupon/>`__.
 
+
 *J2Plasticity* is a multi dimensional material model that incorporates plasticity using the von Mises :math:`J_2` yield criterion, with nonlinear isotropic hardening.
+
 
 .. tabs::
 
    .. tab:: Python
-      
+
       .. py:method:: Model.nDMaterial("J2", tag, K, G, Fy, Fs, Hsat, Hiso)
          :no-index:
 
@@ -70,6 +72,8 @@ Examples
    nDMaterial J2 [incr i] -E $E -G $G $Fy $Fs $Hsat $Hiso $eta
    nDMaterial J2 [incr i] -E $E -G $G $Fy $Fs $Hsat $Hiso $eta -density $density
    nDMaterial J2 [incr i] -E $E -nu $nu $Fy $Fs $Hsat $Hiso $eta -density $density
+
+
 
 Theory 
 ------
