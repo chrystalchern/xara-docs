@@ -43,25 +43,23 @@ This command is used to construct a uniaxial Kent-Scott-Park concrete material w
   :figclass: align-center
 
 
-Example 
--------
+Examples
+--------
 
-.. code-block:: Tcl
+.. ref-gallery::
 
-   uniaxialMaterial Concrete01 1 -4.0 -0.002 0.0 -0.005; 
-
-
-The code above defines a *Concrete01* material with tag ``1``, compression strength of 4.0 at strain 0.002 and reaches ultimate strength of 0.0 at strain of 0.005
+   examples/material/material-0003
 
 
 References
 ----------
 
-Sensitivity is due to 
+Sensitivity is due to:
+
 - Scott, Michael H., Paolo Franchin, Gregory L. Fenves, and Filip C. Filippou.  "Response Sensitivity for Nonlinear Beam–Column Elements.” 
   Journal of Structural Engineering 130, no. 9 (2004): 1281–88. 
   https://doi.org/10.1061/(asce)0733-9445(2004)130:9(1281).
 
 
-Code Developed by: |fcf|, |mhscott|
+Code Developed by: |fcf|, |mhs|
 
