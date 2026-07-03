@@ -2,7 +2,7 @@
 Model
 =====
 
-The following methods return mesh information for a :py:class`Model`, such as element connectivity and material definitions.
+The following methods return mesh information for a :py:class:`Model`, such as element connectivity and material definitions.
 
 .. toctree::
    :maxdepth: 1
