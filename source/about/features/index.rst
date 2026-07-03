@@ -3,6 +3,7 @@ Features
 
 A strong feature of xara is its backwards compatibility with OpenSeesPy and Tcl scripts. 
 This compatibility is described in `Compatibility <CompatibilityLayer>`_.
+
 ..
    Xara offers several advanced features that make it a powerful tool for nonlinear finite element analysis:
    - **Mixed Formulations**: It supports mixed formulations for beams and solids, enabling accurate modeling of complex structural systems.
