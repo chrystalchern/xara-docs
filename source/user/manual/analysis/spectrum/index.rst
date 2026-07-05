@@ -109,6 +109,7 @@ The following example shows how to call the responseSpectrumAnalysis command for
       tsTag = 1 # use the timeSeries 1 as response spectrum function
       direction = 1 # excited DOF = Ux
       responseSpectrumAnalysis(tsTag, direction)
+
 .. admonition:: Example 2: Iterative call
    
    The following example shows how to call the responseSpectrumAnalysis command for 1 mode at a time, using the time series 1 along the DOF 1 (Ux)
