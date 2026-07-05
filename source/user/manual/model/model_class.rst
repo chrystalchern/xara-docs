@@ -17,7 +17,7 @@ exposed as methods.
 
    :param |integer| ndm: number of dimensions
    :param |integer| ndf: number of dofs (optional, default ``ndm*(ndm+1)/2``)
-   :param *FileLike* echo_file: Optional file handle to write command history to. This allows OpenSeesPy scripts to be converted *exactly* to Tcl. See :ref:`<serialization>` below.
+   :param *FileLike* echo_file: Optional file handle to write command history to. This allows Python scripts to be converted *exactly* to Tcl. See :ref:`<serialization>` below.
 
    .. py:attribute:: ndm
       :type: int
