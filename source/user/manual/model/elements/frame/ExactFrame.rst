@@ -1,18 +1,18 @@
 
 .. _ExactFrame:
 
-``ExactFrame``
-^^^^^^^^^^^^^^
+CosseratFrame
+^^^^^^^^^^^^^
 
 .. figure:: ExactFrame_Fig1.png
 	:align: center
 	:figclass: align-center
 	:scale: 55
 
-	Fig. 1: Torsional instability captured by the **ExactFrame** formulation and rendered with `veux <https://veux.io>`__.
+	Fig. 1: Torsional instability captured by the **CosseratFrame** formulation and rendered with `veux <https://veux.io>`__.
 
 
-The **ExactFrame** element is a geometrically exact [4]_ beam element based on Simo's
+The **CosseratFrame** element is a geometrically exact [4]_ beam element based on Simo's
 parameterization [1]_ of Antman's *Special Cosserat Rod* [2]_. 
 This element is formulated without any geometric simplifications, and consequently,
 is capable of modeling highly nonlinear geometric phenomena with extreme accuracy.
@@ -23,7 +23,7 @@ The implementation closely follows the treatment by Perez and Filippou (2024) [3
 
    .. tab:: Python (RT)
 
-      .. py:method:: Model.element("ExactFrame", tag, nodes, section, transform)
+      .. py:method:: Model.element("CosseratFrame", tag, nodes, section, transform)
          :no-index:
 
          :param tag: unique :ref:`element` tag
