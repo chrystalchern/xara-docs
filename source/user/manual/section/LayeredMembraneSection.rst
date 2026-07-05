@@ -44,10 +44,12 @@ The following recorders are available with the LayeredMembraneSection.
    | 1. The **LayeredMembraneSection** can be used in a ``MEFI`` element. 
    | 2. The section can also be referred to as **LMS**.
 
+
 Examples
 --------
 
-For the development of this example, the RW-A20-P10-S38 wall specimen was employed (Tran, 2012). Uniaxial concrete and steel materials are defined, along with FSAM nDMaterials used within LMS sections to represent sections of types **a** and **b**, as illustrated in Fig. 3.1.7.1(a) for the RCLMS example.
+For the development of this example, the RW-A20-P10-S38 wall specimen was employed (Tran, 2012). 
+Uniaxial concrete and steel materials are defined, along with FSAM nDMaterials used within LMS sections to represent sections of types **a** and **b**, as illustrated in Fig. 3.1.7.1(a) for the RCLMS example.
 
 1. **Tcl Code**
 
