@@ -49,6 +49,7 @@ extensions = [
     "sphinxcontrib.bibtex",
     "sphinx.ext.napoleon",
     "sphinx_sitemap",
+    "sphinx_design",
     # "sphinx_codeautolink",
 
     "param_dl",
@@ -121,7 +122,7 @@ exclude_patterns = [
     "user/manual/model/elements/grainfluid/7720-TwentyEightNodeBrickUP.rst",
     # "user/manual/model/elements/fluid/index.rst",
     "user/manual/materialCommands.rst",
-    "user/manual/material/ndMaterials/BoundingCamClay.rst",
+    # "user/manual/material/ndMaterials/BoundingCamClay.rst",
     "user/manual/material/ndMaterials/PM4Sand.rst",
     "user/manual/material/ndMaterials/PM4Silt.rst",
     "user/manual/material/ndMaterials/PressureIndependentMultiYield.rst",
@@ -145,7 +146,6 @@ exclude_patterns = [
     "user/manual/output/getCrdTransfTags.rst",
 
     "user/manual/model/nodes/sp.rst",
-    "user/examples/basicExamples/basicTruss.rst",
     "user/manual/material/matTestCommands.rst",
     "user/manual/model/damping/elementalDamping/SecStifDamping.rst",
     "user/manual/model/damping/elementalDamping/URDDamping.rst",
