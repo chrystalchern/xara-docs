@@ -1,7 +1,7 @@
 .. _ForceFrame:
 
-``ForceFrame``
-^^^^^^^^^^^^^^
+ForceFrame
+^^^^^^^^^^
 
 .. figure:: ForceFrame.png
 	:align: center
