@@ -129,23 +129,30 @@ The Drucker-Prager strength parameters :math:`\rho` and :math:`F_y` can be relat
    F_y = \frac{6 c \cos \phi}{\sqrt{2} (3 - \sin \phi)}
 
 
-Example
--------
 
-This example provides the input file and corresponding results for a confined triaxial compression (CTC) test using a single 8-node brick element and the Drucker-Prager constitutive model.
-A schematic representation of this test is shown below, (a) depicts the application of hydrostatic pressure, and (b) depicts the application of the deviator stress. 
-Also shown is the stress path resulting from this test plotted on the meridian plane. 
-As shown, the element is loaded until failure, at which point the model can no longer converge, as this is a stress-controlled analysis.
+Examples
+--------
 
-.. figure:: DruckerPrager.png
-   :align: center
-   :width: 800px
-   :figclass: align-center
 
-   Triaxial compression test with the Drucker-Prager model.
+.. ref-gallery::
+   
+   examples/material/model-5012
 
-.. literalinclude:: DruckerPragerExample.tcl
-   :language: bash
+
+.. This example provides the input file and corresponding results for a confined triaxial compression (CTC) test using a single 8-node brick element and the Drucker-Prager constitutive model.
+.. A schematic representation of this test is shown below, (a) depicts the application of hydrostatic pressure, and (b) depicts the application of the deviator stress. 
+.. Also shown is the stress path resulting from this test plotted on the meridian plane. 
+.. As shown, the element is loaded until failure, at which point the model can no longer converge, as this is a stress-controlled analysis.
+
+.. .. figure:: DruckerPrager.png
+..    :align: center
+..    :width: 800px
+..    :figclass: align-center
+
+..    Triaxial compression test with the Drucker-Prager model.
+
+.. .. literalinclude:: DruckerPragerExample.tcl
+..    :language: bash
 
 
 
