@@ -30,9 +30,10 @@ Available frame elements include
 
    PrismFrame
    ForceFrame
-   CubicFrame
    ExactFrame
 
+..
+   CubicFrame
 
 To use frame elements, you'll need to:
 
