@@ -1,7 +1,7 @@
 .. _CubicFrame:
 
-``CubicFrame``
-^^^^^^^^^^^^^^
+CubicFrame
+^^^^^^^^^^^
 
 Two-node frame finite element with cubic displacement formulation.
 
