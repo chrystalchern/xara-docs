@@ -1,14 +1,18 @@
 .. _eigen:
 
-eigen
-^^^^^
+Frequency Analysis
+^^^^^^^^^^^^^^^^^^
 
 
 .. tabs::
-   .. tab:: xara
-      .. autofunction:: xara.eigen
 
-   .. tab:: Python 
+   .. tab:: Python
+
+      .. autoclass:: xara.FrequencyAnalysis
+         :members:
+
+
+   .. tab:: OpenSeesPy 
 
       .. py:method:: Model.eigen(n, solver="GenBandArpack")
 
