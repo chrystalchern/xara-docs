@@ -11,4 +11,5 @@ myst-parser
 myst-nb
 myst-sphinx-gallery
 nbformat
+sphinx-design
 
