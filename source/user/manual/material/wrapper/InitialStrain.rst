@@ -48,7 +48,8 @@ Examples
 --------
 
 The following example shows how to use the *InitialStrain* wrapper to apply an initial strain of 0.1 in the :math:`x`-direction and 0.0 in the :math:`y` and :math:`z` directions.
-The script should print the value -0.1. This is the opposite of the imposed strain in the :math:`z` direction since the tetrahedron has :math:`h=1`.
+The script should print the value -0.1. 
+This is the opposite of the imposed strain in the :math:`z` direction since the tetrahedron has :math:`h=1`.
 
 .. tabs::
    .. tab:: Python
@@ -56,30 +57,30 @@ The script should print the value -0.1. This is the opposite of the imposed stra
       .. code-block:: Python
 
          import xara
-         ops = xara.Model(ndm=3, ndf=3)
-         ops.node(1, (0,0,0))
-         ops.node(2, (1,0,0))
-         ops.node(3, (0,1,0))
-         ops.node(4, (0,0,1))
-         ops.fixZ(0.0,  (1,1,1))
+         model = xara.Model(ndm=3, ndf=3)
+         model.node(1, (0,0,0))
+         model.node(2, (1,0,0))
+         model.node(3, (0,1,0))
+         model.node(4, (0,0,1))
+         model.fixZ(0.0,  (1,1,1))
          # Create the material to be wrapped
-         ops.nDMaterial("ElasticIsotropic", 100, 1000.0, 0.0)
+         model.nDMaterial("ElasticIsotropic", 100, 1000.0, 0.0)
          # Create the wrapper
-         ops.nDMaterial("InitStrain", 300,  100, 0.0,0.0,0.1,0.0,0.0,0.0)
+         model.nDMaterial("InitStrain", 300,  100, 0.0,0.0,0.1,0.0,0.0,0.0)
 
          # Create an element and run the analysis
-         ops.element("FourNodeTetrahedron", 1,  1,2,3,4,  300)
-         ops.timeSeries("Constant", 1)
-         ops.pattern("Plain", 1, 1)
-         ops.constraints("Transformation")
-         ops.numberer("RCM")
-         ops.system("FullGeneral")
-         ops.test("NormDispIncr", 1.0e-5, 100, 0)
-         ops.algorithm("Newton")
-         ops.integrator("LoadControl", 1.0)
-         ops.analysis("Static")
-         ops.analyze(1)
-         uz = ops.nodeDisp(4, 3)
+         model.element("FourNodeTetrahedron", 1,  (1,2,3,4),  300)
+         model.timeSeries("Constant", 1)
+         model.pattern("Plain", 1, 1)
+         model.constraints("Transformation")
+         model.numberer("RCM")
+         model.system("FullGeneral")
+         model.test("NormDispIncr", 1.0e-5, 100, 0)
+         model.algorithm("Newton")
+         model.integrator("LoadControl", 1.0)
+         model.analysis("Static")
+         model.analyze(1)
+         uz = model.nodeDisp(4, 3)
          print(uz)
 
    .. tab:: Tcl 
