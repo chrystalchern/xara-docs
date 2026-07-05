@@ -1,4 +1,4 @@
-
+.. _transitioning_to_xara:
 
 Transitioning
 ^^^^^^^^^^^^^
@@ -48,12 +48,15 @@ Once the switch is made, some simple changes to make scripts more readable are:
   .. code-block:: python
 
      ops.uniaxialMaterial("Steel01", tag, E=29000, b=0.02)
-  
+
   .. note::
 
-     In general, a ``tag`` argument cannot be specified as a keyword argument.
+     In general, a ``tag`` argument cannot be specified as a keyword argument. Thus,
+     the following would **not** work:
 
+     .. code-block:: python
 
+        ops.uniaxialMaterial("Steel01", tag=1, E=29000, b=0.02)
 
 
 
