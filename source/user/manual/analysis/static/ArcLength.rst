@@ -51,8 +51,8 @@ The following snippets demonstrate the syntax for configuring the ArcLength inte
 
 .. code-block:: python
 
-   import sees.openseespy as ops
-   model = ops.Model(ndm=2, ndf=3)
+   import xara
+   model = xara.Model(ndm=2, ndf=3)
 
    ...
 
