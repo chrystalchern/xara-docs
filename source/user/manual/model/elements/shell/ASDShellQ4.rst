@@ -118,7 +118,7 @@ Example 2
       .. code-block:: python
 
          # set up a 3D-6DOFs model
-         model = ops.Model(ndm=3, ndf=6)
+         model = xara.Model(ndm=3, ndf=6)
          model.node(1, (0.0, 0.0, 0.0))
          model.node(2, (1.0, 0.0, 0.0))
          model.node(3, (1.0, 1.0, 0.0))
