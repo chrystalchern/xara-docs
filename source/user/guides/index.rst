@@ -1,8 +1,8 @@
 Guides
 ^^^^^^
 
-Examples are currated by the STAIRLab at https://gallery.stairlab.io
-For a great guide to Tcl programming, see `this <https://antirez.com/articoli/tclmisunderstood.html>`__ post.
+.. Examples are currated by the STAIRLab at https://gallery.stairlab.io
+.. For a great guide to Tcl programming, see `this <https://antirez.com/articoli/tclmisunderstood.html>`__ post.
 
 .. toctree::
    :maxdepth: 1
@@ -14,3 +14,7 @@ For a great guide to Tcl programming, see `this <https://antirez.com/articoli/tc
    signatures
    transitioning
    references
+
+..
+   compatibility
+   concrete
