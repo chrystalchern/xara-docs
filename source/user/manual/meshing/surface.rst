@@ -56,9 +56,3 @@ quadrilateral elements.
             })
 
 
-For a more complex example, visit the `wrench <https://gallery.stairlab.io/examples/wrench/>`__ example on the STAIRLab gallery.
-
-.. figure:: figures/wrench.png
-   :width: 50%
-   :align: center
-

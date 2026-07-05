@@ -96,7 +96,6 @@ For a load path where the values are specified at non-constant time intervals:
          timeSeries Path 2 -time {0.0 0.2 0.4 1.0} -values {0.0 1.0 2.0 0.0}
 
 
-A full example is provided at https://gallery.stairlab.io/examples/framecycling/
 
 
 Code developed by: |fmk|

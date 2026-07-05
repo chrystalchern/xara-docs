@@ -8,7 +8,7 @@ J2Plasticity
    :figclass: align-center
    :width: 50%
 
-   Tension test of a coupon using the :math:`J_2` plasticity model from the `STAIRLab gallery <https://gallery.stairlab.io/examples/tension-coupon/>`__.
+   Tension test of a coupon using the :math:`J_2` plasticity model.
 
 
 *J2Plasticity* is a multi dimensional material model that incorporates plasticity using the von Mises :math:`J_2` yield criterion, with nonlinear isotropic hardening.

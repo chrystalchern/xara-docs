@@ -57,6 +57,5 @@ Example
          nDMaterial ElasticIsotropic 1 -E 29000 -nu 0.3
          section PlaneStrain 1 2.5 -material 1
 
-A complete example is available at the STAIRLab `gallery <https://gallery.stairlab.io/examples/example6/>`_.
 
 

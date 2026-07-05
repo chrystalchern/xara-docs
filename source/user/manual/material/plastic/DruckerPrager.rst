@@ -147,7 +147,6 @@ As shown, the element is loaded until failure, at which point the model can no l
 .. literalinclude:: DruckerPragerExample.tcl
    :language: bash
 
-This example is also available from the `STAIRLab example gallery <https://gallery.stairlab.io/examples/triaxial-drucker/>`__.
 
 
 References

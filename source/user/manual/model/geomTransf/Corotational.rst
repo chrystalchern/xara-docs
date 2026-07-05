@@ -59,7 +59,6 @@ The corotational coordinate transformation performs a geometric transformation f
 Examples
 --------
 
-This example is developed in detail on the examples `site <https://gallery.stairlab.io/examples/framevecxz/>`__.
 In order to cover a wide range of cases, the strong axis of the first column, element `1`, 
 is oriented so as to resist bending *outside* the plane of the portal, but the strong axis of the second column, element `3`, will resist bending *inside* the portal plane.
 

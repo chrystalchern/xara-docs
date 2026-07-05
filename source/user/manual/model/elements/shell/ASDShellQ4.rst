@@ -71,7 +71,7 @@ Cantilever Bending Roll-up (corotational)
 """""""""""""""""""""""""""""""""""""""""
 
 A Cantilever beam is subjected to a total end-moment about the Y axis :math:`M_y = n 2 \pi EI/L`, where :math:`n` is the number of rotations (2 in this example).
-The files for this example can be downloaded from https://gallery.stairlab.io/examples/shellcircle/
+
 
 .. figure:: figures/ASDShellQ4/ASDShellQ4_RollUp.png
    :align: center

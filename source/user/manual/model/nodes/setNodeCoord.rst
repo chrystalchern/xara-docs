@@ -6,7 +6,7 @@ setNodeCoord
 
  .. py:method:: Model.setNodeCoord(tag, dim, value)
 
-    Set the coordinates of a node in a :py:class`Model`. The node must already exist in the model.
+    Set the coordinates of a node in a :py:class:`xara.Model`.
 
     :param tag: The tag of the node to set the coordinates for.
     :type tag: |integer|

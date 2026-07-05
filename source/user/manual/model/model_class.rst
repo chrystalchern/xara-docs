@@ -100,7 +100,6 @@ All that is required to run this with |xara| is to change the import on the firs
   You may also want to remove the ``ops.wipe()`` call, as it is no longer needed. This is because |xara|
   is implemented safely *without* internal global variables, 
 
-For more examples, visit the STAIRlab example `gallery <https://gallery.stairlab.io>`__.
 
 Code Developed by: |cmp|
 

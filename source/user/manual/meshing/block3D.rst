@@ -17,9 +17,3 @@ The block3D command generates three-dimensional meshes of :ref:`solid` elements.
          :type args: tuple
          :param dict block: dictionary of reference node locations 
 
-
-Examples
---------
-
-The block3D command is used in `Example 8 <https://gallery.stairlab.io/examples/example8/>`_ of the STAIRLab gallery.
-
