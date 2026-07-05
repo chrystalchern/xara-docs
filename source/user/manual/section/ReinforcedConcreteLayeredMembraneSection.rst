@@ -13,6 +13,8 @@ This class is the abstract representation for the stress-strain behavior for a r
 	
 	(a) Reinforced concrete wall; (b) Layer discretization.
 
+
+
 .. function:: section ReinforcedConcreteLayeredMembraneSection $secTag $nSteelLayers $nConcLayers -reinfSteel{$RSteelAtEachLayer} –conc{$concAtEachLayer} -concThick{$Thicknesses}
 
 .. csv-table:: 
