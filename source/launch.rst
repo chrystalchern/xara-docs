@@ -6,6 +6,34 @@ Overview
 The design of the interface was guided by the demands of the |BRACE2| project, for which a suitably *reliable* and *performant* solution was not available.
 
 
+.. grid:: 2 2 3 3 
+   :gutter: 3
+
+   .. grid-item-card:: :fab:`python;sd-text-primary` Python
+      :link: user/manual/interpreter/python
+      :link-type: doc
+
+      Build and analyze models securely in Python. 
+   
+   .. grid-item-card:: :fab:`python;sd-text-warning` OpenSeesPy
+      :link: OpenSeesPy
+      :link-type: ref
+
+      Use the older OpenSeesPy functions to analyze a globally scoped model.
+
+   .. grid-item-card:: :fas:`feather;sd-text-primary` Tcl
+      :link: user/manual/interpreter/tcl
+      :link-type: doc
+
+      Run old Tcl models or export from Python for faster runs.
+
+   .. :fas:
+   .. .. grid-item-card:: Examples
+   ..    :img-top: _static/images/xara.png
+
+
+All three approaches above require only a standard :ref:`install <install>` of |xara|.
+
 .. py:module:: xara
    :synopsis: A Python interface to the OpenSees finite element framework.
 
@@ -17,39 +45,13 @@ The design of the interface was guided by the demands of the |BRACE2| project, f
 
 .. _user-manual:
 
-With |xara|, nearly everything is done through an instance of the :ref:`Model <modelClass>` class.
-Rather than invoking functions directly from the *xara* module, one instead typically creates
-an *instance* of a model, 
-
-.. code:: Python
-   
-   import xara
-   model = xara.Model(ndm=2, ndf=2)
-
-then constructs and analyzes a finite element simulation by invoking its *methods*:
-
-.. code:: Python
-   
-   model.node(1, (0.0, 0.0))
-   model.node(2, (1.0, 0.0))
-   model.material("Elastic", 1, 29e3, 0.3)
-   model.element("Truss", 1, (1, 2), 1, 20.0)
-   model.analysis("Static")
-   model.analyze(1)
-
-Documentation of these methods is organized as follows:
-
-* :ref:`Modeling <modeling>` methods are used to add components to the finite element model.
-* :ref:`Loading <pattern>` methods are used to define loads and load patterns.
-* :ref:`Analysis <lblAnalysisCommands>` methods are used to move the state of the model from one converged state to another via a number of trial steps.
-* :ref:`Output <output>` methods allow one to obtain output from a finite element analysis, e.g. to record the node displacement history.
-
 
 .. toctree::
    :caption: Documentation
    :maxdepth: 1
    :hidden:
 
+   user/manual/interpreter/index
    user/manual/modeling
    user/manual/meshing/index
    user/manual/loading/index
@@ -73,4 +75,5 @@ Documentation of these methods is organized as follows:
    about/license
    changelog
    cite
+
 
