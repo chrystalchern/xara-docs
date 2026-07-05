@@ -215,6 +215,9 @@ def process_example(
     for cell in nb.cells:
         if cell.cell_type in ("markdown", "code"):
             cell.source = rewrite_image_refs(cell.source, rename_map, gallery_img_dir)
+        if cell.cell_type == "code" and "#<hide>" in cell.source:
+            cell.source = ""
+            cell.cell_type = "markdown"
 
     dest_nb = gallery_dir / f"{example_key}.ipynb"
     nbformat.write(nb, dest_nb)
