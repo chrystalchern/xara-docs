@@ -17,16 +17,6 @@ OutputDocs = Path(__file__).parent/"examples/"
 
 Galleries = [
     {
-        "name": "General",
-        "directory": "general",
-        "description": "General examples.",
-        "examples": [
-            # "node-0005/a.ipynb",
-            "solve-0003/main.ipynb",
-            "model-0001/model-0001.ipynb"
-        ],
-    },
-    {
         "name": "Frames",
         "directory": "frames",
         "description": "Frame examples.",
@@ -34,6 +24,7 @@ Galleries = [
             "frame-0059/main.ipynb",
             "frame-2005/frame-2005.ipynb",
             # "frame-1010/main.ipynb",
+            "frame-1010/frame-1010.ipynb",
             "frame-3056/main.ipynb",
         ],
     },
@@ -75,13 +66,33 @@ Galleries = [
         ],
     },
     {
-        "name": "Nonlinear Geometry",
-        "directory": "geometry",
-        "description": "Nonlinear geometry.",
+        "name": "Analysis",
+        "directory": "analysis",
+        "description": "",
         "examples": [
-            "frame-1010/frame-1010.ipynb",
+            # "node-0005/a.ipynb",
+            "solve-0003/main.ipynb",
         ],
     },
+    {
+        "name": "Miscellaneous",
+        "directory": "general",
+        "description": "Miscellaneous examples.",
+        "examples": [
+            # "node-0005/a.ipynb",
+            # "solve-0003/main.ipynb",
+            "model-0001/model-0001.ipynb",
+            "truss-0002/openseespy.ipynb"
+        ],
+    },
+    # {
+    #     "name": "Nonlinear Geometry",
+    #     "directory": "geometry",
+    #     "description": "Nonlinear geometry.",
+    #     "examples": [
+    #         "frame-1010/frame-1010.ipynb",
+    #     ],
+    # },
 ]
 
 #

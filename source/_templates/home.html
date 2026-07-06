@@ -147,15 +147,15 @@
 
     <pre class=""><div class="text-center">pip install {{ project }}</div></pre>
 
-  <section>
+  <!-- <section>
     <div class="container">
-      <div class="col-md-8 mx-auto my-auto text-center">
+      <div class="col-md-8 mx-auto my-2 text-center">
         <p><em>xara</em> is an open source library for nonlinear finite element analysis that is built
         on the core OpenSees classes. The library can be used to run legacy OpenSees Tcl and OpenSeesPy scripts, with several added improvements.
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="keyfeatures">
     <div class="container is-max-widescreen">
@@ -183,7 +183,8 @@
         {% for example in examples %}
         <a class="casestudies-box-content casestudies-underline"
           href="{{example.link}}">
-          <div class=casestudies-box-title>{{ example.title }}</div><img
+          <!-- <div class=casestudies-box-title>{{ example.title }}</div> -->
+          <img
                src="{{ pathto('_static/../_images', 1) }}/{{ example.image }}" 
                alt="rendering from an example">
           <div class="casestudies-box-text">{{ example.description }}</div>

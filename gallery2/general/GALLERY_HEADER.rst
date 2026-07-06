@@ -1,4 +1,4 @@
-General
-=======
+Miscellaneous
+=============
 
-General examples.
+Miscellaneous examples.

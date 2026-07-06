@@ -200,6 +200,7 @@ if "book" in html_theme:
     })
 
 g = "https://gallery.stairlab.io"
+
 html_favicon = '_static/images/favicon.ico'
 html_context = {
     "root_doc": root_doc,
@@ -210,9 +211,11 @@ html_context = {
 
     # HOME
     "examples": [
-            # {"title": "Basics",      "link": f"{g}/examples/plane-0002/",     "image": "../_static/images/gallery/Example6.png", "description": "Learn the basics of drawing models."},
-            # {"title": "Detailing",   "link": f"{g}/examples/example7/",     "image": "../_static/images/gallery/ShellFrame.png", "description": "."},
-            # {"title": "Finite Rotations",  "link": f"{g}/examples/framecircle/",  "image": "../_static/images/gallery/ShellCircle-576x324.webp", "description": "Render finite deformations in constrained members like Cosserat rods and shells."},
+            {"title": "Basics",      "link": f"{g}/examples/plane-0002/",     "image": "../_static/images/gallery/Example6.png", "description": "Learn the basics of analyzing models."},
+            {"title": "Detailing",   "link": f"{g}/examples/example7/",     "image": "../_static/images/gallery/ShellFrame.png", "description": "."},
+            {"title": "Finite Rotations",  "link": f"{g}/examples/framecircle/",  "image": "../_static/images/gallery/ShellCircle-576x324.webp", "description": "Render finite deformations in constrained members like Cosserat rods and shells."},
+            
+            {"title": "OpenSeesPy", "link": "./examples/general/truss-0002/index.html", "image": "../_static/images/opensees.png", "description": "Run OpenSeesPy scripts in xara."},
 
             # {"title": "Frames",      "link": f"{g}/examples/portal-moments/",     "image": "../_static/images/gallery/moments.png", "description": "Render structural models with extruded sections."},
 #           {"title": "Sections",    "link": f"{g}/examples/framesections/",     "image": "../_static/images/gallery/Torsion.png", "description": "Detailed analysis of structural cross sections."},
@@ -221,9 +224,9 @@ html_context = {
 #           {"title": "Interoperability", "link": f"{g}/examples/cablestayed/",  "image": "../_static/images/gallery/CableStayed02-576x324.webp", "description": "Coming soon."},
     ],
     "features": [
-        # {"title": "Fast", "body": "Core components have been refactored to leverage modern C++ features, which has furnished substantial performance improvements over the alternative serial OpenSees interpreters."},
-        # {"title": "Free", "body": "All source code contributed to xara is licensed under a <em>pure</em> BSD."},
-        # {"title": "Robust", "body": '<em>xara</em> is designed from the ground up for use in production environments like <a href="https://structures.live">structures.live</a>'},
+        {"title": "Fast", "body": "Core components have been refactored to leverage modern C++ features, which has furnished substantial performance improvements over the alternative serial OpenSees interpreters."},
+        {"title": "Free", "body": "All source code contributed to xara is licensed under a <em>pure</em> BSD."},
+        {"title": "Robust", "body": '<em>xara</em> is designed from the ground up for use in production environments like <a href="https://structures.live">structures.live</a>'},
     ],
     "home_image": "_static/images/CableStayed02.png"
 }
