@@ -1,6 +1,6 @@
 # FlatSliderBearing (AS2006)
 
-<p>For a two-dimensional problem:</p>
+For a two-dimensional problem:
 
 ```tcl
 element flatSliderBearing $eleTag $iNode $jNode
@@ -9,7 +9,7 @@ element flatSliderBearing $eleTag $iNode $jNode
         < -iter $maxIter $tol >
 ```
 
-<p>For a three-dimensional problem:</p>
+For a three-dimensional problem:
 
 ```tcl
 element flatSliderBearing $eleTag $iNode $jNode
@@ -17,6 +17,10 @@ element flatSliderBearing $eleTag $iNode $jNode
         < -orient < $x1 $x2 $x3 > $y1 $y2 $y3 > < -shearDist
         $sDratio > < -doRayleigh > < -mass $m > < -iter $maxIter
         $tol >
+```
+
+```{eval-rst}
+.. py:method:: Model.element("FlatSliderBearing", tag, nodes, ...)
 ```
 
 <hr />
