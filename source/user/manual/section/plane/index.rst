@@ -7,8 +7,7 @@ PlaneSection
 
    .. tab:: Python
       
-      .. py:method:: xara.PlaneSection(type, material, thickness)
-         :no-index:
+      .. py:class:: xara.PlaneSection(type, material, thickness)
 
          :param type: string identifying the plane section type. Valid options are ``"PlaneStrain"`` and ``"PlaneStress"``.
          :type type: |string|
