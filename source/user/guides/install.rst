@@ -3,16 +3,16 @@
 Install
 ^^^^^^^
 
-*xara* is built on the |OpenSeesRT| distribution of |OpenSees|, which is developed and maintained at UC Berkeley. 
+.. *xara* is built on the |OpenSeesRT| distribution of |OpenSees|, which is developed and maintained at UC Berkeley. 
 
 
-To install *xara* on Linux and new Macs, run the following command from your shell:
+To install |xara| on Linux and new Macs, run the following command from a terminal:
 
 .. code-block:: bash
 
    python -m pip install xara
 
-Installing with ``pip`` is supported on the following platforms:
+This method is supported on the following platforms:
 
 - Linux
 - MacOS with Apple Silicon (M1, M2, etc.)
