@@ -14,7 +14,7 @@ Modal Damping
 
 .. note::
 
-   In Xara, unlike OpenSees or OpenSeesPy, the tangent stiffness will always be formed to consistently incorporate modal damping effects, regardless of the matrix storage scheme that was selected. 
+   In Xara the tangent stiffness will always be formed to consistently incorporate modal damping effects, regardless of the matrix storage scheme that was selected. 
    
 
 Example
@@ -25,7 +25,7 @@ Example
 
    .. code-block:: tcl
 
-        set N 2 ;# Number of modes for modal damping
+        set N 2 ; # Number of modes for modal damping
         eigen $N
 
         modalDamping 0.05 0.02 ;# 5% in mode 1, 2% in mode 2

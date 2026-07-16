@@ -1,7 +1,7 @@
 .. _elementalDamping:
 
 Elemental Damping Command
-************************
+*************************
 
 .. function:: damping $dampingType $dampingTag $dampingArgs
 

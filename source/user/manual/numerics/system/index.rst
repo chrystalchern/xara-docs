@@ -32,5 +32,6 @@ The following types are available:
    Umfpack
    FullGeneral
    SparseSYM
+..
    Mumps
 

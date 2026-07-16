@@ -23,7 +23,7 @@ A *Quad* element uses the standard Lagrange isoparametric formulation.
              ===================================   ==============================================================================================================
              ``thick`` |float|                     element thickness
              ``type`` |str|                        string representing material behavior. The type parameter can be either ``"PlaneStrain"`` or ``"PlaneStress"``
-             ``material`` |integer|                tag of an :ref:`nDMaterial`
+             ``material`` |integer|                tag of a :ref:`MultiaxialMaterial <nDMaterial>`
              ===================================   ==============================================================================================================
            
          :param pressure: surface pressure (optional, default = 0.0)
@@ -31,9 +31,9 @@ A *Quad* element uses the standard Lagrange isoparametric formulation.
          :param rho: element mass density (per unit volume) from which a lumped element mass matrix is computed (optional, default=0.0). See :ref:`MassSources` for more information.
          :type rho: |float|
          :param b1: constant body forces defined in the domain (optional, default=0.0)
-         :type b1: |float|
+         :type b1: |float|, optional
          :param b2: constant body forces defined in the domain (optional, default=0.0)
-         :type b2: |float|
+         :type b2: |float|, optional
 
 
    .. tab:: Tcl
@@ -72,6 +72,7 @@ The stresses are computed at the four gauss points of the element and then extra
 the interpolation matrix. For a four-node quadrilateral this is given by:
 
 .. math::
+
    \left[\begin{array}{cccc}
    1+\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 1-\frac{1}{2} \sqrt{3} & -\frac{1}{2} \\
    -\frac{1}{2} & 1+\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 1-\frac{1}{2} \sqrt{3} \\
@@ -94,5 +95,5 @@ References
 ----------
 
 
-Code Developed by: |mhs|, |cmp|
+Code Developed by: |mhs|
 

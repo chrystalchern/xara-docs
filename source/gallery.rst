@@ -15,7 +15,7 @@ Frames
 .. ref-gallery::
 
    examples/frames/frame-0059
-   examples/frames/frame-2005
+   examples/frames/frame-2007
 
 
 Materials
@@ -78,11 +78,12 @@ Plane Elasticity
 
 
 Analysis
-------------------
+---------
 
 .. ref-gallery::
 
     examples/analysis/solve-0003
+    examples/analysis/solve-0010
 
 
 .. toctree::

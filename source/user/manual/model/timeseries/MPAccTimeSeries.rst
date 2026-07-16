@@ -15,7 +15,7 @@ This command is used to represent near-field strong ground motion and can simula
    :header: "Argument", "Type", "Description"
    :widths: 10, 10, 40
 
-   	    $tag, |integer|, unique tag among TimeSeries objects
+       $tag, |integer|, unique tag among TimeSeries objects
 	    $tStart, |float|, starting time of non-zero load factor
 	    $tEnd, |float|,	ending time of non-zero load factor
 	    $period, |float|, characteristic period of M&P pulse

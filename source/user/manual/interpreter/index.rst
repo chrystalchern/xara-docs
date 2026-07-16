@@ -8,6 +8,7 @@ Interpreters
    python
    openseespy
    tcl
+   parallel
 
 
 
