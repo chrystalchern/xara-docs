@@ -43,6 +43,23 @@ dl.py-parameter-list .param-type {
     color: var(--pst-color-link-hover);
 }
 
+/* Enlarge article-header text*/
+ul.bd-breadcrumbs {
+    font-size: 1rem;
+    margin-bottom: 0; 
+}
+
+/* Enlarge ">" dividers for breadcrumbs */
+ul.bd-breadcrumbs li.breadcrumb-item:not(.breadcrumb-home):before {
+    font-size: inherit;
+}
+
+/* "Contents" label: page-toc/tocsection/onthispage are all on the same
+   element, so a descendant selector (.page-toc .onthispage) never matched */
+.bd-sidebar-secondary .onthispage {
+    font-size: 1rem;
+}
+
 /* Dark-mode dark panels for sphinx-tabs */
 html[data-theme="dark"] .sphinx-tabs-panel {
     color: var(--pst-color-text-base);
