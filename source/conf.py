@@ -224,8 +224,8 @@ html_context = {
 #           {"title": "Interoperability", "link": f"{g}/examples/cablestayed/",  "image": "../_static/images/gallery/CableStayed02-576x324.webp", "description": "Coming soon."},
     ],
     "features": [
-        {"title": "Fast", "body": "Core components have been refactored to leverage modern C++ features, which has furnished substantial performance improvements over the alternative serial OpenSees interpreters."},
-        {"title": "Free", "body": "All source code contributed to xara is licensed under a <em>pure</em> BSD."},
+        {"title": "Fast", "body": "Core components have been refactored to leverage modern C++ features, furnishing substantial performance improvements over the alternative serial OpenSees interpreters."},
+        {"title": "Free", "body": "All source code contributed to xara is licensed under pure BSD."},
         {"title": "Robust", "body": '<em>xara</em> is designed from the ground up for use in production environments like <a href="https://structures.live">structures.live</a>'},
     ],
     "home_image": "_static/images/CableStayed02.png"
