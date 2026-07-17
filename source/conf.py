@@ -187,7 +187,7 @@ else:
 #         "image_light": html_logo,
 #         "image_dark": "_static/logo-dark.png",
           "link": html_baseurl, # "index.html",
-          "text": '<span class="brand-chi">𝜒ara</span>',
+          "text": '<span class="lead display-3 brand-chi">𝜒ara</span>',
 #         "alt_text": "xara docs - Home",
         }
     }

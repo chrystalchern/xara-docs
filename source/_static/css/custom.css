@@ -36,8 +36,6 @@ dl.py-parameter-list .param-type {
 
 /* Home button: 𝜒ara, chi matching the favicon and homepage title */
 .navbar-brand .brand-chi {
-    font-size: 1.5rem;
-    line-height: 1;
     color: var(--pst-color-text-base);
 }
 
