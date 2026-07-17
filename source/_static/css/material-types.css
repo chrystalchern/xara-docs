@@ -1,0 +1,168 @@
+.material-type-table-block {
+  margin: 1.35rem 0 1.8rem;
+}
+
+.material-type-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 0.45rem;
+}
+
+table.material-type-table {
+  --mt-background: var(--pst-color-background, #ffffff);
+  --mt-surface: var(--pst-color-surface, #f8f9fb);
+  --mt-on-background: var(--pst-color-on-background, #1f2328);
+  --mt-on-surface: var(--pst-color-on-surface, #1f2328);
+  --mt-primary: var(--pst-color-primary, #2563a9);
+  --mt-on-primary: var(--pst-color-on-primary, #ffffff);
+  --mt-border: rgba(127, 127, 127, 0.26);
+  --mt-soft-primary: color-mix(in srgb, var(--mt-primary) 11%, var(--mt-background));
+
+  width: 100%;
+  min-width: 68rem;
+  margin: 0;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--mt-border);
+  border-radius: 0.45rem;
+  overflow: hidden;
+  color: var(--mt-on-background);
+  background: var(--mt-background);
+  font-size: 0.82rem;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+table.material-type-table th,
+table.material-type-table td {
+  padding: 0.42rem 0.5rem;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap !important;
+  border-right: 1px solid var(--mt-border);
+  border-bottom: 1px solid var(--mt-border);
+}
+
+table.material-type-table th > p,
+table.material-type-table td > p {
+  margin: 0;
+}
+
+table.material-type-table thead th {
+  font-weight: 650;
+}
+
+table.material-type-table thead tr:first-child th {
+  color: var(--mt-on-primary);
+  background: var(--mt-primary);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+table.material-type-table thead tr:nth-child(2) th {
+  color: var(--mt-on-surface);
+  background: var(--mt-surface);
+  font-family: var(--pst-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 0.76rem;
+}
+
+table.material-type-table tbody tr:nth-child(even) {
+  background: var(--mt-surface);
+}
+
+table.material-type-table tbody tr:hover {
+  background: var(--mt-soft-primary);
+}
+
+table.material-type-table .group-start {
+  border-left: 2px solid var(--mt-border);
+}
+
+table.material-type-table .group-end {
+  border-right: 2px solid var(--mt-border);
+}
+
+table.material-type-table .material-name {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 13rem;
+  max-width: 16rem;
+  text-align: left;
+  font-weight: 650;
+  box-shadow: 1px 0 0 var(--mt-border);
+}
+
+table.material-type-table thead .material-name {
+  z-index: 4;
+  color: var(--mt-on-primary);
+  background: var(--mt-primary);
+}
+
+table.material-type-table tbody tr:nth-child(odd) .material-name {
+  background: var(--mt-background);
+}
+
+table.material-type-table tbody tr:nth-child(even) .material-name {
+  background: var(--mt-surface);
+}
+
+table.material-type-table tbody tr:hover .material-name {
+  background: var(--mt-soft-primary);
+}
+
+table.material-type-table .material-label {
+  font-family: var(--pst-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+}
+
+table.material-type-table .otype {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.08rem 0.34rem;
+  border: 1px solid var(--mt-border);
+  border-radius: 999px;
+  color: var(--mt-on-surface);
+  background: var(--mt-surface);
+  font-family: var(--pst-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 0.68rem;
+  font-weight: 500;
+  vertical-align: 0.05em;
+}
+
+table.material-type-table .state,
+table.material-type-table .component {
+  font-family: var(--pst-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 0.78rem;
+}
+
+table.material-type-table .state-explicit,
+table.material-type-table .component {
+  font-weight: 650;
+}
+
+table.material-type-table .state-zero,
+table.material-type-table .component-empty,
+.material-type-table-legend .component-empty {
+  color: color-mix(in srgb, var(--mt-on-background, currentColor) 48%, transparent);
+}
+
+table.material-type-table .state-implicit {
+  color: var(--mt-primary);
+  font-weight: 700;
+}
+
+table.material-type-table .component-empty {
+  font-family: var(--pst-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+}
+
+.material-type-table-legend {
+  margin: 0.45rem 0 0;
+  color: var(--pst-color-muted, #626970);
+  font-size: 0.82rem;
+}
+
+.material-type-table-legend code,
+.material-type-table-legend .component-empty {
+  font-family: var(--pst-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+}
