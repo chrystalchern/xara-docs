@@ -33,10 +33,6 @@ This command is used to construct a multi-dimensional [Manzari-Dafalias2004]_ ma
    cz, |float|, fabric-dilatancy tensor parameter
    Den, |float|, mass density of the material
 
-.. note::
-
-   The material formulations for the Manzari-Dafalias object are "ThreeDimensional" and "PlaneStrain"
-
 
 #. Valid Element Recorder queries are:
 
