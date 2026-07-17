@@ -17,4 +17,36 @@ h2 {
     line-height: 1.5;
     padding: .5rem .75rem;
     position: relative;
-}  
+}
+
+.bd-footer a:visited {
+    color: #6f42c1;
+}
+
+.bd-footer a:hover,
+.bd-footer a:visited:hover {
+    color: var(--colorPrimaryLight);
+}
+
+.bd-footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* enlarge GitHub icon: Bulma's .icon caps it at 1.5rem */
+.bd-footer .social-media-icons svg.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: fill .15s ease-in-out;
+}
+
+.bd-footer .social-media-icons svg.icon:hover {
+    fill: var(--colorPrimaryLight);
+}
+
+/* Pull the icon column left (one grid column = 8.3333%) */
+@media (min-width: 992px) {
+    .bd-footer .xara-footer {
+        margin-left: -8.3333%;
+    }
+}
