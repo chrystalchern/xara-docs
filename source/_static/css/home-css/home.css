@@ -35,6 +35,18 @@ h2 {
     }
 }
 
+/* Open the "More" dropdown as an overlay instead of pushing content down
+   (theme CSS sets .dropdown-menu to position: static) */
+.bd-navbar-elements .nav-item.dropdown {
+    position: relative;
+}
+
+.bd-navbar-elements .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
 .bd-footer a:visited {
     color: #6f42c1;
 }
