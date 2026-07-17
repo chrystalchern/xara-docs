@@ -17,4 +17,64 @@ h2 {
     line-height: 1.5;
     padding: .5rem .75rem;
     position: relative;
-}  
+}
+
+/* Header nav: all links inline (no "More" dropdown), wrapping if needed;
+   stacked vertically in the mobile (hamburger) menu */
+.bd-navbar-elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+
+@media (max-width: 1023px) {
+    .bd-navbar-elements {
+        flex-direction: column;
+    }
+}
+
+/* Open the "More" dropdown as an overlay instead of pushing content down
+   (theme CSS sets .dropdown-menu to position: static) */
+.bd-navbar-elements .nav-item.dropdown {
+    position: relative;
+}
+
+.bd-navbar-elements .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.bd-footer a:visited {
+    color: #6f42c1;
+}
+
+.bd-footer a:hover,
+.bd-footer a:visited:hover {
+    color: var(--colorPrimaryLight);
+}
+
+.bd-footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* enlarge GitHub icon: Bulma's .icon caps it at 1.5rem */
+.bd-footer .social-media-icons svg.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: fill .15s ease-in-out;
+}
+
+.bd-footer .social-media-icons svg.icon:hover {
+    fill: var(--colorPrimaryLight);
+}
+
+/* Pull the icon column left (one grid column = 8.3333%) */
+@media (min-width: 992px) {
+    .bd-footer .xara-footer {
+        margin-left: -5%;
+    }
+}

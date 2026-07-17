@@ -38,6 +38,8 @@
     document.documentElement.dataset.theme = "light"; // localStorage.getItem("theme") || "light";
   </script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <!-- theme's Bootstrap bundle: makes the "More" nav dropdown work -->
+  <script src="{{ pathto('_static/scripts/bootstrap.js', 1) }}" defer></script>
 
   <link rel="canonical" href="https://xara.so" >
   <link rel="icon" type="image/x-icon" href="_static/images/favicon.ico">
@@ -89,9 +91,6 @@
 
     <div class="container is-max-widescreen">
       <div class=navbar-brand>
-        <a class=navbar-item href="/"><img alt="xara branding" class="navbar-logo" src="{{ pathto('_static/images/peer-black-100.png', 1) }}" >
-          <div class=navbar-logo-text></div>
-        </a>
         <a role=button class="navbar-burger" aria-label="menu" aria-expanded=false
           data-target="navbar-menu"><span aria-hidden="true"></span>
           <span aria-hidden=true></span>
@@ -103,7 +102,7 @@
           <a href="/install.html" class="navbar-item is-secondary">Install</a>
           <a href=https://numpy.org/doc/stable class="navbar-item is-secondary">Documentation</a>
           {% endif %}
-          <ul class="navbar-item bd-navbar-elements " style="display: flex; flex-direction: row;">
+          <ul class="navbar-item bd-navbar-elements">
             {{ generate_header_nav_html(n_links_before_dropdown=theme_header_links_before_dropdown) }}
           </ul>
         </div>
@@ -200,7 +199,7 @@
       <h2>Pacific Earthquake Engineering Center</h2>
       <div class="col-md-8 mx-auto text-center">
         <p>
-          <em><strong>xara</strong></em> is a free tool developed at the University of California, Berkeley and published by the Pacific Earthquake Engineering Research center.
+          <em><strong>xara</strong></em> is a free tool developed at the University of California, Berkeley and published by the Pacific Earthquake Engineering Research center (PEER). More free tools from PEER:
         </p>
         <hr class="my-4">
         <div class="row g-3">
@@ -256,10 +255,9 @@
     <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
       <div class="row">
         <div class="col-lg-3 mb-3">
-          <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="STAIRlab">
-            <a href="https://stairlab.berkeley.edu">
-              <img id=footer-logo style="max-width: 50;" src="{{ pathto('_static/images', 1) }}/peer-black-100.png"
-              alt="STAIRLab logo."></a>
+          <a class="d-inline-flex align-items-center mb-3 text-body-emphasis text-decoration-none" href="https://stairlab.berkeley.edu" aria-label="STAIRlab">
+            <img id=footer-logo class="me-2" style="max-width: 50;" src="{{ pathto('_static/images', 1) }}/peer-black-100.png"
+              alt="STAIRLab logo.">
             <span class="fs-5">STAIRLab</span>
           </a>
           <ul class="list-unstyled small">
@@ -302,5 +300,17 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.navbar-burger').forEach(burger => {
+        burger.addEventListener('click', () => {
+          const target = document.getElementById(burger.dataset.target);
+          burger.classList.toggle('is-active');
+          if (target) target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
