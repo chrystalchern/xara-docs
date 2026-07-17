@@ -187,7 +187,7 @@ else:
 #         "image_light": html_logo,
 #         "image_dark": "_static/logo-dark.png",
           "link": html_baseurl, # "index.html",
-          "text": f'<span class="lead display-3">{project}</span>',
+          "text": '<span class="brand-chi">𝜒ara</span>',
 #         "alt_text": "xara docs - Home",
         }
     }
@@ -239,8 +239,6 @@ html_css_files = [
     'css/home-css/'+str(file.name) for file in (Path(__file__).parents[0]/"_static/css/home-css/").glob("vars*.css")
 ] + [
      'css/css/'+str(file.name) for file in (Path(__file__).parents[0]/"_static/css/css/").glob("*.css")
-] + [
-    "css/veux.css",
 ]
 
 html_secnum_suffix = " "

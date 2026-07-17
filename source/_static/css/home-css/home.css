@@ -19,6 +19,22 @@ h2 {
     position: relative;
 }
 
+/* Header nav: all links inline (no "More" dropdown), wrapping if needed;
+   stacked vertically in the mobile (hamburger) menu */
+.bd-navbar-elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+
+@media (max-width: 1023px) {
+    .bd-navbar-elements {
+        flex-direction: column;
+    }
+}
+
 .bd-footer a:visited {
     color: #6f42c1;
 }
@@ -47,6 +63,6 @@ h2 {
 /* Pull the icon column left (one grid column = 8.3333%) */
 @media (min-width: 992px) {
     .bd-footer .xara-footer {
-        margin-left: -8.3333%;
+        margin-left: -5%;
     }
 }

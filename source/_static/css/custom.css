@@ -33,3 +33,36 @@ dl.py-parameter-list .param-type {
 .version-deprecated { background: #fdf3e0; color: #9a6b00; }
 .version-removed    { background: #fbe9e9; color: #a32020; }
 .version-fixed      { background: #ece9fb; color: #5b3da3; }
+
+/* Home button: 𝜒ara, chi matching the favicon and homepage title */
+.navbar-brand .brand-chi {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--pst-color-text-base);
+}
+
+.navbar-brand:hover .brand-chi {
+    color: var(--pst-color-link-hover);
+}
+
+/* Dark-mode dark panels for sphinx-tabs */
+html[data-theme="dark"] .sphinx-tabs-panel {
+    color: var(--pst-color-text-base);
+    background: rgb(50, 50, 50);
+    border-color: #4a4a4a;
+}
+
+html[data-theme="dark"] .sphinx-tabs-tab {
+    color: var(--pst-color-link);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .sphinx-tabs-tab[aria-selected="true"] {
+    border-color: #4a4a4a;
+    border-bottom: 1px solid rgb(50, 50, 50);
+    background-color: rgb(50, 50, 50);
+}
+
+html[data-theme="dark"] [role="tablist"] {
+    border-bottom-color: #4a4a4a;
+}
